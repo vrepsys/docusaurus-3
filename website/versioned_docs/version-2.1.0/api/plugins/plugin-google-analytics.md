@@ -10,9 +10,7 @@ import APITable from '@site/src/components/APITable';
 The default [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/) plugin. It is a JavaScript library for measuring how users interact with your website **in the production build**. If you are using Google Analytics 4 you might need to consider using [plugin-google-gtag](./plugin-google-gtag.md) instead.
 
 :::caution production only
-
 This plugin is always inactive in development and **only active in production** to avoid polluting the analytics statistics.
-
 :::
 
 ## Installation {#installation}
@@ -22,11 +20,9 @@ npm install --save @docusaurus/plugin-google-analytics
 ```
 
 :::tip
-
 If you use the preset `@docusaurus/preset-classic`, you don't need to install this plugin as a dependency.
 
 You can configure this plugin through the preset options.
-
 :::
 
 ## Configuration {#configuration}
@@ -37,10 +33,10 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `trackingID` | `string` | **Required** | The tracking ID of your analytics service. |
-| `anonymizeIP` | `boolean` | `false` | Whether the IP should be anonymized when sending requests. |
+| Name          | Type      | Default      | Description                                                |
+| ------------- | --------- | ------------ | ---------------------------------------------------------- |
+| `trackingID`  | `string`  | **Required** | The tracking ID of your analytics service.                 |
+| `anonymizeIP` | `boolean` | `false`      | Whether the IP should be anonymized when sending requests. |
 
 ```mdx-code-block
 </APITable>
@@ -51,12 +47,10 @@ Accepted fields:
 You can configure this plugin through preset options or plugin options.
 
 :::tip
-
 Most Docusaurus users configure this plugin through the preset options.
-
 :::
 
-```js config-tabs
+```js
 // Preset Options: googleAnalytics
 // Plugin Options: @docusaurus/plugin-google-analytics
 

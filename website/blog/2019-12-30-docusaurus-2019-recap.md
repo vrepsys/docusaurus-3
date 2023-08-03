@@ -19,9 +19,13 @@ Last but not least, we implemented a plugins architecture and turned the repo in
 ## GitHub Activity
 
 - Stars: 10050 → 14632 (+45.6% y/y)
+
 - Total Contributors: 182 → 303 (+66.4% y/y). Most of which are non-Facebook contributors
+
 - Daily npm Downloads: 728 → 2320 (+218.7% y/y). The peak was in November
+
 - D1 is currently used by 3872 projects on GitHub while D2 is used by 247 projects on GitHub
+
 - We now have 4 active core contributors! (+100% y/y)
 
 ## Notable Users
@@ -29,15 +33,21 @@ Last but not least, we implemented a plugins architecture and turned the repo in
 A good portion of the projects within the Open Source community use Docusaurus. This half we also onboarded more notable projects onto Docusaurus 2:
 
 - [Create React App](https://create-react-app.dev/)
+
 - [Redux](https://redux.js.org/)
+
 - [Draft.js](https://draftjs.org/)
+
 - [Flux](http://facebook.github.io/flux/)
 
 And welcomed more projects to Docusaurus 1:
 
 - [Libra](https://developers.libra.org/)
+
 - [MobX](https://mobx.js.org/)
+
 - [Immer](https://immerjs.github.io/immer/)
+
 - [Sorbet](https://sorbet.org/)
 
 ## Media
@@ -49,7 +59,9 @@ Yangshun gave a classroom session during F8 about [Using Docusaurus to Create Op
 A few third-party hosting/development services also has first-class integration with a Docusaurus setup:
 
 - [Vercel deployment](https://github.com/vercel/vercel/tree/main/examples/docusaurus)
+
 - [CodeSandbox](https://codesandbox.io/s/docusaurus-template-x3vg9)
+
 - [Render](https://render.com/docs/deploy-docusaurus)
 
 ## Looking Ahead

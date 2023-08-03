@@ -60,6 +60,6 @@ module.exports = {
 
 ## Options
 
-| Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `sync` | `boolean` | `false` | Syncing tab choices (Yarn and npm). See https://docusaurus.io/docs/markdown-features/#syncing-tab-choices for details. |
+| Property | Type      | Default | Description                                                                                                                                                                                 |
+| -------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sync`   | `boolean` | `false` | Syncing tab choices (Yarn and npm). See [https://docusaurus.io/docs/markdown-features/#syncing-tab-choices](https://docusaurus.io/docs/markdown-features/#syncing-tab-choices) for details. |

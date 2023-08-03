@@ -53,20 +53,35 @@ The component used for Markdown pages is `@theme/MDXPage`. React pages are direc
 The blog creates the following routes:
 
 - **Posts list pages**: `/`, `/page/2`, `/page/3`...
+
   - The component is `@theme/BlogListPage`.
+
 - **Post pages**: `/2021/11/21/algolia-docsearch-migration`, `/2021/05/12/announcing-docusaurus-two-beta`...
+
   - Generated from each Markdown post.
+
   - The routes are fully customizable through the `slug` front matter.
+
   - The component is `@theme/BlogPostPage`.
+
 - **Tags list page**: `/tags`
+
   - The route is customizable through the `tagsBasePath` option.
+
   - The component is `@theme/BlogTagsListPage`.
+
 - **Tag pages**: `/tags/adoption`, `/tags/beta`...
+
   - Generated through the tags defined in each post's front matter.
+
   - The routes always have base defined in `tagsBasePath`, but the subroutes are customizable through the tag's `permalink` field.
+
   - The component is `@theme/BlogTagsPostsPage`.
+
 - **Archive page**: `/archive`
+
   - The route is customizable through the `archiveBasePath` option.
+
   - The component is `@theme/BlogArchivePage`.
 
 ### Docs routing {#docs-routing}
@@ -90,57 +105,59 @@ The doc's `slug` front matter customizes the last part of the route, but the bas
 
 Throughout the documentation, we always try to be unambiguous about whether we are talking about file paths or URL paths. Content plugins usually map file paths directly to URL paths, for example, `./docs/advanced/routing.md` will become `/docs/advanced/routing`. However, with `slug`, you can make URLs totally decoupled from the file structure.
 
-When writing links in Markdown, you could either mean a _file path_, or a _URL path_, which Docusaurus would use several heuristics to determine.
+When writing links in Markdown, you could either mean a *file path*, or a *URL path*, which Docusaurus would use several heuristics to determine.
 
-- If the path has a `@site` prefix, it is _always_ an asset file path.
-- If the path has an `http(s)://` prefix, it is _always_ a URL path.
+- If the path has a `@site` prefix, it is *always* an asset file path.
+
+- If the path has an `http(s)://` prefix, it is *always* a URL path.
+
 - If the path doesn't have an extension, it is a URL path. For example, a link `[page](../plugins)` on a page with URL `/docs/advanced/routing` will link to `/docs/plugins`. Docusaurus will only detect broken links when building your site (when it knows the full route structure), but will make no assumptions about the existence of a file. It is exactly equivalent to writing `<a href="../plugins">page</a>` in a JSX file.
+
 - If the path has an `.md(x)` extension, Docusaurus would try to resolve that Markdown file to a URL, and replace the file path with a URL path.
+
 - If the path has any other extension, Docusaurus would treat it as [an asset](../guides/markdown-features/markdown-features-assets.mdx) and bundle it.
 
 The following directory structure may help you visualize this file → URL mapping. Assume that there's no slug customization in any page.
 
 <details>
+  <summary>A sample site structure</summary>
 
-<summary>A sample site structure</summary>
-
-```bash
-.
-├── blog                            # blog plugin has routeBasePath: '/blog'
-│   ├── 2019-05-28-first-blog-post.md       # -> /blog/2019/05/28/first-blog-post
-│   ├── 2019-05-29-long-blog-post.md        # -> /blog/2019/05/29/long-blog-post
-│   ├── 2021-08-01-mdx-blog-post.mdx        # -> /blog/2021/08/01/mdx-blog-post
-│   └── 2021-08-26-welcome
-│       ├── docusaurus-plushie-banner.jpeg
-│       └── index.md                        # -> /blog/2021/08/26/welcome
-├── docs                            # docs plugin has routeBasePath: '/docs'; current version has base path '/'
-│   ├── intro.md                            # -> /docs/intro
-│   ├── tutorial-basics
-│   │   ├── _category_.json
-│   │   ├── congratulations.md              # -> /docs/tutorial-basics/congratulations
-│   │   └── markdown-features.mdx           # -> /docs/tutorial-basics/congratulations
-│   └── tutorial-extras
-│       ├── _category_.json
-│       ├── manage-docs-versions.md         # -> /docs/tutorial-extras/manage-docs-versions
-│       └── translate-your-site.md          # -> /docs/tutorial-extras/translate-your-site
-├── src
-│   └── pages                       # pages plugin has routeBasePath: '/'
-│       ├── index.module.css
-│       ├── index.tsx                       # -> /
-│       └── markdown-page.md                # -> /markdown-page
-└── versioned_docs
-    └── version-1.0.0               # version has base path '/1.0.0'
-        ├── intro.md                        # -> /docs/1.0.0/intro
-        ├── tutorial-basics
-        │   ├── _category_.json
-        │   ├── congratulations.md          # -> /docs/1.0.0/tutorial-basics/congratulations
-        │   └── markdown-features.mdx       # -> /docs/1.0.0/tutorial-basics/congratulations
-        └── tutorial-extras
-            ├── _category_.json
-            ├── manage-docs-versions.md     # -> /docs/1.0.0/tutorial-extras/manage-docs-versions
-            └── translate-your-site.md      # -> /docs/1.0.0/tutorial-extras/translate-your-site
-```
-
+  ```bash
+  .
+  ├── blog                            # blog plugin has routeBasePath: '/blog'
+  │   ├── 2019-05-28-first-blog-post.md       # -> /blog/2019/05/28/first-blog-post
+  │   ├── 2019-05-29-long-blog-post.md        # -> /blog/2019/05/29/long-blog-post
+  │   ├── 2021-08-01-mdx-blog-post.mdx        # -> /blog/2021/08/01/mdx-blog-post
+  │   └── 2021-08-26-welcome
+  │       ├── docusaurus-plushie-banner.jpeg
+  │       └── index.md                        # -> /blog/2021/08/26/welcome
+  ├── docs                            # docs plugin has routeBasePath: '/docs'; current version has base path '/'
+  │   ├── intro.md                            # -> /docs/intro
+  │   ├── tutorial-basics
+  │   │   ├── _category_.json
+  │   │   ├── congratulations.md              # -> /docs/tutorial-basics/congratulations
+  │   │   └── markdown-features.mdx           # -> /docs/tutorial-basics/congratulations
+  │   └── tutorial-extras
+  │       ├── _category_.json
+  │       ├── manage-docs-versions.md         # -> /docs/tutorial-extras/manage-docs-versions
+  │       └── translate-your-site.md          # -> /docs/tutorial-extras/translate-your-site
+  ├── src
+  │   └── pages                       # pages plugin has routeBasePath: '/'
+  │       ├── index.module.css
+  │       ├── index.tsx                       # -> /
+  │       └── markdown-page.md                # -> /markdown-page
+  └── versioned_docs
+      └── version-1.0.0               # version has base path '/1.0.0'
+          ├── intro.md                        # -> /docs/1.0.0/intro
+          ├── tutorial-basics
+          │   ├── _category_.json
+          │   ├── congratulations.md          # -> /docs/1.0.0/tutorial-basics/congratulations
+          │   └── markdown-features.mdx       # -> /docs/1.0.0/tutorial-basics/congratulations
+          └── tutorial-extras
+              ├── _category_.json
+              ├── manage-docs-versions.md     # -> /docs/1.0.0/tutorial-extras/manage-docs-versions
+              └── translate-your-site.md      # -> /docs/1.0.0/tutorial-extras/translate-your-site
+  ```
 </details>
 
 So much about content plugins. Let's take one step back and talk about how routing works in a Docusaurus app in general.
@@ -154,61 +171,59 @@ The `/docs/advanced/routing` route can correspond to either `/docs/advanced/rout
 For example, the build output of the directory above is (ignoring other assets and JS bundle):
 
 <details>
+  <summary>Output of the above workspace</summary>
 
-<summary>Output of the above workspace</summary>
-
-```bash
-build
-├── 404.html                      # /404/
-├── blog
-│   ├── archive
-│   │   └── index.html            # /blog/archive/
-│   ├── first-blog-post
-│   │   └── index.html            # /blog/first-blog-post/
-│   ├── index.html                # /blog/
-│   ├── long-blog-post
-│   │   └── index.html            # /blog/long-blog-post/
-│   ├── mdx-blog-post
-│   │   └── index.html            # /blog/mdx-blog-post/
-│   ├── tags
-│   │   ├── docusaurus
-│   │   │   └── index.html        # /blog/tags/docusaurus/
-│   │   ├── hola
-│   │   │   └── index.html        # /blog/tags/hola/
-│   │   └── index.html            # /blog/tags/
-│   └── welcome
-│       └── index.html            # /blog/welcome/
-├── docs
-│   ├── 1.0.0
-│   │   ├── intro
-│   │   │   └── index.html        # /docs/1.0.0/intro/
-│   │   ├── tutorial-basics
-│   │   │   ├── congratulations
-│   │   │   │   └── index.html    # /docs/1.0.0/tutorial-basics/congratulations/
-│   │   │   └── markdown-features
-│   │   │       └── index.html    # /docs/1.0.0/tutorial-basics/markdown-features/
-│   │   └── tutorial-extras
-│   │       ├── manage-docs-versions
-│   │       │   └── index.html    # /docs/1.0.0/tutorial-extras/manage-docs-versions/
-│   │       └── translate-your-site
-│   │           └── index.html    # /docs/1.0.0/tutorial-extras/translate-your-site/
-│   ├── intro
-│   │   └── index.html            # /docs/1.0.0/intro/
-│   ├── tutorial-basics
-│   │   ├── congratulations
-│   │   │   └── index.html        # /docs/tutorial-basics/congratulations/
-│   │   └── markdown-features
-│   │       └── index.html        # /docs/tutorial-basics/markdown-features/
-│   └── tutorial-extras
-│       ├── manage-docs-versions
-│       │   └── index.html        # /docs/tutorial-extras/manage-docs-versions/
-│       └── translate-your-site
-│           └── index.html        # /docs/tutorial-extras/translate-your-site/
-├── index.html                    # /
-└── markdown-page
-    └── index.html                # /markdown-page/
-```
-
+  ```bash
+  build
+  ├── 404.html                      # /404/
+  ├── blog
+  │   ├── archive
+  │   │   └── index.html            # /blog/archive/
+  │   ├── first-blog-post
+  │   │   └── index.html            # /blog/first-blog-post/
+  │   ├── index.html                # /blog/
+  │   ├── long-blog-post
+  │   │   └── index.html            # /blog/long-blog-post/
+  │   ├── mdx-blog-post
+  │   │   └── index.html            # /blog/mdx-blog-post/
+  │   ├── tags
+  │   │   ├── docusaurus
+  │   │   │   └── index.html        # /blog/tags/docusaurus/
+  │   │   ├── hola
+  │   │   │   └── index.html        # /blog/tags/hola/
+  │   │   └── index.html            # /blog/tags/
+  │   └── welcome
+  │       └── index.html            # /blog/welcome/
+  ├── docs
+  │   ├── 1.0.0
+  │   │   ├── intro
+  │   │   │   └── index.html        # /docs/1.0.0/intro/
+  │   │   ├── tutorial-basics
+  │   │   │   ├── congratulations
+  │   │   │   │   └── index.html    # /docs/1.0.0/tutorial-basics/congratulations/
+  │   │   │   └── markdown-features
+  │   │   │       └── index.html    # /docs/1.0.0/tutorial-basics/markdown-features/
+  │   │   └── tutorial-extras
+  │   │       ├── manage-docs-versions
+  │   │       │   └── index.html    # /docs/1.0.0/tutorial-extras/manage-docs-versions/
+  │   │       └── translate-your-site
+  │   │           └── index.html    # /docs/1.0.0/tutorial-extras/translate-your-site/
+  │   ├── intro
+  │   │   └── index.html            # /docs/1.0.0/intro/
+  │   ├── tutorial-basics
+  │   │   ├── congratulations
+  │   │   │   └── index.html        # /docs/tutorial-basics/congratulations/
+  │   │   └── markdown-features
+  │   │       └── index.html        # /docs/tutorial-basics/markdown-features/
+  │   └── tutorial-extras
+  │       ├── manage-docs-versions
+  │       │   └── index.html        # /docs/tutorial-extras/manage-docs-versions/
+  │       └── translate-your-site
+  │           └── index.html        # /docs/tutorial-extras/translate-your-site/
+  ├── index.html                    # /
+  └── markdown-page
+      └── index.html                # /markdown-page/
+  ```
 </details>
 
 If `trailingSlash` is set to `false`, the build would emit `intro.html` instead of `intro/index.html`.
@@ -273,16 +288,12 @@ If you put some HTML pages under the `static` folder, they will be copied to the
 ```
 
 <BrowserWindow>
-
-- [/pure-html](/pure-html)
-- [pathname:///pure-html](pathname:///pure-html)
-
+  - [/pure-html](/pure-html)
+  - [pathname:///pure-html](pathname:///pure-html)
 </BrowserWindow>
 
 :::tip
-
 The first link will **not** trigger a "broken links detected" check during the production build, because the respective file actually exists. Nevertheless, when you click on the link, a "page not found" will be displayed until you refresh.
-
 :::
 
 The `pathname://` protocol is useful for referencing any content in the static folder. For example, Docusaurus would convert [all Markdown static assets to require() calls](../guides/markdown-features/markdown-features-assets.mdx#static-assets). You can use `pathname://` to keep it a regular link instead of being hashed by Webpack.

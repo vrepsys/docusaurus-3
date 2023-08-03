@@ -9,16 +9,17 @@ slug: /docs-introduction
 The docs feature provides users with a way to organize Markdown files in a hierarchical format.
 
 :::info
-
 Check the [Docs Plugin API Reference documentation](./../../api/plugins/plugin-content-docs.md) for an exhaustive list of options.
-
 :::
 
 Your site's documentation is organized by four levels, from lowest to highest:
 
 1. Individual pages.
+
 2. Sidebars.
+
 3. Versions.
+
 4. Plugin instances.
 
 The guide will introduce them in that order: starting from [how individual pages can be configured](./docs-create-doc.mdx), to [how to create a sidebar or multiple ones](./sidebar/index.md), to [how to create and manage versions](./versioning.md), to [how to use multiple docs plugin instances](./docs-multi-instance.mdx).
@@ -96,9 +97,7 @@ This page will be the home page when users visit https://example.com/.
 ```
 
 :::caution
-
 If you added `slug: /` to a doc to make it the homepage, you should delete the existing homepage at `./src/pages/index.js`, or else there will be two files mapping to the same route!
-
 :::
 
 Now, the site's structure will be like the following:
@@ -110,7 +109,5 @@ example.com/tutorial-basics/...    -> generated from `docs/tutorial-basics/...`
 ```
 
 :::tip
-
 There's also a "blog-only mode" for those who only want to use the blog feature of Docusaurus 2. You can use the same method detailed above. Follow the setup instructions on [Blog-only mode](../../blog.mdx#blog-only-mode).
-
 :::

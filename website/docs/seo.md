@@ -57,9 +57,7 @@ keywords: [keywords, describing, the main topics]
 When creating your React page, adding these fields in `Layout` would also improve SEO.
 
 :::tip
-
 Prefer to use front matter for fields like `description` and `keywords`: Docusaurus will automatically apply this to both `description` and `og:description`, while you would have to manually declare two metadata tags when using the `<head>` tag.
-
 :::
 
 For JSX pages, you can use the Docusaurus [`<Head>`](docusaurus-core.md#head) component.
@@ -82,9 +80,7 @@ export default function page() {
 ```
 
 :::tip
-
 For convenience, the default theme `<Layout>` component accept `title` and `description` as props.
-
 :::
 
 ## Static HTML generation {#static-html-generation}
@@ -102,9 +98,7 @@ You may also add a title for your image—this doesn't impact SEO much but is di
 ```
 
 <BrowserWindow>
-
-![Docusaurus banner](./assets/docusaurus-asset-example-banner.png 'Image title')
-
+  ![Docusaurus banner](./assets/docusaurus-asset-example-banner.png "Image title")
 </BrowserWindow>
 
 ## Rich search information {#rich-search-information}
@@ -123,13 +117,11 @@ Disallow:
 Read more about the robots file in [the Google documentation](https://developers.google.com/search/docs/advanced/robots/intro).
 
 :::caution
-
 **Important**: the `robots.txt` file does **not** prevent HTML pages from being indexed.
 
 To prevent your whole Docusaurus site from being indexed, use the [`noIndex`](./api/docusaurus.config.js.md#noIndex) site config. Some [hosting providers](./deployment.mdx) may also let you configure a `X-Robots-Tag: noindex` HTTP header (GitHub Pages does not support this).
 
 To prevent a single page from being indexed, use `<meta name="robots" content="noindex">` as [page metadata](#single-page-metadata). Read more about the [robots meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
-
 :::
 
 ## Sitemap file {#sitemap-file}
@@ -137,7 +129,6 @@ To prevent a single page from being indexed, use `<meta name="robots" content="n
 Docusaurus provides the [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md) plugin, which is shipped with `preset-classic` by default. It autogenerates a `sitemap.xml` file which will be available at `https://example.com/[baseUrl]/sitemap.xml` after the production build. This sitemap metadata helps search engine crawlers crawl your site more accurately.
 
 :::tip
-
 The sitemap plugin automatically filters pages containing a `noindex` [robots meta directive](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
 
 For example, [`/examples/noIndex`](/examples/noIndex) is not included in the [Docusaurus sitemap.xml file](pathname:///sitemap.xml) because it contains the following [page metadata](#single-page-metadata):
@@ -147,7 +138,6 @@ For example, [`/examples/noIndex`](/examples/noIndex) is not included in the [Do
   <meta name="robots" content="noindex, nofollow" />
 </head>
 ```
-
 :::
 
 ## Human readable links {#human-readable-links}

@@ -7,19 +7,23 @@ slug: /migration/automated
 The migration CLI automatically migrates your v1 website to a v2 website.
 
 :::info
-
 Manual work is still required after using the migration CLI, as we can't automate a full migration
-
 :::
 
 The migration CLI migrates:
 
 - Site configurations (from `siteConfig.js` to `docusaurus.config.js`)
+
 - `package.json`
+
 - `sidebars.json`
+
 - `/docs`
+
 - `/blog`
+
 - `/static`
+
 - `versioned_sidebar.json` and `/versioned_docs` if your site uses versioning
 
 To use the migration CLI, follow these steps:
@@ -36,7 +40,7 @@ npx @docusaurus/migrate migrate <v1 website directory> <desired v2 website direc
 npx @docusaurus/migrate migrate ./v1-website ./v2-website
 ```
 
-3. To view your new website locally, go into your v2 website's directory and start your development server.
+1. To view your new website locally, go into your v2 website's directory and start your development server.
 
 ```bash
 cd ./v2-website
@@ -45,9 +49,7 @@ yarn start
 ```
 
 :::danger
-
 The migration CLI updates existing files. Be sure to have committed them first!
-
 :::
 
 #### Options {#options}
@@ -65,11 +67,9 @@ npx @docusaurus/migrate migrate --mdx --page ./v1-website ./v2-website
 ```
 
 :::danger
-
 The migration of pages and MDX is still a work in progress.
 
 We recommend you to try to run the pages without these options, commit, and then try to run the migration again with the `--page` and `--mdx` options.
 
 This way, you'd be able to easily inspect and fix the diff.
-
 :::

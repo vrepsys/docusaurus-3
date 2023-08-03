@@ -15,8 +15,11 @@ Stack Overflow is a popular forum to ask code-level questions or if you're stuck
 There are many online forums for discussion about best practices and application architecture as well as the future of Docusaurus. If you have an answerable code-level question, Stack Overflow is usually a better fit.
 
 - [Docusaurus online chat](https://discord.gg/docusaurus)
+
   - [#help-and-questions](https://discord.gg/fwbcrQ3dHR) for user help
+
   - [#contributors](https://discord.gg/6g6ASPA) for contributing help
+
 - [Reddit's Docusaurus community](https://www.reddit.com/r/docusaurus/)
 
 ## Feature requests {#feature-requests}

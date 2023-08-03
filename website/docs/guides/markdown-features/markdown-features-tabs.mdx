@@ -16,6 +16,7 @@ import styles from './markdown-features-tabs-styles.module.css';
 Docusaurus provides the `<Tabs>` component that you can use in Markdown thanks to [MDX](./markdown-features-react.mdx):
 
 <!-- prettier-ignore-start -->
+
 ```jsx
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -32,6 +33,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 ```
+
 <!-- prettier-ignore-end -->
 
 ```mdx-code-block
@@ -44,7 +46,7 @@ import TabItem from '@theme/TabItem';
 </BrowserWindow>
 ```
 
----
+***
 
 It is also possible to provide `values` and `defaultValue` props to `Tabs`:
 
@@ -81,28 +83,7 @@ It is also possible to provide `values` and `defaultValue` props to `Tabs`:
 <details>
   <summary><code>Tabs</code> props take precedence over the <code>TabItem</code> props:</summary>
 
-```jsx
-<Tabs
-  defaultValue="apple"
-  values={[
-    {label: 'Apple 1', value: 'apple'},
-    {label: 'Orange 1', value: 'orange'},
-    {label: 'Banana 1', value: 'banana'},
-  ]}>
-  <TabItem value="apple" label="Apple 2">
-    This is an apple 🍎
-  </TabItem>
-  <TabItem value="orange" label="Orange 2">
-    This is an orange 🍊
-  </TabItem>
-  <TabItem value="banana" label="Banana 2" default>
-    This is a banana 🍌
-  </TabItem>
-</Tabs>
-```
-
-```mdx-code-block
-<BrowserWindow>
+  ```jsx
   <Tabs
     defaultValue="apple"
     values={[
@@ -110,21 +91,39 @@ It is also possible to provide `values` and `defaultValue` props to `Tabs`:
       {label: 'Orange 1', value: 'orange'},
       {label: 'Banana 1', value: 'banana'},
     ]}>
-    <TabItem value="apple" label="Apple 2">This is an apple 🍎</TabItem>
-    <TabItem value="orange" label="Orange 2">This is an orange 🍊</TabItem>
-    <TabItem value="banana" label="Banana 2" default>This is a banana 🍌</TabItem>
+    <TabItem value="apple" label="Apple 2">
+      This is an apple 🍎
+    </TabItem>
+    <TabItem value="orange" label="Orange 2">
+      This is an orange 🍊
+    </TabItem>
+    <TabItem value="banana" label="Banana 2" default>
+      This is a banana 🍌
+    </TabItem>
   </Tabs>
-</BrowserWindow>
-```
+  ```
 
+  ```mdx-code-block
+  <BrowserWindow>
+    <Tabs
+      defaultValue="apple"
+      values={[
+        {label: 'Apple 1', value: 'apple'},
+        {label: 'Orange 1', value: 'orange'},
+        {label: 'Banana 1', value: 'banana'},
+      ]}>
+      <TabItem value="apple" label="Apple 2">This is an apple 🍎</TabItem>
+      <TabItem value="orange" label="Orange 2">This is an orange 🍊</TabItem>
+      <TabItem value="banana" label="Banana 2" default>This is a banana 🍌</TabItem>
+    </Tabs>
+  </BrowserWindow>
+  ```
 </details>
 
 :::tip
-
 By default, all tabs are rendered eagerly during the build process, and search engines can index hidden tabs.
 
 It is possible to only render the default tab with `<Tabs lazy />`.
-
 :::
 
 ## Displaying a default tab {#displaying-a-default-tab}
@@ -191,7 +190,7 @@ For all tab groups that have the same `groupId`, the possible values do not need
 </BrowserWindow>
 ```
 
----
+***
 
 Tab choices with different group IDs will not interfere with each other:
 
@@ -251,6 +250,7 @@ You might want to customize the appearance of a certain set of tabs. You can pas
 You can also customize each tab heading independently by using the `attributes` field. The extra props can be passed to the headings either through the `values` prop in `Tabs`, or props of each `TabItem`—in the same way as you declare `label`.
 
 <!-- prettier-ignore-start -->
+
 ```jsx title="some-doc.mdx"
 import styles from './styles.module.css';
 
@@ -266,6 +266,7 @@ import styles from './styles.module.css';
   </TabItem>
 </Tabs>
 ```
+
 <!-- prettier-ignore-end -->
 
 ```css title="styles.module.css"
@@ -308,7 +309,6 @@ import styles from './styles.module.css';
 ```
 
 :::tip
-
 `className` would be merged with other default class names. You may also use a custom `data-value` field (`{'data-value': 'apple'}`) paired with CSS attribute selectors:
 
 ```css title="styles.module.css"
@@ -316,7 +316,6 @@ li[role='tab'][data-value='apple'] {
   color: red;
 }
 ```
-
 :::
 
 ## Query string {#query-string}
@@ -349,7 +348,6 @@ Use the `queryString` prop to enable this feature and define the search param na
 As soon as a tab is clicked, a search parameter is added at the end of the url: `?current-os=android` or `?current-os=ios`.
 
 :::tip
-
 `queryString` can be used together with `groupId`.
 
 For convenience, when the `queryString` prop is `true`, the `groupId` value will be used as a fallback.
@@ -376,5 +374,4 @@ For convenience, when the `queryString` prop is `true`, the `groupId` value will
 ```
 
 When the page loads, the tab query string choice will be restored in priority over the `groupId` choice (using `localStorage`).
-
 :::

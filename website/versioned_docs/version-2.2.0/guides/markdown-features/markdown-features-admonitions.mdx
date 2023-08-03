@@ -88,6 +88,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 If you use [Prettier](https://prettier.io) to format your Markdown files, Prettier might auto-format your code to invalid admonition syntax. To avoid this problem, add empty lines around the starting and ending directives. This is also why the examples we show here all have empty lines around the content.
 
 <!-- prettier-ignore -->
+
 ```md
 <!-- Prettier doesn't change this -->
 :::note
@@ -251,6 +252,7 @@ module.exports = {
 The plugin accepts two options:
 
 - `tag`: The tag that encloses the admonition. Defaults to `:::`.
+
 - `keywords`: An array of keywords that can be used as the type for the admonition. Note that if you override this, the default values will not be applied.
 
 The `keyword` will be passed as the `type` prop of the `Admonition` component. If you register more types than the default, you are also responsible for providing their implementation—including the container's style, icon, default title text, etc. You would usually need to [eject](../../swizzling.md#ejecting) the `@theme/Admonition` component, so you could re-use the same infrastructure as the other types.

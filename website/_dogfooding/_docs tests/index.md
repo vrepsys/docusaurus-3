@@ -11,5 +11,7 @@ sidebar_label: Docs tests # TODO why is this required?
 This Docusaurus docs plugin instance is meant to test fancy edge-cases that regular unit tests don't really cover.
 
 - [/tests/docs](/tests/docs)
+
 - [/tests/blog](/tests/blog)
+
 - [/tests/pages](/tests/pages)

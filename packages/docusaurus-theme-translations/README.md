@@ -7,6 +7,7 @@ This package includes default translations for labels (like the pagination "Next
 Please help us provide exhaustive translations:
 
 - add new translation by running `yarn workspace @docusaurus/theme-translations update %new_lang_code%`, then edit generated JSON files
+
 - double-check existent `language.json` file for bad or missing translations
 
 ## For maintainers:

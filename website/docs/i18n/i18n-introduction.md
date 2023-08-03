@@ -18,16 +18,27 @@ For more context, you can read the initial [RFC](https://github.com/facebook/doc
 The goals of the Docusaurus i18n system are:
 
 - **Simple**: just put the translated files in the correct filesystem location
+
 - **Flexible translation workflows**: use Git (monorepo, forks, or submodules), SaaS software, FTP
+
 - **Flexible deployment options**: single, multiple domains, or hybrid
+
 - **Modular**: allow plugin authors to provide i18n support
+
 - **Low-overhead runtime**: documentation is mostly static and does not require heavy JS libraries or polyfills
+
 - **Scalable build-times**: allow building and deploying localized sites independently
+
 - **Localize assets**: an image of your site might contain text that should be translated
+
 - **No coupling**: not forced to use any SaaS, yet integrations are possible
+
 - **Easy to use with [Crowdin](https://crowdin.com/)**: a lot of Docusaurus v1 sites use Crowdin and should be able to migrate to v2
+
 - **Good SEO defaults**: we set useful SEO headers like [`hreflang`](https://developers.google.com/search/docs/advanced/crawling/localized-versions) for you
+
 - **RTL support**: locales reading right-to-left (Arabic, Hebrew, etc.) are supported and easy to implement
+
 - **Default translations**: classic theme labels are translated for you in [many languages](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-translations/locales)
 
 ### i18n non-goals {#i18n-non-goals}
@@ -35,7 +46,9 @@ The goals of the Docusaurus i18n system are:
 We don't provide support for:
 
 - **Automatic locale detection**: opinionated, and best done on the [server (your hosting provider)](../deployment.mdx)
+
 - **Translation SaaS software**: you are responsible to understand the external tools of your choice
+
 - **Translation of slugs**: technically complicated, little SEO value
 
 ## Translation workflow {#translation-workflow}
@@ -45,7 +58,9 @@ We don't provide support for:
 Overview of the workflow to create a translated Docusaurus website:
 
 1. **Configure**: declare the default locale and alternative locales in [`docusaurus.config.js`](../api/docusaurus.config.js.md#i18n)
+
 2. **Translate**: put the translation files at the correct filesystem location
+
 3. **Deploy**: build and deploy your site using a single or multi-domain strategy
 
 ### Translation files {#translation-files}
@@ -63,7 +78,9 @@ Markdown and MDX documents are translated as a whole, to fully preserve the tran
 JSON is used to translate:
 
 - Your React code: standalone React pages in `src/pages`, or other components
+
 - Layout labels provided through `themeConfig`: navbar, footer
+
 - Layout labels provided through plugin options: docs sidebar category labels, blog sidebar title...
 
 The JSON format used is called **Chrome i18n**:
@@ -84,6 +101,7 @@ The JSON format used is called **Chrome i18n**:
 The choice was made for 2 reasons:
 
 - **Description attribute**: to help translators with additional context
+
 - **Widely supported**: [Chrome extensions](https://developer.chrome.com/docs/extensions/mv2/i18n-messages/), [Crowdin](https://support.crowdin.com/file-formats/chrome-json/), [Transifex](https://docs.transifex.com/formats/chrome-json), [Phrase](https://help.phrase.com/help/chrome-json-messages), [Applanga](https://www.applanga.com/docs/formats/chrome_i18n_json), etc.
 
 #### Data files {#data-files}
@@ -101,9 +119,7 @@ website/i18n/[locale]/[pluginName]/...
 ```
 
 :::note
-
 For multi-instance plugins, the path is `website/i18n/[locale]/[pluginName]-[pluginId]/...`.
-
 :::
 
 Translating a very simple Docusaurus site in French would lead to the following tree:
@@ -132,6 +148,9 @@ The JSON files are initialized with the [`docusaurus write-translations`](../cli
 Each content plugin or theme is different, and **defines its own translation files location**:
 
 - [Docs i18n](../api/plugins/plugin-content-docs.md#i18n)
+
 - [Blog i18n](../api/plugins/plugin-content-blog.md#i18n)
+
 - [Pages i18n](../api/plugins/plugin-content-pages.md#i18n)
+
 - [Themes i18n](../api/themes/theme-configuration.md#i18n)

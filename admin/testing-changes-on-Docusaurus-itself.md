@@ -41,4 +41,4 @@ Feel free to contribute debug instructions for other IDEs
 
 ### Observing changes
 
-Note that since most packages are built with TypeScript, you would need to compile them every time to see the effect. Alternatively, you can run `yarn watch` inside the package directory to start an incremental build. Now that the server is running, you can make changes to the core Docusaurus code and docs to see the effects on the Docusaurus site. LiveReload will reflect changes to the local site in your browser, usually running at http://localhost:3000.
+Note that since most packages are built with TypeScript, you would need to compile them every time to see the effect. Alternatively, you can run `yarn watch` inside the package directory to start an incremental build. Now that the server is running, you can make changes to the core Docusaurus code and docs to see the effects on the Docusaurus site. LiveReload will reflect changes to the local site in your browser, usually running at [http://localhost:3000](http://localhost:3000).

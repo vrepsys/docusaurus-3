@@ -50,7 +50,6 @@ module.exports = {
 ```
 
 :::tip
-
 Docusaurus supports [**module shorthands**](./using-plugins.md#module-shorthands), allowing you to simplify the above configuration as:
 
 ```js title="docusaurus.config.js"
@@ -60,7 +59,6 @@ module.exports = {
   themes: ['classic'],
 };
 ```
-
 :::
 
 They can also be loaded from local directories:
@@ -116,9 +114,7 @@ module.exports = {
 ```
 
 :::tip
-
 The `presets: [['classic', {...}]]` shorthand works as well.
-
 :::
 
 For further help configuring themes, plugins, and presets, see [Using Plugins](./using-plugins.md).
@@ -164,9 +160,7 @@ const Hello = () => {
 ```
 
 :::tip
-
 If you just want to use those fields on the client side, you could create your own JS files and import them as ES6 modules, there is no need to put them in `docusaurus.config.js`.
-
 :::
 
 ## Customizing Babel Configuration {#customizing-babel-configuration}

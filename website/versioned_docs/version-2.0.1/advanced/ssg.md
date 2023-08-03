@@ -8,14 +8,13 @@ description: Docusaurus statically renders your React code into HTML, allowing f
 In [architecture](architecture.md), we mentioned that the theme is run in Webpack. But beware: that doesn't mean it always has access to browser globals! The theme is built twice:
 
 - During **server-side rendering**, the theme is compiled in a sandbox called [React DOM Server](https://reactjs.org/docs/react-dom-server.html). You can see this as a "headless browser", where there is no `window` or `document`, only React. SSR produces static HTML pages.
+
 - During **client-side rendering**, the theme is compiled to JavaScript that gets eventually executed in the browser, so it has access to browser variables.
 
 :::info SSR or SSG?
-
-_Server-side rendering_ and _static site generation_ can be different concepts, but we use them interchangeably.
+*Server-side rendering* and *static site generation* can be different concepts, but we use them interchangeably.
 
 Strictly speaking, Docusaurus is a static site generator, because there's no server-side runtime—we statically render to HTML files that are deployed on a CDN, instead of dynamically pre-rendering on each request. This differs from the working model of [Next.js](https://nextjs.org/).
-
 :::
 
 Therefore, while you probably know not to access Node globals like `process` ([or can we?](#node-env)) or the `'fs'` module, you can't freely access browser globals either.
@@ -109,26 +108,26 @@ These HTML files are the first to arrive at the user's browser screen when a URL
 
 In CSR-only apps, all DOM elements are generated on client side with React, and the HTML file only ever contains one root element for React to mount DOM to; in SSR, React is already facing a fully built HTML page, and it only needs to correlate the DOM elements with the virtual DOM in its model. This step is called "hydration". After React has hydrated the static markup, the app starts to work as any normal React app.
 
-Note that Docusaurus is ultimately a single-page application, so static site generation is only an optimization (_progressive enhancement_, as it's called), but our functionality does not fully depend on those HTML files. This is contrary to site generators like [Jekyll](https://jekyllrb.com/) and [Docusaurus v1](https://v1.docusaurus.io/), where all files are statically transformed to markup, and interactiveness is added through external JavaScript linked with `<script>` tags. If you inspect the build output, you will still see JS assets under `build/assets/js`, which are, really, the core of Docusaurus.
+Note that Docusaurus is ultimately a single-page application, so static site generation is only an optimization (*progressive enhancement*, as it's called), but our functionality does not fully depend on those HTML files. This is contrary to site generators like [Jekyll](https://jekyllrb.com/) and [Docusaurus v1](https://v1.docusaurus.io/), where all files are statically transformed to markup, and interactiveness is added through external JavaScript linked with `<script>` tags. If you inspect the build output, you will still see JS assets under `build/assets/js`, which are, really, the core of Docusaurus.
 
 ## Escape hatches {#escape-hatches}
 
 If you want to render any dynamic content on your screen that relies on the browser API to be functional at all, for example:
 
 - Our [live codeblock](../guides/markdown-features/markdown-features-code-blocks.mdx#interactive-code-editor), which runs in the browser's JS runtime
+
 - Our [themed image](../guides/markdown-features/markdown-features-assets.mdx#themed-images) that detects the user's color scheme to display different images
+
 - The JSON viewer of our debug panel which uses the `window` global for styling
 
 You may need to escape from SSR since static HTML can't display anything useful without knowing the client state.
 
 :::caution
-
 It is important for the first client-side render to produce the exact same DOM structure as server-side rendering, otherwise, React will correlate virtual DOM with the wrong DOM elements.
 
 Therefore, the naïve attempt of `if (typeof window !== 'undefined) {/* render something */}` won't work appropriately as a browser vs. server detection, because the first client render would instantly render different markup from the server-generated one.
 
 You can read more about this pitfall in [The Perils of Rehydration](https://www.joshwcomeau.com/react/the-perils-of-rehydration/).
-
 :::
 
 We provide several more reliable ways to escape SSR.
@@ -155,7 +154,7 @@ function MyComponent(props) {
 }
 ```
 
-It's important to realize that the children of `<BrowserOnly>` is not a JSX element, but a function that _returns_ an element. This is a design decision. Consider this code:
+It's important to realize that the children of `<BrowserOnly>` is not a JSX element, but a function that *returns* an element. This is a design decision. Consider this code:
 
 ```jsx
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -190,7 +189,7 @@ function MyComponent() {
 
 ### `useEffect` {#useeffect}
 
-Lastly, you can put your logic in `useEffect()` to delay its execution until after first CSR. This is most appropriate if you are only performing side-effects but don't _get_ data from the client state.
+Lastly, you can put your logic in `useEffect()` to delay its execution until after first CSR. This is most appropriate if you are only performing side-effects but don't *get* data from the client state.
 
 ```jsx
 function MyComponent() {

@@ -32,9 +32,7 @@ Meanwhile, the default doc site functionalities provided by Docusaurus 1 are now
 ```
 
 :::tip
-
 Please use the most recent Docusaurus 2 version, which you can check out [here](https://www.npmjs.com/package/@docusaurus/core) (using the `latest` tag).
-
 :::
 
 #### CLI commands {#cli-commands}
@@ -43,7 +41,7 @@ Meanwhile, CLI commands are renamed to `docusaurus <command>` (instead of `docus
 
 The `"scripts"` section of your `package.json` should be updated as follows:
 
-```json {3-6} title="package.json"
+```json title="package.json"
 {
   "scripts": {
     "start": "docusaurus start",
@@ -171,7 +169,7 @@ No actions needed, these configuration fields were not modified.
 
 Deprecated. We wrote a custom CSS framework for Docusaurus 2 called [Infima](https://infima.dev/) which uses CSS variables for theming. The docs are not quite ready yet and we will update here when it is. To overwrite Infima's CSS variables, create your own CSS file (e.g. `./src/css/custom.css`) and import it globally by passing it as an option to `@docusaurus/preset-classic`:
 
-```js {7-9} title="docusaurus.config.js"
+```js title="docusaurus.config.js"
 module.exports = {
   // ...
   presets: [
@@ -211,7 +209,7 @@ Alteratively, use the following tool to generate the different shades for your w
 
 import ColorGenerator from '@site/src/components/ColorGenerator';
 
-<ColorGenerator/>
+<ColorGenerator />
 
 #### `footerIcon`, `copyright`, `ogImage`, `twitterImage`, `docsSideNavCollapsible` {#footericon-copyright-ogimage-twitterimage-docssidenavcollapsible}
 
@@ -251,7 +249,7 @@ headerLinks: [
 
 Now, these two fields are both handled by the theme:
 
-```js {6-19} title="docusaurus.config.js"
+```js title="docusaurus.config.js"
 module.exports = {
   // ...
   themeConfig: {
@@ -279,7 +277,7 @@ module.exports = {
 
 #### `algolia` {#algolia}
 
-```js {4-8} title="docusaurus.config.js"
+```js title="docusaurus.config.js"
 module.exports = {
   // ...
   themeConfig: {
@@ -294,18 +292,16 @@ module.exports = {
 ```
 
 :::caution
-
 Your Algolia DocSearch v1 config (found [here](https://github.com/algolia/docsearch-configs/blob/master/configs)) should be updated for Docusaurus v2 ([example](https://github.com/algolia/docsearch-configs/tree/master/configs/docusaurus-2.json)).
 
 You can contact the DocSearch team (@shortcuts, @s-pace) for support. They can update it for you and trigger a recrawl of your site to restore the search (otherwise you will have to wait up to 24h for the next scheduled crawl)
-
 :::
 
 #### `blogSidebarCount` {#blogsidebarcount}
 
 Deprecated. Pass it as a blog option to `@docusaurus/preset-classic` instead:
 
-```js {8} title="docusaurus.config.js"
+```js title="docusaurus.config.js"
 module.exports = {
   // ...
   presets: [
@@ -332,7 +328,7 @@ Deprecated. Create a `CNAME` file in your `static` folder instead with your cust
 
 Deprecated. Pass it as an option to `@docusaurus/preset-classic` docs instead:
 
-```js {8-20} title="docusaurus.config.js"
+```js title="docusaurus.config.js"
 module.exports = {
   // ...
   presets: [
@@ -408,29 +404,53 @@ module.exports = {
 The following fields are all deprecated, you may remove from your configuration file.
 
 - `blogSidebarTitle`
+
 - `cleanUrl` - Clean URL is used by default now.
+
 - `defaultVersionShown` - Versioning is not ported yet. You'd be unable to migration to Docusaurus 2 if you are using versioning. Stay tuned.
+
 - `disableHeaderTitle`
+
 - `disableTitleTagline`
+
 - `docsSideNavCollapsible` is available at `docsPluginOptions.sidebarCollapsible`, and this is turned on by default now.
+
 - `facebookAppId`
+
 - `facebookComments`
+
 - `facebookPixelId`
+
 - `fonts`
+
 - `highlight` - We now use [Prism](https://prismjs.com/) instead of [highlight.js](https://highlightjs.org/).
+
 - `markdownOptions` - We use MDX in v2 instead of Remarkable. Your Markdown options have to be converted to Remark/Rehype plugins.
+
 - `markdownPlugins` - We use MDX in v2 instead of Remarkable. Your Markdown plugins have to be converted to Remark/Rehype plugins.
+
 - `manifest`
+
 - `onPageNav` - This is turned on by default now.
+
 - `separateCss` - It can imported in the same manner as `custom.css` mentioned above.
+
 - `scrollToTop`
+
 - `scrollToTopOptions`
+
 - `translationRecruitingLink`
+
 - `twitter`
+
 - `twitterUsername`
+
 - `useEnglishUrl`
+
 - `users`
+
 - `usePrism` - We now use [Prism](https://prismjs.com/) instead of [highlight.js](https://highlightjs.org/)
+
 - `wrapPagesHTML`
 
 We intend to implement many of the deprecated config fields as plugins in future. Help will be appreciated!
@@ -442,11 +462,13 @@ In v1, all pages were available with or without the `.html` extension.
 For example, these 2 pages exist:
 
 - [https://v1.docusaurus.io/docs/en/installation](https://v1.docusaurus.io/docs/en/installation)
+
 - [https://v1.docusaurus.io/docs/en/installation.html](https://v1.docusaurus.io/docs/en/installation.html)
 
 If [`cleanUrl`](https://v1.docusaurus.io/docs/en/site-config#cleanurl-boolean) was:
 
 - `true`: links would target `/installation`
+
 - `false`: links would target `/installation.html`
 
 In v2, by default, the canonical page is `/installation`, and not `/installation.html`.
@@ -526,7 +548,7 @@ In Docusaurus v2, get the `siteConfig` object from `useDocusaurusContext` instea
 
 In v2, you have to apply the theme layout around each page. The Layout component takes metadata props.
 
-`CompLibrary` is deprecated in v2, so you have to write your own React component or use Infima styles (Docs will be available soon, sorry about that! In the meanwhile, inspect the V2 website or view https://infima.dev/ to see what styles are available).
+`CompLibrary` is deprecated in v2, so you have to write your own React component or use Infima styles (Docs will be available soon, sorry about that! In the meanwhile, inspect the V2 website or view [https://infima.dev/](https://infima.dev/) to see what styles are available).
 
 You can migrate CommonJS to ES6 imports/exports.
 
@@ -567,11 +589,12 @@ export default MyPage;
 The following code could be helpful for migration of various pages:
 
 - Index page - [Flux](https://github.com/facebook/flux/blob/master/website/src/pages/index.js/) (recommended), [Docusaurus 2](https://github.com/facebook/docusaurus/blob/main/website/src/pages/index.js/), [Hermes](https://github.com/facebook/hermes/blob/main/website/src/pages/index.js/)
+
 - Help/Support page - [Docusaurus 2](https://github.com/facebook/docusaurus/blob/main/website/src/pages/help.js/), [Flux](http://facebook.github.io/flux/support)
 
 ## Content {#content}
 
-### Replace AUTOGENERATED_TABLE_OF_CONTENTS {#replace-autogenerated_table_of_contents}
+### Replace AUTOGENERATED\_TABLE\_OF\_CONTENTS {#replace-autogenerated_table_of_contents}
 
 This feature is replaced by [inline table of content](../guides/markdown-features/markdown-features-toc.mdx#inline-table-of-contents)
 
@@ -589,7 +612,7 @@ Refer to the [multi-language support code blocks](../guides/markdown-features/ma
 
 ### Front matter {#front-matter}
 
-The Docusaurus front matter fields for the blog have been changed from camelCase to snake_case to be consistent with the docs.
+The Docusaurus front matter fields for the blog have been changed from camelCase to snake\_case to be consistent with the docs.
 
 The fields `authorFBID` and `authorTwitter` have been deprecated. They are only used for generating the profile image of the author which can be done via the `authors` field.
 

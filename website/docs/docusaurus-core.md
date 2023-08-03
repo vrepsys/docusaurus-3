@@ -36,21 +36,15 @@ import ErrorBoundaryTestButton from "@site/src/components/ErrorBoundaryTestButto
 ```
 
 :::tip
-
-To see it in action, click here: <ErrorBoundaryTestButton/>
-
+To see it in action, click here: <ErrorBoundaryTestButton />
 :::
 
 :::info
-
 Docusaurus uses this component to catch errors within the theme's layout, and also within the entire app.
-
 :::
 
 :::note
-
 This component doesn't catch build-time errors and only protects against client-side render errors that can happen when using stateful React components.
-
 :::
 
 #### Props {#errorboundary-props}
@@ -58,9 +52,7 @@ This component doesn't catch build-time errors and only protects against client-
 - `fallback`: an optional render callback returning a JSX element. It will receive an object with 2 attributes: `error`, the error that was caught, and `tryAgain`, a function (`() => void`) callback to reset the error in the component and try rendering it again. If not present, `@theme/Error` will be rendered instead. `@theme/Error` is used for the error boundaries wrapping the site, above the layout.
 
 :::caution
-
 The `fallback` prop is a callback, and **not a React functional component**. You can't use React hooks inside this callback.
-
 :::
 
 ### `<Head/>` {#head}
@@ -152,9 +144,7 @@ The target location to navigate to. Example: `/docs/introduction`.
 ```
 
 :::tip
-
 Prefer this component to vanilla `<a>` tags because Docusaurus does a lot of optimizations (e.g. broken path detection, prefetching, applying base URL...) if you use `<Link>`.
-
 :::
 
 ### `<Redirect/>` {#redirect}
@@ -175,9 +165,7 @@ const Home = () => {
 ```
 
 :::note
-
 `@docusaurus/router` implements [React Router](https://reacttraining.com/react-router/web/guides/quick-start) and supports its features.
-
 :::
 
 ### `<BrowserOnly/>` {#browseronly}
@@ -185,14 +173,13 @@ const Home = () => {
 The `<BrowserOnly>` component permits to render React components only in the browser after the React app has hydrated.
 
 :::tip
-
 Use it for integrating with code that can't run in Node.js, because the `window` or `document` objects are being accessed.
-
 :::
 
 #### Props {#browseronly-props}
 
 - `children`: render function prop returning browser-only JSX. Will not be executed in Node.js
+
 - `fallback` (optional): JSX to render on the server (Node.js) and until React hydration completes.
 
 #### Example with code {#browseronly-example-code}
@@ -243,6 +230,7 @@ The placeholders will be replaced with the provided dynamic values and JSX eleme
 #### Props {#interpolate-props}
 
 - `children`: text containing interpolation placeholders like `{placeholderName}`
+
 - `values`: object containing interpolation placeholder values
 
 ```jsx
@@ -276,18 +264,19 @@ When [localizing your site](./i18n/i18n-introduction.md), the `<Translate/>` com
 The translation strings will statically extracted from your code with the [`docusaurus write-translations`](./cli.md#docusaurus-write-translations-sitedir) CLI and a `code.json` translation file will be created in `website/i18n/[locale]`.
 
 :::note
-
 The `<Translate/>` props **must be hardcoded strings**.
 
 Apart from the `values` prop used for interpolation, it is **not possible to use variables**, or the static extraction wouldn't work.
-
 :::
 
 #### Props {#translate-props}
 
 - `children`: untranslated string in the default site locale (can contain [interpolation placeholders](#interpolate))
+
 - `id`: optional value to be used as the key in JSON translation files
+
 - `description`: optional text to help the translator
+
 - `values`: optional object containing interpolation placeholder values
 
 #### Example {#example}
@@ -325,13 +314,11 @@ export default function Home() {
 ```
 
 :::note
-
 You can even omit the children prop and specify a translation string in your `code.json` file manually after running the `docusaurus write-translations` CLI command.
 
 ```jsx
 <Translate id="homepage.title" />
 ```
-
 :::
 
 ## Hooks {#hooks}
@@ -396,9 +383,7 @@ const MyComponent = () => {
 ```
 
 :::note
-
 The `siteConfig` object only contains **serializable values** (values that are preserved after `JSON.stringify()`). Functions, regexes, etc. would be lost on the client side.
-
 :::
 
 ### `useIsBrowser` {#useIsBrowser}
@@ -406,11 +391,9 @@ The `siteConfig` object only contains **serializable values** (values that are p
 Returns `true` when the React app has successfully hydrated in the browser.
 
 :::caution
-
 Use this hook instead of `typeof windows !== 'undefined'` in React rendering logic.
 
 The first client-side render output (in the browser) **must be exactly the same** as the server-side render output (Node.js). Not following this rule can lead to unexpected hydration behaviors, as described in [The Perils of Rehydration](https://www.joshwcomeau.com/react/the-perils-of-rehydration/).
-
 :::
 
 Usage example:
@@ -432,14 +415,13 @@ const MyComponent = () => {
 React hook to prepend your site `baseUrl` to a string.
 
 :::caution
-
 **Don't use it for regular links!**
 
 The `/baseUrl/` prefix is automatically added to all **absolute paths** by default:
 
 - Markdown: `[link](/my/path)` will link to `/baseUrl/my/path`
-- React: `<Link to="/my/path/">link</Link>` will link to `/baseUrl/my/path`
 
+- React: `<Link to="/my/path/">link</Link>` will link to `/baseUrl/my/path`
 :::
 
 #### Options {#options}
@@ -466,7 +448,6 @@ const SomeImage = () => {
 ```
 
 :::tip
-
 In most cases, you don't need `useBaseUrl`.
 
 Prefer a `require()` call for [assets](./guides/markdown-features/markdown-features-assets.mdx):
@@ -474,7 +455,6 @@ Prefer a `require()` call for [assets](./guides/markdown-features/markdown-featu
 ```jsx
 <img src={require('@site/static/img/myImage.png').default} />
 ```
-
 :::
 
 ### `useBaseUrlUtils` {#useBaseUrlUtils}
@@ -504,9 +484,7 @@ React hook to access Docusaurus global data created by all the plugins.
 Global data is namespaced by plugin name then by plugin ID.
 
 :::info
-
 Plugin ID is only useful when a plugin is used multiple times on the same site. Each plugin instance is able to create its own global data.
-
 :::
 
 ```ts
@@ -536,9 +514,7 @@ const MyComponent = () => {
 ```
 
 :::tip
-
 Inspect your site's global data at `./docusaurus/globalData.json`
-
 :::
 
 ### `usePluginData` {#usePluginData}
@@ -632,13 +608,13 @@ const message = interpolate('Welcome {firstName}', {firstName: 'Sébastien'});
 The imperative counterpart of the [`<Translate>`](#translate) component. Also supporting [placeholders interpolation](#interpolate).
 
 :::tip
-
 Use the imperative API for the **rare cases** where a **component cannot be used**, such as:
 
 - the page `title` metadata
-- the `placeholder` props of form inputs
-- the `aria-label` props for accessibility
 
+- the `placeholder` props of form inputs
+
+- the `aria-label` props for accessibility
 :::
 
 #### Signature {#signature-1}
@@ -692,9 +668,7 @@ export default function Home() {
 A module that exposes a few boolean variables to check the current rendering environment.
 
 :::caution
-
 For React rendering logic, use [`useIsBrowser()`](#useIsBrowser) or [`<BrowserOnly>`](#browseronly) instead.
-
 :::
 
 Example:
@@ -707,12 +681,12 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 ```
 
-| Field | Description |
-| --- | --- |
-| `ExecutionEnvironment.canUseDOM` | `true` if on client/browser, `false` on Node.js/prerendering. |
-| `ExecutionEnvironment.canUseEventListeners` | `true` if on client and has `window.addEventListener`. |
-| `ExecutionEnvironment.canUseIntersectionObserver` | `true` if on client and has `IntersectionObserver`. |
-| `ExecutionEnvironment.canUseViewport` | `true` if on client and has `window.screen`. |
+| Field                                             | Description                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------- |
+| `ExecutionEnvironment.canUseDOM`                  | `true` if on client/browser, `false` on Node.js/prerendering. |
+| `ExecutionEnvironment.canUseEventListeners`       | `true` if on client and has `window.addEventListener`.        |
+| `ExecutionEnvironment.canUseIntersectionObserver` | `true` if on client and has `IntersectionObserver`.           |
+| `ExecutionEnvironment.canUseViewport`             | `true` if on client and has `window.screen`.                  |
 
 ### `constants` {#constants}
 

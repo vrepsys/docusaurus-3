@@ -12,17 +12,13 @@ Docusaurus Plugin to generate **client-side redirects**.
 This plugin will write additional HTML pages to your static site that redirect the user to your existing Docusaurus pages with JavaScript.
 
 :::caution production only
-
 This plugin is always inactive in development and **only active in production** because it works on the build output.
-
 :::
 
 :::caution
-
 It is better to use server-side redirects whenever possible.
 
 Before using this plugin, you should look if your hosting provider doesn't offer this feature.
-
 :::
 
 ## Installation {#installation}
@@ -39,11 +35,11 @@ Accepted fields:
 <APITable>
 ```
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `fromExtensions` | `string[]` | `[]` | The extensions to be removed from the route after redirecting. |
-| `toExtensions` | `string[]` | `[]` | The extensions to be appended to the route after redirecting. |
-| `redirects` | <code><a href="#RedirectRule">RedirectRule</a>[]</code> | `[]` | The list of redirect rules. |
+| Option            | Type                                                            | Default     | Description                                                                                                                                            |
+| ----------------- | --------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fromExtensions`  | `string[]`                                                      | `[]`        | The extensions to be removed from the route after redirecting.                                                                                         |
+| `toExtensions`    | `string[]`                                                      | `[]`        | The extensions to be appended to the route after redirecting.                                                                                          |
+| `redirects`       | <code><a href="#RedirectRule">RedirectRule</a>\[]</code>        | `[]`        | The list of redirect rules.                                                                                                                            |
 | `createRedirects` | <code><a href="#CreateRedirectsFn">CreateRedirectsFn</a></code> | `undefined` | A callback to create a redirect rule. Docusaurus query this callback against every path it has created, and use its return value to output more paths. |
 
 ```mdx-code-block
@@ -51,9 +47,7 @@ Accepted fields:
 ```
 
 :::note
-
 This plugin will also read the [`siteConfig.onDuplicateRoutes`](../docusaurus.config.js.md#onDuplicateRoutes) config to adjust its logging level when multiple files will be emitted to the same location.
-
 :::
 
 ### Types {#types}
@@ -68,11 +62,9 @@ type RedirectRule = {
 ```
 
 :::note
-
-The idea of "from" and "to" is central in this plugin. "From" means a path that you want to _create_, i.e. an extra HTML file that will be written; "to" means a path to want to redirect _to_, usually a route that Docusaurus already knows about.
+The idea of "from" and "to" is central in this plugin. "From" means a path that you want to *create*, i.e. an extra HTML file that will be written; "to" means a path to want to redirect *to*, usually a route that Docusaurus already knows about.
 
 This is why you can have multiple "from" for the same "to": we will create multiple HTML files that all redirect to the same destination. On the other hand, one "from" can never have more than one "to": the written HTML file needs to have a determinate destination.
-
 :::
 
 #### `CreateRedirectsFn` {#CreateRedirectsFn}

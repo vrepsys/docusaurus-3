@@ -15,7 +15,6 @@ The debug plugin will display useful debug information at [http://localhost:3000
 It is mostly useful for plugin authors, that will be able to inspect more easily the content of the `.docusaurus` folder (like the creates routes), but also be able to inspect data structures that are never written to disk, like the plugin data loaded through the `contentLoaded` lifecycle.
 
 :::info
-
 If you use the plugin via the classic preset, the preset will **enable the plugin in development and disable it in production** by default (`debug: undefined`) to avoid exposing potentially sensitive information. You can use `debug: true` to always enable it or `debug: false` to always disable it.
 
 If you use a standalone plugin, you may need to achieve the same effect by checking the environment:
@@ -28,15 +27,12 @@ module.exports = {
   ].filter(Boolean),
 };
 ```
-
 :::
 
 :::note
-
 If you report a bug, we will probably ask you to have this plugin turned on in the production, so that we can inspect your deployment config more easily.
 
 If you don't have any sensitive information, you can keep it on in production [like we do](/__docusaurus/debug).
-
 :::
 
 ## Installation {#installation}
@@ -46,11 +42,9 @@ npm install --save @docusaurus/plugin-debug
 ```
 
 :::tip
-
 If you use the preset `@docusaurus/preset-classic`, you don't need to install this plugin as a dependency.
 
 You can configure this plugin through the preset options.
-
 :::
 
 ## Configuration {#configuration}
@@ -62,9 +56,7 @@ This plugin currently has no options.
 You can configure this plugin through preset options or plugin options.
 
 :::tip
-
 Most Docusaurus users configure this plugin through the preset options.
-
 :::
 
 ```mdx-code-block

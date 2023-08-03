@@ -105,19 +105,15 @@ module.exports = config;
 ```
 
 :::tip
-
 Type annotations are very useful and help your IDE understand the type of config objects!
 
 The best IDEs (VS Code, WebStorm, IntelliJ...) will provide a nice auto-completion experience.
-
 :::
 
 :::info
-
 By default, the Docusaurus TypeScript config does not type-check JavaScript files.
 
 The `// @ts-check` comment ensures the config file is properly type-checked when running `npx tsc`.
-
 :::
 
 ## Swizzling TypeScript theme components {#swizzling-typescript-theme-components}

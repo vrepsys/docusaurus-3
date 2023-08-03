@@ -44,14 +44,15 @@ For more fine-grained control, you can also enable the plugin manually and confi
 ## Supported configs
 
 - Recommended: recommended rule set for most Docusaurus sites that should be extended from.
+
 - All: **all** rules enabled. This will change between minor versions, so you should not use this if you want to avoid unexpected breaking changes.
 
 ## Supported rules
 
-| Name | Description |  |
-| --- | --- | --- |
-| [`@docusaurus/no-untranslated-text`](./no-untranslated-text.md) | Enforce text labels in JSX to be wrapped by translate calls |  |
-| [`@docusaurus/string-literal-i18n-messages`](./string-literal-i18n-messages.md) | Enforce translate APIs to be called on plain text labels | ✅ |
+| Name                                                                            | Description                                                 |    |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------- | -- |
+| [`@docusaurus/no-untranslated-text`](./no-untranslated-text.md)                 | Enforce text labels in JSX to be wrapped by translate calls |    |
+| [`@docusaurus/string-literal-i18n-messages`](./string-literal-i18n-messages.md) | Enforce translate APIs to be called on plain text labels    | ✅ |
 
 ✅ = recommended
 

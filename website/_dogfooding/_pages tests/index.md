@@ -8,7 +8,7 @@ import PagePartial from "./_pagePartial.md"
 <PagePartial />
 ```
 
----
+***
 
 Now let's import `../README.md`:
 
@@ -21,15 +21,27 @@ import Readme from "../README.md"
 ### Other tests
 
 - [Code block tests](/tests/pages/code-block-tests)
+
 - [Link tests](/tests/pages/link-tests)
+
 - [Error boundary tests](/tests/pages/error-boundary-tests)
+
 - [Hydration tests](/tests/pages/hydration-tests)
+
 - [Asset linking tests](/tests/pages/markdown-tests)
+
 - [General Markdown tests](/tests/pages/markdownPageTests)
+
 - [TOC tests](/tests/pages/page-toc-tests)
+
 - [Diagram tests](/tests/pages/diagrams)
+
 - [Tabs tests](/tests/pages/tabs-tests)
+
 - [z-index tests](/tests/pages/z-index-tests)
+
 - [Head metadata tests](/tests/pages/head-metadata)
+
 - [Unlisted page](/tests/pages/unlisted)
+
 - [Analytics](/tests/pages/analytics)

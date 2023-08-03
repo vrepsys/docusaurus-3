@@ -32,7 +32,7 @@ The data that was loaded in `loadContent` will be consumed in `contentLoaded`. I
 
 ### `content` {#content}
 
-`contentLoaded` will be called _after_ `loadContent` is done. The return value of `loadContent()` will be passed to `contentLoaded` as `content`.
+`contentLoaded` will be called *after* `loadContent` is done. The return value of `loadContent()` will be passed to `contentLoaded` as `content`.
 
 ### `actions` {#actions}
 
@@ -114,9 +114,7 @@ This function permits one to create some global plugin data that can be read fro
 This data becomes accessible to your client-side/theme code through the [`useGlobalData`](../../docusaurus-core.md#useGlobalData) and [`usePluginData`](../../docusaurus-core.md#usePluginData) hooks.
 
 :::caution
-
 Global data is... global: its size affects the loading time of all pages of your site, so try to keep it small. Prefer `createData` and page-specific data whenever possible.
-
 :::
 
 For example, this plugin below creates a `/friends` page which displays `Your friends are: Yangshun, Sebastien`:
@@ -158,9 +156,7 @@ export default function friendsPlugin(context, options) {
 Modifies the internal webpack config. If the return value is a JavaScript object, it will be merged into the final config using [`webpack-merge`](https://github.com/survivejs/webpack-merge). If it is a function, it will be called and receive `config` as the first argument and an `isServer` flag as the second argument.
 
 :::caution
-
 The API of `configureWebpack` will be modified in the future to accept an object (`configureWebpack({config, isServer, utils, content})`)
-
 :::
 
 ### `config` {#config}
@@ -176,6 +172,7 @@ The API of `configureWebpack` will be modified in the future to accept an object
 `configureWebpack` also receives an util object:
 
 - `getStyleLoaders(isServer: boolean, cssOptions: {[key: string]: any}): Loader[]`
+
 - `getJSLoader(isServer: boolean, cacheOptions?: {}): Loader | null`
 
 You may use them to return your webpack configuration conditionally.

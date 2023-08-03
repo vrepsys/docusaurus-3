@@ -6,9 +6,11 @@ Happy contributing!
 
 ## Pre-flight checklist
 
-- [ ] I have read the [Contributing Guidelines on pull requests](https://github.com/facebook/docusaurus/blob/main/CONTRIBUTING.md#pull-requests).
-- [ ] **If this is a code change**: I have written unit tests and/or added dogfooding pages to fully verify the new behavior.
-- [ ] **If this is a new API or substantial change**: the PR has an accompanying issue (closes #0000) and the maintainers have approved on my working plan.
+- I have read the [Contributing Guidelines on pull requests](https://github.com/facebook/docusaurus/blob/main/CONTRIBUTING.md#pull-requests).
+
+- **If this is a code change**: I have written unit tests and/or added dogfooding pages to fully verify the new behavior.
+
+- **If this is a new API or substantial change**: the PR has an accompanying issue (closes #0000) and the maintainers have approved on my working plan.
 
 <!--
 Please also remember to sign the CLA, although you can also sign it after submitting the PR. The CLA is required for us to merge your PR.
@@ -37,7 +39,7 @@ After submission, our Netlify bot will post a deploy preview link in comment, in
 Please don't be afraid to change the main site's configuration as well! You can make use of your new feature on our site so we can preview its effects. We can decide if it should be kept in production before merging it.
 -->
 
-Deploy preview: https://deploy-preview-_____--docusaurus-2.netlify.app/
+Deploy preview: [https://deploy-preview-\_\_\_\_\_--docusaurus-2.netlify.app/](https://deploy-preview-_____--docusaurus-2.netlify.app/)
 
 ## Related issues/PRs
 

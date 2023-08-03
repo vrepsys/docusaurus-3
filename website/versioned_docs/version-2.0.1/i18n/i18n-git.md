@@ -12,23 +12,27 @@ A **possible translation strategy** is to **version control the translation file
 This strategy has advantages:
 
 - **Easy to get started**: just commit the `i18n` folder to Git
+
 - **Easy for developers**: Git, GitHub and pull requests are mainstream developer tools
+
 - **Free** (or without any additional cost, assuming you already use Git)
+
 - **Low friction**: does not require signing up to an external tool
+
 - **Rewarding**: contributors are happy to have a nice contribution history
 
 Using Git also present some shortcomings:
 
 - **Hard for non-developers**: they do not master Git and pull-requests
+
 - **Hard for professional translators**: they are used to SaaS translation softwares and advanced features
+
 - **Hard to maintain**: you have to keep the translated files **in sync** with the untranslated files
 
 :::note
-
 Some **large-scale technical projects** (React, Vue.js, MDN, TypeScript, Nuxt.js, etc.) use Git for translations.
 
 Refer to the [Docusaurus i18n RFC](https://github.com/facebook/docusaurus/issues/3317) for our notes and links studying these systems.
-
 :::
 
 ## Initialization {#initialization}
@@ -101,11 +105,9 @@ npm run write-translations -- --locale fr
 ```
 
 :::tip
-
 Use the `--messagePrefix '(fr) '` option to make the untranslated strings stand out.
 
 `Hello` will appear as `(fr) Hello` and makes it clear a translation is missing.
-
 :::
 
 Copy your untranslated Markdown files to the French folder:
@@ -167,9 +169,7 @@ npm run write-translations -- --locale fr
 New translations will be appended, and existing ones will not be overridden.
 
 :::tip
-
 Reset your translations with the `--override` option.
-
 :::
 
 ### Localize edit URLs {#localize-edit-urls}

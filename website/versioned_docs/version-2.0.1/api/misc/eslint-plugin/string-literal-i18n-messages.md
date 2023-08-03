@@ -46,5 +46,6 @@ If you're not using the [i18n feature](../../../i18n/i18n-introduction.md), you 
 
 ## Further Reading {#further-reading}
 
-- https://docusaurus.io/docs/docusaurus-core#translate
-- https://docusaurus.io/docs/docusaurus-core#translate-imperative
+- [https://docusaurus.io/docs/docusaurus-core#translate](https://docusaurus.io/docs/docusaurus-core#translate)
+
+- [https://docusaurus.io/docs/docusaurus-core#translate-imperative](https://docusaurus.io/docs/docusaurus-core#translate-imperative)

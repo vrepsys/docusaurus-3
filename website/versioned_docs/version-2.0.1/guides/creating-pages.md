@@ -10,15 +10,11 @@ In this section, we will learn about creating pages in Docusaurus.
 The `@docusaurus/plugin-content-pages` plugin empowers you to create **one-off standalone pages** like a showcase page, playground page, or support page. You can use React components, or Markdown.
 
 :::note
-
 Pages do not have sidebars, only [docs](./docs/docs-introduction.md) do.
-
 :::
 
 :::info
-
 Check the [Pages Plugin API Reference documentation](./../api/plugins/plugin-content-pages.md) for an exhaustive list of options.
-
 :::
 
 ## Add a React page {#add-a-react-page}
@@ -56,9 +52,7 @@ Once you save the file, the development server will automatically reload the cha
 Each page doesn't come with any styling. You will need to import the `Layout` component from `@theme/Layout` and wrap your contents within that component if you want the navbar and/or footer to appear.
 
 :::tip
-
 You can also create TypeScript pages with the `.tsx` extension (`helloReact.tsx`).
-
 :::
 
 ## Add a Markdown page {#add-a-markdown-page}
@@ -84,9 +78,7 @@ Markdown pages are less flexible than React pages because it always uses the the
 Here's an [example Markdown page](/examples/markdownPageExample).
 
 :::tip
-
 You can use the full power of React in Markdown pages too, refer to the [MDX](https://mdxjs.com/) documentation.
-
 :::
 
 ## Routing {#routing}
@@ -94,21 +86,23 @@ You can use the full power of React in Markdown pages too, refer to the [MDX](ht
 If you are familiar with other static site generators like Jekyll and Next, this routing approach will feel familiar to you. Any JavaScript file you create under `/src/pages/` directory will be automatically converted to a website page, following the `/src/pages/` directory hierarchy. For example:
 
 - `/src/pages/index.js` → `[baseUrl]`
+
 - `/src/pages/foo.js` → `[baseUrl]/foo`
+
 - `/src/pages/foo/test.js` → `[baseUrl]/foo/test`
+
 - `/src/pages/foo/index.js` → `[baseUrl]/foo/`
 
 In this component-based development era, it is encouraged to co-locate your styling, markup, and behavior together into components. Each page is a component, and if you need to customize your page design with your own styles, we recommend co-locating your styles with the page component in its own directory. For example, to create a "Support" page, you could do one of the following:
 
 - Add a `/src/pages/support.js` file
+
 - Create a `/src/pages/support/` directory and a `/src/pages/support/index.js` file.
 
 The latter is preferred as it has the benefits of letting you put files related to the page within that directory. For example, a CSS module file (`styles.module.css`) with styles meant to only be used on the "Support" page.
 
 :::note
-
 This is merely a recommended directory structure, and you will still need to manually import the CSS module file within your component module (`support/index.js`).
-
 :::
 
 By default, any Markdown or JavaScript file starting with `_` will be ignored and no routes will be created for that file (see the `exclude` option).
@@ -130,9 +124,7 @@ my-website
 ```
 
 :::caution
-
 All JavaScript/TypeScript files within the `src/pages/` directory will have corresponding website paths generated for them. If you want to create reusable components into that directory, use the `exclude` option (by default, files prefixed with `_`, test files(`.test.js`), and files in `__tests__` directory are not turned into pages).
-
 :::
 
 ### Duplicate Routes {#duplicate-routes}

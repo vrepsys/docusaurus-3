@@ -51,11 +51,9 @@ With `{#custom-id}` syntax you can set your own header ID.
 ```
 
 :::note
-
 All files prefixed with an underscore (`_`) under the `docs` directory are treated as "partial" pages and will be ignored by default.
 
 Read more about [importing partial pages](../markdown-features/markdown-features-react.mdx#importing-markdown).
-
 :::
 
 ## Doc front matter {#doc-front-matter}
@@ -66,7 +64,7 @@ The [front matter](../markdown-features/markdown-features-intro.mdx#front-matter
 
 Optionally, you can add tags to your doc pages, which introduces another dimension of categorization in addition to the [docs sidebar](./sidebar/index.md). Tags are passed in the front matter as a list of labels:
 
-```md "your-doc-page.md"
+```md
 ---
 id: doc-with-tags
 title: A doc with tags
@@ -77,11 +75,9 @@ tags:
 ```
 
 :::tip
-
 Tags can also be declared with `tags: [Demo, Getting started]`.
 
 Read more about all the possible [Yaml array syntaxes](https://www.w3schools.io/file/yaml-arrays/).
-
 :::
 
 ## Organizing folder structure {#organizing-folder-structure}
@@ -140,12 +136,11 @@ Lorem ipsum
 `slug` will be appended to the doc plugin's `routeBasePath`, which is `/docs` by default. See [Docs-only mode](#docs-only-mode) for how to remove the `/docs` part from the URL.
 
 :::note
-
 It is possible to use:
 
 - absolute slugs: `slug: /mySlug`, `slug: /`...
-- relative slugs: `slug: mySlug`, `slug: ./../mySlug`...
 
+- relative slugs: `slug: mySlug`, `slug: ./../mySlug`...
 :::
 
 If you want a document to be available at the root, and have a path like `https://docusaurus.io/docs/`, you can use the slug front matter:

@@ -47,11 +47,9 @@ import Translate from '@docusaurus/Translate';
 ```
 
 :::note
-
 The `write-translations` CLI still works to extract translations from your code.
 
 The code translations are now added to `i18n/[locale]/code.json` using Chrome i18n JSON format.
-
 :::
 
 ### Stricter Markdown parser {#stricter-markdown-parser}
@@ -71,21 +69,19 @@ This section will help you figure out how to **keep your existing v1 translation
 There are **multiple possible strategies** to migrate a Docusaurus v1 site using Crowdin, with different tradeoffs.
 
 :::caution
-
 This documentation is a best-effort to help you migrate, please help us improve it if you find a better way!
-
 :::
 
 Before all, we recommend to:
 
 - Migrate your v1 Docusaurus site to v2 without the translations
+
 - Get familiar with the [new i18n system of Docusaurus v2](../i18n/i18n-introduction.md) an
+
 - Make Crowdin work for your v2 site, using a new and untranslated Crowdin project and the [Crowdin tutorial](../i18n/i18n-crowdin.mdx)
 
 :::danger
-
 Don't try to migrate without understanding both Crowdin and Docusaurus v2 i18n.
-
 :::
 
 ### Create a new Crowdin project {#create-a-new-crowdin-project}
@@ -93,21 +89,27 @@ Don't try to migrate without understanding both Crowdin and Docusaurus v2 i18n.
 To avoid any **risk of breaking your v1 site in production**, one possible strategy is to duplicate the original v1 Crowdin project.
 
 :::info
-
 This strategy was used to [upgrade the Jest website](https://jestjs.io/blog/2021/03/09/jest-website-upgrade).
-
 :::
 
 Unfortunately, Crowdin does not have any "Duplicate/clone Project" feature, which makes things complicated.
 
 - Download the translation memory of your original project in `.tmx` format (`https://crowdin.com/project/<ORIGINAL_PROJECT>/settings#tm` > `View Records`)
+
 - Upload the translation memory to your new project (`https://crowdin.com/project/<NEW_PROJECT>/settings#tm` > `View Records`)
+
 - Reconfigure `crowdin.yml` for Docusaurus v2 according to the i18n docs
+
 - Upload the Docusaurus v2 source files with the Crowdin CLI to the new project
+
 - Mark sensitive strings like `id` or `slug` as "hidden string" on Crowdin
+
 - On the "Translations" tab, click on "Pre-Translation > via TM" (`https://crowdin.com/project/<NEW_PROJECT>/settings#translations`)
+
 - Try first with "100% match" (more content will be translated than "Perfect"), and pre-translate your sources
+
 - Download the Crowdin translations locally
+
 - Try to run/build your site and see if there are any errors
 
 You will likely have errors on your first-try: the pre-translation might try to translate things that it should not be translated (front matter, admonition, code blocks...), and the translated MD files might be invalid for the MDX parser.
@@ -117,19 +119,18 @@ You will have to fix all the errors until your site builds. You can do that by m
 There is no ultimate guide we could write to fix these errors, but common errors are due to:
 
 - Not marking enough strings as "hidden strings" in Crowdin, leading to pre-translation trying to translate these strings.
+
 - Having bad v1 translations, leading to invalid markup in v2: bad HTML elements inside translations and unclosed tags
+
 - Anything rejected by the MDX parser, like using HTML elements instead of JSX elements (use the [MDX playground](https://mdxjs.com/playground/) for debugging)
 
 You might want to repeat this pre-translation process, eventually trying the "Perfect" option and limiting pre-translation only some languages/files.
 
 :::tip
-
 Use [`mdx-code-block`](../i18n/i18n-crowdin.mdx#mdx-solutions) around problematic Markdown elements: Crowdin is less likely mess things up with code blocks.
-
 :::
 
 :::note
-
 You will likely notice that some things were translated on your old project, but are now untranslated in your new project.
 
 The Crowdin Markdown parser is evolving other time and each Crowdin project has a different parser version, which can lead to pre-translation not being able to pre-translate all the strings.
@@ -137,13 +138,10 @@ The Crowdin Markdown parser is evolving other time and each Crowdin project has 
 This parser version is undocumented, and you will have to ask the Crowdin support to know your project's parser version and fix one specific version.
 
 Using the same CLI version and parser version across the 2 Crowdin projects might give better results.
-
 :::
 
 :::danger
-
 Crowdin has an "upload translations" feature, but in our experience it does not give very good results for Markdown
-
 :::
 
 ### Use the existing Crowdin project {#use-the-existing-crowdin-project}
@@ -151,9 +149,7 @@ Crowdin has an "upload translations" feature, but in our experience it does not 
 If you don't mind modifying your existing Crowdin project and risking to mess things up, it may be possible to use the Crowdin branch system.
 
 :::caution
-
 This workflow has not been tested in practice, please report us how good it is.
-
 :::
 
 This way, you wouldn't need to create a new Crowdin project, transfer the translation memory, apply pre-translations, and try to fix the pre-translations errors.

@@ -27,6 +27,7 @@ This email will include a new `appId` and `apiKey` to use in your Docusaurus con
 The only things you have to do:
 
 - Join the Algolia application (eventually creating a new Algolia account)
+
 - Update your site configuration.
 
 ```js title="docusaurus.config.js"
@@ -45,11 +46,9 @@ module.exports = config;
 ```
 
 :::info
-
 `appId` is now **required**.
 
 These keys are not secrets and can be added to your Git repository.
-
 :::
 
 ## DocSearch has a new home!
@@ -71,7 +70,9 @@ With the upcoming stable release of [DocSearch UI](https://docsearch.algolia.com
 DocSearch now leverages the [Algolia Crawler](https://www.algolia.com/products/search-and-discovery/crawler/), which includes a web interface that will allow you to:
 
 - Start, schedule and monitor your crawls
+
 - Edit your config file from a live editor
+
 - Test your results with DocSearch v3
 
 ![The Algolia crawler front page showing the project's overview, such as last complete crawl and indices](./img/crawler-overview.png)
@@ -81,7 +82,9 @@ DocSearch now leverages the [Algolia Crawler](https://www.algolia.com/products/s
 But also, more Algolia features in **your own Algolia app**:
 
 - Team management
+
 - Browse and see how your records are indexed in Algolia
+
 - Try other Algolia features with free trials
 
 ![The Algolia index overview page, showing various filters and the details of every single index](./img/index-overview.png)
@@ -102,7 +105,7 @@ We wrote a small [migration guide](https://docsearch.algolia.com/docs/migrating-
 
 ### I received the migration email but the invite expired
 
-Please contact us via either [email](mailto:docsearch@algolia.com) or [DocSearch's Discord](https://discord.gg/bRTacwYrfX) or on [Docusaurus's Discord #algolia channel](https://discordapp.com/invite/docusaurus)
+Please contact us via either [email](mailto\:docsearch@algolia.com) or [DocSearch's Discord](https://discord.gg/bRTacwYrfX) or on [Docusaurus's Discord #algolia channel](https://discordapp.com/invite/docusaurus)
 
 ### I have feedback!
 

@@ -7,9 +7,7 @@ You should be able to click on the category and browse this `<categoryName>/<cat
 Some intro text
 
 :::tip
-
 It is also possible to render the card items for that category thanks to MDX:
-
 :::
 
 ## Category content

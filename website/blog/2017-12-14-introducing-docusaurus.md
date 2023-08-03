@@ -11,9 +11,12 @@ We are very happy to introduce [Docusaurus](https://github.com/facebook/docusaur
 We created [Docusaurus](https://docusaurus.io) for the following reasons:
 
 1. To put the focus on writing good documentation instead of worrying about the infrastructure of a website.
-1. To provide features that many of our open source websites need like blog support, search and versioning.
-1. To make it easy to push updates, new features, and bug fixes to everyone all at once.
-1. And, finally, to provide a consistent look and feel across all of our open source projects.
+
+2. To provide features that many of our open source websites need like blog support, search and versioning.
+
+3. To make it easy to push updates, new features, and bug fixes to everyone all at once.
+
+4. And, finally, to provide a consistent look and feel across all of our open source projects.
 
 <!--truncate-->
 
@@ -67,7 +70,7 @@ root-of-repo
 │   └── static
 ```
 
-With the exception of node_modules and package.json, all the directories and files you see are where you customize and add content to your Docusaurus-based website. The docs folder is where you add your Markdown that represents your documentation; the blog folder is where you add your Markdown for your [blog posts](https://v1.docusaurus.io/docs/en/blog.html); `siteConfig.js` is where you make most of the [customizations](https://v1.docusaurus.io/docs/en/site-config.html) for your site; `sidebars.json` is where you maintain the layout and content of the [sidebar](https://v1.docusaurus.io/docs/en/navigation.html) for your documentation; the `pages` folder is where you add [custom](https://v1.docusaurus.io/docs/en/custom-pages.html) pages for your site; the `static` folder is where all of your static assets go (e.g., CSS stylesheets and images); and the `core` folder is where you can customize core components of the site, in this case the footer.
+With the exception of node\_modules and package.json, all the directories and files you see are where you customize and add content to your Docusaurus-based website. The docs folder is where you add your Markdown that represents your documentation; the blog folder is where you add your Markdown for your [blog posts](https://v1.docusaurus.io/docs/en/blog.html); `siteConfig.js` is where you make most of the [customizations](https://v1.docusaurus.io/docs/en/site-config.html) for your site; `sidebars.json` is where you maintain the layout and content of the [sidebar](https://v1.docusaurus.io/docs/en/navigation.html) for your documentation; the `pages` folder is where you add [custom](https://v1.docusaurus.io/docs/en/custom-pages.html) pages for your site; the `static` folder is where all of your static assets go (e.g., CSS stylesheets and images); and the `core` folder is where you can customize core components of the site, in this case the footer.
 
 ## How does Docusaurus work?
 
@@ -95,16 +98,26 @@ root-of-Docusaurus
 The key files here are build-files.js and start-server.js. There are many similarities between these two files: `build-files.js` is used to build the physical artifacts for serving by an external web server. `start-server.js` is used to run the Docusaurus server and locally test your site. Both go through the following general process to take all of the Markdown and configuration to create a runnable website:
 
 1. Process your website settings in `siteConfig.js`
-1. Read the document metadata that exists in all the Markdown files in your docs directory.
-1. Create a table of contents for your documents based upon the IDs extracted from the metadata.
-1. Convert the Markdown to HTML, including doing link replacement.
-1. These files will go in a build/docs directory of the compiled site, and any translated versions will go into a language specific folder within the build/docs folder.
-1. Repeat 1-3 for blog posts.
-1. The blog file will go in a build/blog directory of the compiled site.
-1. Read the main.css file and concatenate any user-defined css into master css file that will be in the build/css directory of the compiled site.
-1. Copy images into an build/img directory of the compiled site.
-1. Take any custom pages that were added to the pages folder of the site and compile/copy those into the root build directory of the compiled site. Any translated versions will go into a language specific folder within build.
-1. Create CNAME and sitemap.xml files and add those to build.
+
+2. Read the document metadata that exists in all the Markdown files in your docs directory.
+
+3. Create a table of contents for your documents based upon the IDs extracted from the metadata.
+
+4. Convert the Markdown to HTML, including doing link replacement.
+
+5. These files will go in a build/docs directory of the compiled site, and any translated versions will go into a language specific folder within the build/docs folder.
+
+6. Repeat 1-3 for blog posts.
+
+7. The blog file will go in a build/blog directory of the compiled site.
+
+8. Read the main.css file and concatenate any user-defined css into master css file that will be in the build/css directory of the compiled site.
+
+9. Copy images into an build/img directory of the compiled site.
+
+10. Take any custom pages that were added to the pages folder of the site and compile/copy those into the root build directory of the compiled site. Any translated versions will go into a language specific folder within build.
+
+11. Create CNAME and sitemap.xml files and add those to build.
 
 Note that this process does not take into full account how translations or versioning works. The underlying details of those features will be saved for future blog posts.
 
@@ -138,12 +151,19 @@ Docusaurus wouldn't exist without the work of the rest of the core Docusaurus te
 Special thanks also goes out to our earliest [adopters](https://v1.docusaurus.io/en/users.html) of Docusaurus:
 
 - [BuckleScript](https://bucklescript.github.io/)
+
 - [FastText](https://fasttext.cc)
+
 - [Jest](https://jestjs.io)
+
 - [Make It Open](http://makeitopen.com)
+
 - [Prettier](https://prettier.io/)
+
 - [Reason-react](https://reasonml.github.io/reason-react/)
+
 - [React Native](https://facebook.github.io/react-native/)
+
 - [Relay](https://facebook.github.io/relay/)
 
 Without their dedication to creating or migrating their websites over to the platform, we would have not have been in the position where we are today.
@@ -151,6 +171,9 @@ Without their dedication to creating or migrating their websites over to the pla
 ## Resources
 
 - [Read our documentation](https://v1.docusaurus.io)
+
 - [Follow our Twitter feed](https://twitter.com/docusaurus)
+
 - [Follow us on GitHub](https://github.com/facebook/docusaurus)
+
 - [About Slash, the Docusaurus mascot](https://v1.docusaurus.io/about-slash.html)

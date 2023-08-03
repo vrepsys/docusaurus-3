@@ -12,9 +12,7 @@ import TabItem from '@theme/TabItem';
 ```
 
 :::caution
-
 Think about it before starting to version your documentation - it can become difficult for contributors to help improve it!
-
 :::
 
 Most of the time, you don't need versioning as it will just increase your build time, and introduce complexity to your codebase. Versioning is **best suited for websites with high-traffic and rapid changes to documentation between versions**. If your documentation rarely changes, don't add versioning to your documentation.
@@ -60,11 +58,9 @@ The table below explains how a versioned file maps to its version and the genera
 | `docs/hello.md`                         | current        | /docs/next/hello  |
 
 :::tip
-
 The files in the `docs` directory belong to the `current` docs version.
 
 By default, the `current` docs version is labeled as `Next` and hosted under `/docs/next/*`, but it is entirely configurable to fit your project's release lifecycle.
-
 :::
 
 ### Terminology {#terminology}
@@ -72,10 +68,10 @@ By default, the `current` docs version is labeled as `Next` and hosted under `/d
 Note the terminology we use here.
 
 <dl>
-<dt><b>Current version</b></dt>
-<dd>The version placed in the <code>./docs</code> folder.</dd>
-<dt><b>Latest version / last version</b></dt>
-<dd>The version served by default for docs navbar items. Usually has path <code>/docs</code>.</dd>
+  <dt><b>Current version</b></dt>
+  <dd>The version placed in the <code>./docs</code> folder.</dd>
+  <dt><b>Latest version / last version</b></dt>
+  <dd>The version served by default for docs navbar items. Usually has path <code>/docs</code>.</dd>
 </dl>
 
 Current version is defined by the **file system location**, while latest version is defined by the **the navigation behavior**. They may or may not be the same version! (And the default configuration, as shown in the table above, would treat them as different: current version at `/docs/next` and latest at `/docs`.)
@@ -85,6 +81,7 @@ Current version is defined by the **file system location**, while latest version
 ### Tagging a new version {#tagging-a-new-version}
 
 1. First, make sure the current docs version (the `./docs` directory) is ready to be frozen.
+
 2. Enter a new version number.
 
 ```bash npm2yarn
@@ -94,12 +91,15 @@ npm run docusaurus docs:version 1.1.0
 When tagging a new version, the document versioning mechanism will:
 
 - Copy the full `docs/` folder contents into a new `versioned_docs/version-[versionName]/` folder.
+
 - Create a versioned sidebars file based from your current [sidebar](docs-introduction.md#sidebar) configuration (if it exists) - saved as `versioned_sidebars/version-[versionName]-sidebars.json`.
+
 - Append the new version number to `versions.json`.
 
 ### Creating new docs {#creating-new-docs}
 
 1. Place the new file into the corresponding version folder.
+
 2. Include the reference to the new file in the corresponding sidebar file according to the version number.
 
 ```mdx-code-block
@@ -138,7 +138,9 @@ versioned_sidebars/version-1.0.0-sidebars.json
 You can update multiple docs versions at the same time because each directory in `versioned_docs/` represents specific routes when published.
 
 1. Edit any file.
+
 2. Commit and push changes.
+
 3. It will be published to the version.
 
 Example: When you change any file in `versioned_docs/version-2.6/`, it will only affect the docs for version `2.6`.
@@ -160,14 +162,16 @@ Example:
 ]
 ```
 
-2. Delete the versioned docs directory. Example: `versioned_docs/version-1.8.0`.
-3. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`.
+1. Delete the versioned docs directory. Example: `versioned_docs/version-1.8.0`.
+
+2. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`.
 
 ## Configuring versioning behavior {#configuring-versioning-behavior}
 
 The "current" version is the version name for the `./docs` folder. There are different ways to manage versioning, but two very common patterns are:
 
 - You release v1, and start immediately working on v2 (including its docs). In this case, the **current version** is v2, which is in the `./docs` source folder, and can be browsed at `example.com/docs/next`. The **latest version** is v1, which is in the `./versioned_docs/version-1` source folder, and is browsed by most of your users at `example.com/docs`.
+
 - You release v1, and will maintain it for some time before thinking about v2. In this case, the **current version** and **latest version** will both be point to v1, since the v2 docs doesn't even exist yet!
 
 Docusaurus defaults work great for the first use case. We will label the current version as "next" and you can even choose not to publish it.
@@ -198,17 +202,29 @@ The docs in `./docs` will be served at `/docs/1.0.0` instead of `/docs/next`, an
 We offer these plugin options to customize versioning behavior:
 
 - `disableVersioning`: Explicitly disable versioning even with versions. This will make the site only include the current version.
+
 - `includeCurrentVersion`: Include the current version (the `./docs` folder) of your docs.
+
   - **Tip**: turn it off if the current version is a work-in-progress, not ready to be published.
+
 - `lastVersion`: Sets which version "latest version" (the `/docs` route) refers to.
+
   - **Tip**: `lastVersion: 'current'` makes sense if your current version refers to a major version that's constantly patched and released. The actual route base path and label of the latest version are configurable.
+
 - `onlyIncludeVersions`: Defines a subset of versions from `versions.json` to be deployed.
+
   - **Tip**: limit to 2 or 3 versions in dev and deploy previews to improve startup and build time.
+
 - `versions`: A dictionary of version metadata. For each version, you can customize the following:
+
   - `label`: the label displayed in the versions dropdown and banner.
+
   - `path`: the route base path of this version. By default, latest version has `/` and current version has `/next`.
+
   - `banner`: one of `'none'`, `'unreleased'`, and `'unmaintained'`. Determines what's displayed at the top of every doc page. Any version above the latest version would be "unreleased", and any version below would be "unmaintained".
+
   - `badge`: show a badge with the version name at the top of a doc of that version.
+
   - `className`: add a custom `className` to the `<html>` element of doc pages of that version.
 
 See [docs plugin configuration](../../api/plugins/plugin-content-docs.md#configuration) for more details.
@@ -218,14 +234,19 @@ See [docs plugin configuration](../../api/plugins/plugin-content-docs.md#configu
 We offer several navbar items to help you quickly set up navigation without worrying about versioned routes.
 
 - [`doc`](../../api/themes/theme-configuration.md#navbar-doc-link): a link to a doc.
+
 - [`docSidebar`](../../api/themes/theme-configuration.md#navbar-doc-sidebar): a link to the first item in a sidebar.
+
 - [`docsVersion`](../../api/themes/theme-configuration.md#navbar-docs-version): a link to the main doc of the currently viewed version.
+
 - [`docsVersionDropdown`](../../api/themes/theme-configuration.md#navbar-docs-version-dropdown): a dropdown containing all the versions available.
 
 These links would all look for an appropriate version to link to, in the following order:
 
 1. **Active version**: the version that the user is currently browsing, if she is on a page provided by this doc plugin. If she's not on a doc page, fall back to...
+
 2. **Preferred version**: the version that the user last viewed. If there's no history, fall back to...
+
 3. **Latest version**: the default version that we navigate to, configured by the `lastVersion` option.
 
 ## Recommended practices {#recommended-practices}
@@ -241,9 +262,7 @@ Should you cut a new documentation version 1.0.1? **You probably shouldn't**. 1.
 As a good rule of thumb, try to keep the number of your versions below 10. You will **very likely** to have a lot of obsolete versioned documentation that nobody even reads anymore. For example, [Jest](https://jestjs.io/versions) is currently in version `27.4`, and only maintains several latest documentation versions with the lowest being `25.X`. Keep it small 😊
 
 :::tip archive older versions
-
 If you deploy your site on a Jamstack provider (e.g. [Netlify](../../deployment.mdx)), the provider will save each production build as a snapshot under an immutable URL. You can include archived versions that will never be rebuilt as external links to these immutable URLs. The Jest website and the Docusaurus website both use such pattern to keep the number of actively built versions low.
-
 :::
 
 ### Use absolute import within the docs {#use-absolute-import-within-the-docs}

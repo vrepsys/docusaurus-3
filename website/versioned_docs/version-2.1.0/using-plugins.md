@@ -107,9 +107,7 @@ module.exports = {
 ```
 
 :::note
-
 At most one plugin instance can be the "default plugin instance", by omitting the `id` attribute, or using `id: 'default'`.
-
 :::
 
 ## Using themes {#using-themes}
@@ -117,9 +115,7 @@ At most one plugin instance can be the "default plugin instance", by omitting th
 Themes are loaded in the exact same way as plugins. From the consumer perspective, the `themes` and `plugins` entries are interchangeable when installing and configuring a plugin. The only nuance is that themes are loaded after plugins, and it's possible for [a theme to override a plugin's default theme components](./swizzling.md#theme-aliases).
 
 :::tip
-
 The `themes` and `plugins` options lead to different [shorthand resolutions](#module-shorthands), so if you want to take advantage of shorthands, be sure to use the right entry!
-
 :::
 
 ```js title="docusaurus.config.js"
@@ -139,13 +135,21 @@ Presets are bundles of plugins and themes. For example, instead of letting you r
 The classic preset is shipped by default to new Docusaurus websites created with [`create-docusaurus`](./installation.md#scaffold-project-website). It contains the following themes and plugins:
 
 - [`@docusaurus/theme-classic`](./api/themes/theme-configuration.md)
+
 - [`@docusaurus/theme-search-algolia`](./api/themes/theme-search-algolia.md)
+
 - [`@docusaurus/plugin-content-docs`](./api/plugins/plugin-content-docs.md)
+
 - [`@docusaurus/plugin-content-blog`](./api/plugins/plugin-content-blog.md)
+
 - [`@docusaurus/plugin-content-pages`](./api/plugins/plugin-content-pages.md)
+
 - [`@docusaurus/plugin-debug`](./api/plugins/plugin-debug.md)
+
 - [`@docusaurus/plugin-google-analytics`](./api/plugins/plugin-google-analytics.md)
+
 - [`@docusaurus/plugin-google-gtag`](./api/plugins/plugin-google-gtag.md)
+
 - [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md)
 
 The classic preset will relay each option entry to the respective plugin/theme.
@@ -267,7 +271,9 @@ This is especially useful when some plugins and themes are intended to be used t
 Docusaurus supports shorthands for plugins, themes, and presets. When it sees a plugin/theme/preset name, it tries to load one of the following, in that order:
 
 - `[name]` (like `content-docs`)
+
 - `@docusaurus/[moduleType]-[name]` (like `@docusaurus/plugin-content-docs`)
+
 - `docusaurus-[moduleType]-[name]` (like `docusaurus-plugin-content-docs`)
 
 where `moduleType` is one of `'preset'`, `'theme'`, `'plugin'`, depending on which field the module name is declared in. The first module name that's successfully found is loaded.
@@ -291,14 +297,15 @@ If the name is scoped (beginning with `@`), the name is first split into scope a
 If there is no name (like `@jquery`), `[scope]/docusaurus-[moduleType]` (i.e. `@jquery/docusaurus-plugin`) is loaded. Otherwise, the following are attempted:
 
 - `[scope]/[name]` (like `@jquery/content-docs`)
+
 - `[scope]/docusaurus-[moduleType]-[name]` (like `@jquery/docusaurus-plugin-content-docs`)
 
 Below are some examples, for a plugin registered in the `plugins` field. Note that unlike [ESLint](https://eslint.org/docs/user-guide/configuring/plugins#configuring-plugins) or [Babel](https://babeljs.io/docs/en/options#name-normalization) where a consistent naming convention for plugins is mandated, Docusaurus permits greater naming freedom, so the resolutions are not certain, but follows the priority defined above.
 
-| Declaration | May be resolved as |
-| --- | --- |
-| `awesome` | `docusaurus-plugin-awesome` |
-| `sitemap` | [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md) |
-| `@my-company` | `@my-company/docusaurus-plugin` (the only possible resolution!) |
-| `@my-company/awesome` | `@my-company/docusaurus-plugin-awesome` |
-| `@my-company/awesome/web` | `@my-company/docusaurus-plugin-awesome/web` |
+| Declaration               | May be resolved as                                              |
+| ------------------------- | --------------------------------------------------------------- |
+| `awesome`                 | `docusaurus-plugin-awesome`                                     |
+| `sitemap`                 | [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md) |
+| `@my-company`             | `@my-company/docusaurus-plugin` (the only possible resolution!) |
+| `@my-company/awesome`     | `@my-company/docusaurus-plugin-awesome`                         |
+| `@my-company/awesome/web` | `@my-company/docusaurus-plugin-awesome/web`                     |

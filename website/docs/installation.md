@@ -12,16 +12,15 @@ import TabItem from '@theme/TabItem';
 Docusaurus is essentially a set of npm [packages](https://github.com/facebook/docusaurus/tree/main/packages).
 
 :::tip
+Use the [**Fast Track**](introduction.md#fast-track) to understand Docusaurus in **5 minutes ⏱**!
 
-Use the **[Fast Track](introduction.md#fast-track)** to understand Docusaurus in **5 minutes ⏱**!
-
-Use **[docusaurus.new](https://docusaurus.new)** to test Docusaurus immediately in your browser!
-
+Use [**docusaurus.new**](https://docusaurus.new) to test Docusaurus immediately in your browser!
 :::
 
 ## Requirements {#requirements}
 
 - [Node.js](https://nodejs.org/en/download/) version 16.14 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed.
+
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
 ## Scaffold project website {#scaffold-project-website}
@@ -41,52 +40,49 @@ npx create-docusaurus@latest my-website classic --typescript
 ```
 
 :::info FB-Only
-
 If you are setting up a new Docusaurus website for a Facebook open source project, use the `facebook` template instead, which comes with some useful Facebook-specific defaults:
 
 ```bash
 npx create-docusaurus@latest my-website facebook
 ```
-
 :::
 
 <details>
   <summary>Alternative installation commands</summary>
 
-You can also initialize a new project using your preferred project manager:
+  You can also initialize a new project using your preferred project manager:
 
-```mdx-code-block
-<Tabs>
-<TabItem value="npm">
-```
+  ```mdx-code-block
+  <Tabs>
+  <TabItem value="npm">
+  ```
 
-```bash
-npm init docusaurus
-```
+  ```bash
+  npm init docusaurus
+  ```
 
-```mdx-code-block
-</TabItem>
-<TabItem value="yarn">
-```
+  ```mdx-code-block
+  </TabItem>
+  <TabItem value="yarn">
+  ```
 
-```bash
-yarn create docusaurus
-```
+  ```bash
+  yarn create docusaurus
+  ```
 
-```mdx-code-block
-</TabItem>
-<TabItem value="pnpm">
-```
+  ```mdx-code-block
+  </TabItem>
+  <TabItem value="pnpm">
+  ```
 
-```bash
-pnpm create docusaurus
-```
+  ```bash
+  pnpm create docusaurus
+  ```
 
-```mdx-code-block
-</TabItem>
-</Tabs>
-```
-
+  ```mdx-code-block
+  </TabItem>
+  </Tabs>
+  ```
 </details>
 
 Run `npx create-docusaurus@latest --help`, or check out its [API docs](./api/misc/create-docusaurus.md) for more information about all available flags.
@@ -124,12 +120,19 @@ my-website
 ### Project structure rundown {#project-structure-rundown}
 
 - `/blog/` - Contains the blog Markdown files. You can delete the directory if you've disabled the blog plugin, or you can change its name after setting the `path` option. More details can be found in the [blog guide](blog.mdx)
+
 - `/docs/` - Contains the Markdown files for the docs. Customize the order of the docs sidebar in `sidebars.js`. You can delete the directory if you've disabled the docs plugin, or you can change its name after setting the `path` option. More details can be found in the [docs guide](./guides/docs/docs-introduction.md)
+
 - `/src/` - Non-documentation files like pages or custom React components. You don't have to strictly put your non-documentation files here, but putting them under a centralized directory makes it easier to specify in case you need to do some sort of linting/processing
+
   - `/src/pages` - Any JSX/TSX/MDX file within this directory will be converted into a website page. More details can be found in the [pages guide](guides/creating-pages.md)
+
 - `/static/` - Static directory. Any contents inside here will be copied into the root of the final `build` directory
+
 - `/docusaurus.config.js` - A config file containing the site configuration. This is the equivalent of `siteConfig.js` in Docusaurus v1
+
 - `/package.json` - A Docusaurus website is a React app. You can install and use any npm packages you like in them
+
 - `/sidebars.js` - Used by the documentation to specify the order of documents in the sidebar
 
 ### Monorepos {#monorepos}
@@ -163,7 +166,7 @@ cd my-website
 npm run start
 ```
 
-By default, a browser window will open at http://localhost:3000.
+By default, a browser window will open at [http://localhost:3000](http://localhost:3000).
 
 Congratulations! You have just created your first Docusaurus site! Browse around the site to see what's available.
 
@@ -206,9 +209,7 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
 :::tip
-
 Use new unreleased features of Docusaurus with the [`@canary` npm dist tag](/community/canary)
-
 :::
 
 ## Problems? {#problems}

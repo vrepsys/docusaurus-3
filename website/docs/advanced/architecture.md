@@ -11,9 +11,7 @@ import Zoom from 'react-medium-image-zoom';
 ```
 
 <Zoom>
-
-![Architecture overview](/img/architecture.png)
-
+  ![Architecture overview](/img/architecture.png)
 </Zoom>
 
 This diagram shows how Docusaurus works to build your app. Plugins each collect their content and emit JSON data; themes provide layout components which receive the JSON data as route modules. The bundler bundles all the components and emits a server bundle and a client bundle.
@@ -21,6 +19,7 @@ This diagram shows how Docusaurus works to build your app. Plugins each collect 
 Although you (either plugin authors or site creators) are writing JavaScript all the time, bear in mind that the JS is actually run in different environments:
 
 - All plugin lifecycle methods are run in Node. Therefore, until we support ES Modules in our codebase, plugin source code must be provided as CommonJS that can be `require`'d.
+
 - The theme code is built with Webpack. They can be provided as ESM—following React conventions.
 
 Plugin code and theme code never directly import each other: they only communicate through protocols (in our case, through JSON temp files and calls to `addRoute`). A useful mental model is to imagine that the plugins are not written in JavaScript, but in another language like Rust. The only way to interact with plugins for the user is through `docusaurus.config.js`, which itself is run in Node (hence you can use `require` and pass callbacks as plugin options).

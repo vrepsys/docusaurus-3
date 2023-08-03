@@ -54,11 +54,9 @@ After the migration, your Docusaurus 2 site could look like:
 ```
 
 :::info
-
 This migration does not change the `/docs` folder location, but Docusaurus v2 sites generally have the `/docs` folder inside `/website`
 
 You are free to put the `/docs` folder anywhere you want after having migrated to v2.
-
 :::
 
 ## Migration process {#migration-process}
@@ -66,12 +64,19 @@ You are free to put the `/docs` folder anywhere you want after having migrated t
 There are multiple things to migrate to obtain a fully functional Docusaurus 2 website:
 
 - packages
+
 - CLI commands
+
 - site configuration
+
 - Markdown files
+
 - sidebars file
+
 - pages, components and CSS
+
 - versioned docs
+
 - i18n support 🚧
 
 ## Automated migration process {#automated-migration-process}
@@ -81,9 +86,7 @@ The [migration CLI](./migration-automated.md) will handle many things of the mig
 However, some parts can't easily be automated, and you will have to fallback to the manual process.
 
 :::note
-
 We recommend running the migration CLI, and complete the missing parts thanks to the manual migration process.
-
 :::
 
 ## Manual migration process {#manual-migration-process}

@@ -22,18 +22,31 @@ We are **still in alpha**, but expect **some good news very soon**!
 We have worked on many features this year, and would like to highlight the most significant ones:
 
 - **i18n**: easily translate your Docusaurus site, released soon! ([preview](https://github.com/facebook/docusaurus/pull/3325), [doc](https://docusaurus.io/docs/next/i18n/introduction))
+
 - **Version dropdown**: enable contextual version switch
+
 - **Versioning options**: solving the most common pain-points users had with versioning
+
 - **Contextual search**: search in the current version, use the brand-new DocSearch 3 experience
+
 - **Markdown pages**: use Markdown instead of React components to create standalone pages
+
 - **Better theme**: various UI, UX and accessibility improvements
+
 - **PWA**: add offline support to your site, and make it installable
+
 - **Fail-fast**: strict config validation, detect broken links, and prevent bad production deployments
+
 - **Multi-instance**: use the docs plugin twice on a single site (e.g. iOS/Android SDK docs)
+
 - **Migration CLI**: automate the upgrade from Docusaurus 1
+
 - **CodeSandbox**: assess Docusaurus easily from your browser with [new.docusaurus.io](https://new.docusaurus.io/)
+
 - **Canary releases**: use the `@canary` npm tag to use the upcoming release before anyone else
+
 - **TypeScript**: progressive adoption for internal code, and improve usage for users
+
 - **Publish Infima**: it is now [open-source](https://github.com/facebookincubator/infima)
 
 ## Docusaurus 2 growth
@@ -45,12 +58,19 @@ The plan to [rebuild Docusaurus from scratch in 2019](https://docusaurus.io/blog
 Notable **projects, startups, large companies, and individuals** adopted Docusaurus 2 ([showcase](https://docusaurus.io/showcase)):
 
 - [Supabase](https://supabase.io)
+
 - [React Navigation](https://reactnavigation.org)
+
 - [React Redux](https://react-redux.js.org/)
+
 - [Vector](https://vector.dev)
+
 - [Algolia DocSearch](https://docsearch.algolia.com)
+
 - [SAP Cloud SDK](https://sap.github.io/cloud-sdk)
+
 - [Palo Alto Cortex XSOAR](https://xsoar.pan.dev)
+
 - [Quddús George's website](https://portfoliosaurus.now.sh)
 
 We helped **large scale Docusaurus 1 sites to upgrade**, ensuring a proper **migration path** and **feature parity**.
@@ -63,15 +83,18 @@ Localized Docusaurus 1 sites (like **Jest**) will be able to upgrade too:
 
 ![Jest's new website built with Docusaurus v2 in Japanese](/img/blog/2020-recap/jest-screenshot.png)
 
-We also saw the **[first right-to-left](https://datagit.ir/)** Docusaurus 2 site published:
+We also saw the [**first right-to-left**](https://datagit.ir/) Docusaurus 2 site published:
 
 ![Datagit's website in Persian, a right-to-left language. The sidebar appears on the right of the window and the TOC appears on the left.](/img/blog/2020-recap/datagit-rtl-screenshot.png)
 
 ## GitHub Activity
 
 - **Stars**: 14632 → 20946 (+43.2% y/y)
+
 - **Total Contributors**: 303 → 512 (+68.9% y/y). Most of which are non-Facebook contributors
+
 - **Weekly npm Downloads**: 2356 → 25592 (+986% y/y)
+
 - **On GitHub**, Docusaurus 1 is used by 6311 projects (+62.9% y/y) while Docusaurus 2 is used by 5039 projects (+1940% y/y)
 
 ## Collaboration with Major League Hacking
@@ -81,9 +104,13 @@ We have welcomed [Major League Hacking](https://mlh.io/) (MLH) fellows for 2 sea
 We are very thankful for the **various contributions** they made, such as:
 
 - Writing the foundations of the v1 to v2 migration CLI
+
 - Help migrate the React Native website from v1 to v2
+
 - Making the config validation more strict and exhaustive, returning helpful error messages
+
 - Adding CodeSandbox support
+
 - Improving the CI pipelines: build size and Lighthouse bots
 
 We look forward to continuing this collaboration in 2021.
@@ -97,10 +124,15 @@ Rachel Nabors (Documentation Engineer @ Facebook) talked a bit about Docusaurus 
 Many blog posts have been published:
 
 - [To the Makers of Docusaurus](https://portfoliosaurus.now.sh/blog/toTheMakers) by Quddus George
+
 - [Richer API documentation with Redoc and Docusaurus](https://davidgoss.co/blog/api-documentation-redoc-docusaurus/) by David Goss
+
 - [How to Build a Plugin for Docusaurus v2](https://aknapen.nl/blog/how-to-build-a-plugin-for-docusaurus-v2/) by Adriaan Knapen
+
 - [React Tracked Documentation Website with Docusaurus v2](https://blog.axlight.com/posts/react-tracked-documentation-website-with-docusaurus-v2/) by Daishi Kato
+
 - [Easy documentation with Docusaurus](https://blog.logrocket.com/easy-documentation-with-docusaurus/) by Anshul Goyal (MLH fellow)
+
 - [Build Beautiful Documentation Websites with Docusaurus](https://lo-victoria.com/build-beautiful-documentation-websites-with-docusaurus) by Victoria Lo
 
 ## Community
@@ -118,18 +150,27 @@ With proper support for **i18n and versioning**, and **large scale migrations** 
 We still have a few **major features** that we would like to work on:
 
 - [Create a theme gallery](https://github.com/facebook/docusaurus/issues/3522), make it easy to switch from one another, and include **first-class Tailwind support**
+
 - [Upgrade to Webpack 5](https://github.com/facebook/docusaurus/issues/4027), improve performances and build times
+
 - [Better compatibility with CommonMark](https://github.com/facebook/docusaurus/issues/3018), as MDX and makes it harder for CommonMark-based sites to adopt Docusaurus
+
 - [Upgrade to MDX 2.0](https://github.com/facebook/docusaurus/issues/4029)
+
 - Other tasks that we might discover during 2021
 
-Huge thanks to the community for [their contributions in 2020](https://github.com/facebook/docusaurus/graphs/contributors?from=2020-01-01&to=2021-01-01&type=c), especially:
+Huge thanks to the community for [their contributions in 2020](https://github.com/facebook/docusaurus/graphs/contributors?from=2020-01-01\&to=2021-01-01\&type=c), especially:
 
 - [Joel Marcey](https://github.com/JoelMarcey) for creating Docusaurus and supporting the project all this time
+
 - the core team - [Alexey Pyltsyn](https://github.com/lex111), [Sébastien Lorber](https://sebastienlorber.com), [Yangshun Tay](https://twitter.com/yangshunz)
+
 - the Major League Hacking and Facebook interns for their significant impact
+
 - the Algolia team for DocSearch 3 and their support
+
 - [Bartosz Kaszubowski](https://github.com/Simek) for his investment in the React Native migration
+
 - the whole community for their contributions, and providing support to each other
 
 Cheers to a great 2021! 🎉

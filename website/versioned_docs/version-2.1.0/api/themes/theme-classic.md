@@ -14,9 +14,7 @@ npm install --save @docusaurus/theme-classic
 ```
 
 :::tip
-
 If you have installed `@docusaurus/preset-classic`, you don't need to install it as a dependency.
-
 :::
 
 ## Configuration {#configuration}
@@ -27,18 +25,16 @@ Accepted fields:
 <APITable>
 ```
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `customCss` | <code>string[] \| string</code> | `[]` | Stylesheets to be imported globally as [client modules](../../advanced/client.md#client-modules). Relative paths are resolved against the site directory. |
+| Option      | Type                             | Default | Description                                                                                                                                               |
+| ----------- | -------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `customCss` | <code>string\[] \| string</code> | `[]`    | Stylesheets to be imported globally as [client modules](../../advanced/client.md#client-modules). Relative paths are resolved against the site directory. |
 
 ```mdx-code-block
 </APITable>
 ```
 
 :::note
-
 Most configuration for the theme is done in `themeConfig`, which can be found in [theme configuration](./theme-configuration.md).
-
 :::
 
 ### Example configuration {#ex-config}
@@ -46,12 +42,10 @@ Most configuration for the theme is done in `themeConfig`, which can be found in
 You can configure this theme through preset options or plugin options.
 
 :::tip
-
 Most Docusaurus users configure this plugin through the preset options.
-
 :::
 
-```js config-tabs
+```js
 // Preset Options: theme
 // Plugin Options: @docusaurus/theme-classic
 

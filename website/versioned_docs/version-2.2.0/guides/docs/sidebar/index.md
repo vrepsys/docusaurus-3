@@ -7,12 +7,15 @@ slug: /sidebar
 Creating a sidebar is useful to:
 
 - Group multiple **related documents**
+
 - **Display a sidebar** on each of those documents
+
 - Provide **paginated navigation**, with next/previous button
 
 To use sidebars on your Docusaurus site:
 
 1. Define a file that exports a dictionary of [sidebar objects](#sidebar-object).
+
 2. Pass this object into the `@docusaurus/plugin-docs` plugin directly or via `@docusaurus/preset-classic`.
 
 ```js title="docusaurus.config.js"

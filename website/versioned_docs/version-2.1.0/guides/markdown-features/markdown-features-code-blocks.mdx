@@ -50,11 +50,9 @@ console.log('Every repo must come with a mascot.');
 Use the matching language meta string for your code block, and Docusaurus will pick up syntax highlighting automatically, powered by [Prism React Renderer](https://github.com/FormidableLabs/prism-react-renderer).
 
 <BrowserWindow>
-
-```js
-console.log('Every repo must come with a mascot.');
-```
-
+  ```js
+  console.log('Every repo must come with a mascot.');
+  ```
 </BrowserWindow>
 
 ### Theming {#theming}
@@ -81,17 +79,13 @@ Because a Prism theme is just a JS object, you can also write your own theme if 
 By default, Docusaurus comes with a subset of [commonly used languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js).
 
 :::caution
-
 Some popular languages like Java, C#, or PHP are not enabled by default.
-
 :::
 
 To add syntax highlighting for any of the other [Prism-supported languages](https://prismjs.com/#supported-languages), define it in an array of additional languages.
 
 :::note
-
-Each additional language has to be a valid Prism component name. For example, Prism would map the _language_ `cs` to `csharp`, but only `prism-csharp.js` exists as a _component_, so you need to use `additionalLanguages: ['csharp']`. You can look into `node_modules/prismjs/components` to find all components (languages) available.
-
+Each additional language has to be a valid Prism component name. For example, Prism would map the *language* `cs` to `csharp`, but only `prism-csharp.js` exists as a *component*, so you need to use `additionalLanguages: ['csharp']`. You can look into `node_modules/prismjs/components` to find all components (languages) available.
 :::
 
 For example, if you want to add highlighting for the PowerShell language:
@@ -203,7 +197,7 @@ Supported commenting syntax:
 | Bash-style | `# ...`                  |
 | HTML-style | `<!-- ... -->`           |
 
-We will do our best to infer which set of comment styles to use based on the language, and default to allowing _all_ comment styles. If there's a comment style that is not currently supported, we are open to adding them! Pull requests welcome. Note that different comment styles have no semantic difference, only their content does.
+We will do our best to infer which set of comment styles to use based on the language, and default to allowing *all* comment styles. If there's a comment style that is not currently supported, we are open to adding them! Pull requests welcome. Note that different comment styles have no semantic difference, only their content does.
 
 You can set your own background color for highlighted code line in your `src/css/custom.css` which will better fit to your selected syntax highlighting theme. The color given below works for the default highlighting theme (Palenight), so if you are using another theme, you will have to tweak the color accordingly.
 
@@ -245,7 +239,7 @@ export default MyComponent;
 <BrowserWindow>
 ```
 
-```jsx {1,4-6,11}
+```jsx
 import React from 'react';
 
 function MyComponent(props) {
@@ -264,7 +258,6 @@ export default MyComponent;
 ```
 
 :::tip prefer comments
-
 Prefer highlighting with comments where you can. By inlining highlight in the code, you don't have to manually count the lines if your code block becomes long. If you add/remove lines, you also don't have to offset your line ranges.
 
 ````diff
@@ -282,7 +275,6 @@ Prefer highlighting with comments where you can. By inlining highlight in the co
 ````
 
 Below, we will introduce how the magic comment system can be extended to define custom directives and their functionalities. The magic comments would only be parsed if a highlight metastring is not present.
-
 :::
 
 ### Custom magic comments {#custom-magic-comments}
@@ -410,7 +402,7 @@ export default MyComponent;
 <BrowserWindow>
 ```
 
-```jsx {1,4-6,11} showLineNumbers
+```jsx showLineNumbers
 import React from 'react';
 
 function MyComponent(props) {
@@ -440,7 +432,7 @@ npm install --save @docusaurus/theme-live-codeblock
 
 You will also need to add the plugin to your `docusaurus.config.js`.
 
-```js {3}
+```js
 module.exports = {
   // ...
   themes: ['@docusaurus/theme-live-codeblock'],
@@ -481,7 +473,7 @@ The code block will be rendered as an interactive editor. Changes to the code wi
 <BrowserWindow>
 ```
 
-```jsx live
+```jsx
 function Clock(props) {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
@@ -511,9 +503,7 @@ function Clock(props) {
 ### Imports {#imports}
 
 :::caution react-live and imports
-
 It is not possible to import components directly from the react-live code editor, you have to define available imports upfront.
-
 :::
 
 By default, all React imports are available. If you need more imports available, swizzle the react-live scope:
@@ -559,7 +549,7 @@ The `ButtonExample` component is now available to use:
 <BrowserWindow>
 ```
 
-```jsx live
+```jsx
 function MyPlayground(props) {
   return (
     <div>
@@ -641,15 +631,11 @@ If you want to embed HTML markup such as anchor links or bold type, you can use 
 </BrowserWindow>
 
 :::caution MDX is whitespace insensitive
-
 MDX is in line with JSX behavior: line break characters, even when inside `<pre>`, are turned into spaces. You have to explicitly write the new line character for it to be printed out.
-
 :::
 
 :::caution
-
 Syntax highlighting only works on plain strings. Docusaurus will not attempt to parse code block content containing JSX children.
-
 :::
 
 ## Multi-language support code blocks {#multi-language-support-code-blocks}

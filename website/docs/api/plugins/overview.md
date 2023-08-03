@@ -14,7 +14,9 @@ We provide official Docusaurus plugins.
 These plugins are responsible for loading your site's content, and creating pages for your theme to render.
 
 - [@docusaurus/plugin-content-docs](./plugin-content-docs.md)
+
 - [@docusaurus/plugin-content-blog](./plugin-content-blog.md)
+
 - [@docusaurus/plugin-content-pages](./plugin-content-pages.md)
 
 ## Behavior plugins {#behavior-plugins}
@@ -22,9 +24,15 @@ These plugins are responsible for loading your site's content, and creating page
 These plugins will add a useful behavior to your Docusaurus site.
 
 - [@docusaurus/plugin-debug](./plugin-debug.md)
+
 - [@docusaurus/plugin-sitemap](./plugin-sitemap.md)
+
 - [@docusaurus/plugin-pwa](./plugin-pwa.md)
+
 - [@docusaurus/plugin-client-redirects](./plugin-client-redirects.md)
+
 - [@docusaurus/plugin-ideal-image](./plugin-ideal-image.md)
+
 - [@docusaurus/plugin-google-analytics](./plugin-google-analytics.md)
+
 - [@docusaurus/plugin-google-gtag](./plugin-google-gtag.md)

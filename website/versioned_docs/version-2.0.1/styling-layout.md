@@ -7,9 +7,7 @@ import ColorGenerator from '@site/src/components/ColorGenerator';
 # Styling and Layout
 
 :::tip
-
 This section is focused on styling through stylesheets. For more advanced customizations (DOM structure, React code...), refer to the [swizzling guide](./swizzling.md).
-
 :::
 
 A Docusaurus site is a single-page React application. You can style it the way you style React apps.
@@ -61,7 +59,9 @@ function MyComponent() {
 If you want to add CSS to any element, you can open the DevTools in your browser to inspect its class names. Class names come in several kinds:
 
 - **Theme class names**. These class names are listed exhaustively in [the next subsection](#theme-class-names). They don't have any default properties. You should always prioritize targeting those stable class names in your custom CSS.
+
 - **Infima class names**. These class names are found in the classic theme and usually follow the [BEM convention](http://getbem.com/naming/) of `block__element--modifier`. They are usually stable but are still considered implementation details, so you should generally avoid targeting them. However, you can [modify Infima CSS variables](#styling-your-site-with-infima).
+
 - **CSS module class names**. These class names have a hash in production (`codeBlockContainer_RIuc`) and are appended with a long file path in development. They are considered implementation details and you should almost always avoid targeting them in your custom CSS. If you must, you can use an [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) (`[class*='codeBlockContainer']`) that ignores the hash.
 
 ### Theme Class Names {#theme-class-names}
@@ -69,28 +69,24 @@ If you want to add CSS to any element, you can open the DevTools in your browser
 We provide some stable CSS class names for robust and maintainable global layout styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 :::tip
-
 If you can't find a way to create a robust CSS selector, please [report your customization use-case](https://github.com/facebook/docusaurus/discussions/5468) and we will consider adding new class names.
-
 :::
 
 <details>
+  <summary>Exhaustive list of stable class names</summary>
 
-<summary>Exhaustive list of stable class names</summary>
+  ```mdx-code-block
+  import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
+  import CodeBlock from '@theme/CodeBlock';
 
-```mdx-code-block
-import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-ts">
-  {ThemeClassNamesCode
-    // remove source comments
-    .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
-    .replace(/^ *\n/gm,'')
-    .trim()}
-</CodeBlock>
-```
-
+  <CodeBlock className="language-ts">
+    {ThemeClassNamesCode
+      // remove source comments
+      .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
+      .replace(/^ *\n/gm,'')
+      .trim()}
+  </CodeBlock>
+  ```
 </details>
 
 ### Styling your site with Infima {#styling-your-site-with-infima}
@@ -110,7 +106,7 @@ Infima uses 7 shades of each color. We recommend using [ColorBox](https://www.co
 
 Alternatively, use the following tool to generate the different shades for your website and copy the variables into `/src/css/custom.css`.
 
-<ColorGenerator/>
+<ColorGenerator />
 
 ### Dark Mode {#dark-mode}
 
@@ -179,9 +175,7 @@ The class names will be processed by webpack into a globally unique class name d
 ## CSS-in-JS {#css-in-js}
 
 :::caution
-
 CSS-in-JS support is a work in progress, so libs like MUI may have display quirks. [Welcoming PRs](https://github.com/facebook/docusaurus/issues/1640).
-
 :::
 
 ## Sass/SCSS {#sassscss}
@@ -194,7 +188,7 @@ To use Sass/SCSS as your CSS preprocessor, install the unofficial Docusaurus 2 p
 npm install --save docusaurus-plugin-sass sass
 ```
 
-2. Include the plugin in your `docusaurus.config.js` file:
+1. Include the plugin in your `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -205,7 +199,7 @@ module.exports = {
 };
 ```
 
-3. Write and import your stylesheets in Sass/SCSS as normal.
+1. Write and import your stylesheets in Sass/SCSS as normal.
 
 ### Global styles using Sass/SCSS {#global-styles-using-sassscss}
 

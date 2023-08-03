@@ -9,16 +9,17 @@ keywords:
 There are a few options you can use to add search to your website:
 
 - 🥇 [Algolia DocSearch](#using-algolia-docsearch) (**official**)
+
 - 👥 [Typesense DocSearch](#using-typesense-docsearch)
+
 - 👥 [Local Search](#using-local-search)
+
 - 👥 [Your own `SearchBar` component](#using-your-own-search)
 
 :::info
-
 🥇 Docusaurus provides **first-class support** for [Algolia DocSearch](#using-algolia-docsearch).
 
 👥 Other options are **maintained by the community**: please report bugs to their respective repositories.
-
 :::
 
 ## 🥇 Using Algolia DocSearch {#using-algolia-docsearch}
@@ -32,15 +33,11 @@ DocSearch crawls your website once a week (the schedule is configurable from the
 If your website is [not eligible](https://docsearch.algolia.com/docs/who-can-apply) for the free, hosted version of DocSearch, or if your website sits behind a firewall and is not public, then you can [run your own](https://docsearch.algolia.com/docs/run-your-own/) DocSearch crawler.
 
 :::note
-
 By default, the Docusaurus preset generates a [sitemap.xml](https://docusaurus.io/sitemap.xml) that the Algolia crawler can use.
-
 :::
 
 :::info From the old docsearch?
-
 You can read more about migration from the legacy DocSearch infra in [our blog post](/blog/2021/11/21/algolia-docsearch-migration) or [the DocSearch migration docs](https://docsearch.algolia.com/docs/migrating-from-legacy).
-
 :::
 
 ### Index Configuration {#algolia-index-configuration}
@@ -48,9 +45,7 @@ You can read more about migration from the legacy DocSearch infra in [our blog p
 After your application has been approved and deployed, you will receive an email with all the details for you to add DocSearch to your project. Editing and managing your crawls can be done via [the web interface](https://crawler.algolia.com/). Indices are readily available after deployment, so manual configuration usually isn't necessary.
 
 :::tip
-
 It is highly recommended to use a config similar to the [**Docusaurus 2 website config**](https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template).
-
 :::
 
 ### Connecting Algolia {#connecting-algolia}
@@ -58,30 +53,29 @@ It is highly recommended to use a config similar to the [**Docusaurus 2 website 
 Docusaurus' own `@docusaurus/preset-classic` supports Algolia DocSearch integration. If you use the classic preset, no additional installation is needed.
 
 <details>
-<summary>Installation steps when not using <code>@docusaurus/preset-classic</code></summary>
+  <summary>Installation steps when not using <code>@docusaurus/preset-classic</code></summary>
 
-1. Install the package:
+  1. Install the package:
 
-```bash npm2yarn
-npm install --save @docusaurus/theme-search-algolia
-```
+  ```bash npm2yarn
+  npm install --save @docusaurus/theme-search-algolia
+  ```
 
-2. Register the theme in `docusaurus.config.js`:
+  2. Register the theme in `docusaurus.config.js`:
 
-```js title="docusaurus.config.js"
-module.exports = {
-  title: 'My site',
-  // ...
-  themes: ['@docusaurus/theme-search-algolia'],
-  themeConfig: {
+  ```js title="docusaurus.config.js"
+  module.exports = {
+    title: 'My site',
     // ...
-  },
-};
-```
-
+    themes: ['@docusaurus/theme-search-algolia'],
+    themeConfig: {
+      // ...
+    },
+  };
+  ```
 </details>
 
-Then, add an `algolia` field in your `themeConfig`. **[Apply for DocSearch](https://docsearch.algolia.com/apply/)** to get your Algolia index and API key.
+Then, add an `algolia` field in your `themeConfig`. [**Apply for DocSearch**](https://docsearch.algolia.com/apply/) to get your Algolia index and API key.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -118,19 +112,15 @@ module.exports = {
 ```
 
 :::info
-
 The `searchParameters` option used to be named `algoliaOptions` in Docusaurus v1.
 
 Refer to its [official DocSearch documentation](https://docsearch.algolia.com/docs/api#searchparameters) for possible values.
-
 :::
 
 :::caution
-
 The search feature will not work reliably until Algolia crawls your site.
 
 If search doesn't work after any significant change, please use the Algolia dashboard to **trigger a new crawl**.
-
 :::
 
 ### Contextual search {#contextual-search}
@@ -162,10 +152,10 @@ Similarly, when browsing the French site, it would be odd to return search resul
 To solve this problem, the contextual search feature understands that you are browsing a specific docs version and language, and will create the search query filters dynamically.
 
 - on `/en/docs/v1/myDoc`, search results will only include **English** results for the **v1** docs (+ other unversioned pages)
+
 - on `/fr/docs/v2/myDoc`, search results will only include **French** results for the **v2** docs (+ other unversioned pages)
 
 :::info
-
 When using `contextualSearch: true` (default), the contextual facet filters will be merged with the ones provided with `algolia.searchParameters.facetFilters` .
 
 For specific needs, you can disable `contextualSearch` and define your own `facetFilters`:
@@ -188,7 +178,6 @@ module.exports = {
 ```
 
 Refer to the relevant [Algolia faceting documentation](https://www.algolia.com/doc/guides/managing-results/refine-results/faceting/).
-
 :::
 
 ### Styling your Algolia search {#styling-your-algolia-search}
@@ -270,7 +259,7 @@ npm run swizzle @docusaurus/theme-search-algolia SearchBar
 
 The Algolia DocSearch team can help you figure out search problems on your site.
 
-You can contact them by [email](mailto:documentationsearch@algolia.com) or on [Discord](https://discord.gg/tXdr5mP).
+You can contact them by [email](mailto\:documentationsearch@algolia.com) or on [Discord](https://discord.gg/tXdr5mP).
 
 Docusaurus also has an `#algolia` channel on [Discord](https://discordapp.com/invite/docusaurus).
 
@@ -281,11 +270,13 @@ Docusaurus also has an `#algolia` channel on [Discord](https://discordapp.com/in
 Typesense is an [open source](https://github.com/typesense/typesense) instant-search engine that you can either:
 
 - [Self-Host](https://typesense.org/docs/latest/guide/install-typesense.html#option-2-local-machine-self-hosting) on your own servers or
+
 - Use the Managed [Typesense Cloud](https://cloud.typesense.org) service.
 
 Similar to Algolia DocSearch, there are two components:
 
 - [typesense-docsearch-scraper](https://github.com/typesense/typesense-docsearch-scraper) - which scrapes your website and indexes the data in your Typesense cluster.
+
 - [docusaurus-theme-search-typesense](https://github.com/typesense/docusaurus-theme-search-typesense) - a search bar UI component to add to your website.
 
 Read a step-by-step walk-through of how to [run typesense-docsearch-scraper here](https://typesense.org/docs/latest/guide/docsearch.html#step-1-set-up-docsearch-scraper) and how to [install the Search Bar in your Docusaurus Site here](https://typesense.org/docs/latest/guide/docsearch.html#option-a-docusaurus-powered-sites).

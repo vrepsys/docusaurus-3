@@ -15,10 +15,12 @@ import Navbar from '@theme/Navbar';
 The alias `@theme` can refer to a few directories, in the following priority:
 
 1. A user's `website/src/theme` directory, which is a special directory that has the higher precedence.
+
 2. A Docusaurus theme package's `theme` directory.
+
 3. Fallback components provided by Docusaurus core (usually not needed).
 
-This is called a _layered architecture_: a higher-priority layer providing the component would shadow a lower-priority layer, making swizzling possible. Given the following structure:
+This is called a *layered architecture*: a higher-priority layer providing the component would shadow a lower-priority layer, making swizzling possible. Given the following structure:
 
 ```
 website
@@ -53,9 +55,7 @@ export default function CodeBlock(props) {
 Check the code of `@docusaurus/theme-live-codeblock` for details.
 
 :::caution
-
 Unless you want to publish a re-usable "theme enhancer" (like `@docusaurus/theme-live-codeblock`), you likely don't need `@theme-init`.
-
 :::
 
 It can be quite hard to wrap your mind around these aliases. Let's imagine the following case with a super convoluted setup with three themes/plugins and the site itself all trying to define the same component. Internally, Docusaurus loads these themes as a "stack".
@@ -78,7 +78,7 @@ The components in this "stack" are pushed in the order of `preset plugins > pres
 
 `@theme-original/*` always points to the topmost non-swizzled component. That's why you can import `@theme-original/CodeBlock` in the swizzled component—it points to the next one in the "component stack", a theme-provided one. Plugin authors should not try to use this because your component could be the topmost component and cause a self-import.
 
-`@theme-init/*` always points to the bottommost component—usually, this comes from the theme or plugin that first provides this component. Individual plugins / themes trying to enhance code block can safely use `@theme-init/CodeBlock` to get its basic version. Site creators should generally not use this because you likely want to enhance the _topmost_ instead of the _bottommost_ component. It's also possible that the `@theme-init/CodeBlock` alias does not exist at all—Docusaurus only creates it when it points to a different one from `@theme-original/CodeBlock`, i.e. when it's provided by more than one theme. We don't waste aliases!
+`@theme-init/*` always points to the bottommost component—usually, this comes from the theme or plugin that first provides this component. Individual plugins / themes trying to enhance code block can safely use `@theme-init/CodeBlock` to get its basic version. Site creators should generally not use this because you likely want to enhance the *topmost* instead of the *bottommost* component. It's also possible that the `@theme-init/CodeBlock` alias does not exist at all—Docusaurus only creates it when it points to a different one from `@theme-original/CodeBlock`, i.e. when it's provided by more than one theme. We don't waste aliases!
 
 ## Client modules {#client-modules}
 
@@ -126,8 +126,11 @@ Because Docusaurus builds a single-page application, `script` tags will only be 
 For every route transition, there will be several important timings:
 
 1. The user clicks a link, which causes the router to change its current location.
+
 2. Docusaurus preloads the next route's assets, while keeping displaying the current page's content.
+
 3. The next route's assets have loaded.
+
 4. The new location's route component gets rendered to DOM.
 
 `onRouteUpdate` will be called at event (2), and `onRouteDidUpdate` will be called at (4). They both receive the current location and the previous location (which can be `null`, if this is the first screen).
@@ -180,7 +183,5 @@ export default module;
 Both lifecycles will fire on first render, but they will not fire on server-side, so you can safely access browser globals in them.
 
 :::tip Prefer using React
-
 Client module lifecycles are purely imperative, and you can't use React hooks or access React contexts within them. If your operations are state-driven or involve complicated DOM manipulations, you should consider [swizzling components](../swizzling.md) instead.
-
 :::
