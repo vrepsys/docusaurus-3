@@ -11,7 +11,7 @@ We continued to invest in [Docusaurus 2](https://docusaurus.io/), and made it re
 
 We now **recommend Docusaurus 2** as the **default choice** to start a new Docusaurus project and encourage v1 users to [migrate to Docusaurus 2](https://docusaurus.io/docs/migration).
 
-We are **still in alpha**, but expect **some good news very soon**!
+We are **still in alpha**, but ex pect **some good news very soon**!
 
 ![Three Docusaurus plushies laid side-by-side on the table](/img/blog/2020-recap/docusaurus-plushie-banner.jpeg)
 
@@ -63,7 +63,7 @@ Localized Docusaurus 1 sites (like **Jest**) will be able to upgrade too:
 
 ![Jest's new website built with Docusaurus v2 in Japanese](/img/blog/2020-recap/jest-screenshot.png)
 
-We also saw the **[first right-to-left](https://datagit.ir/)** Docusaurus 2 site published:
+We also saw the [**first right-to-left**](https://datagit.ir/) Docusaurus 2 site published:
 
 ![Datagit's website in Persian, a right-to-left language. The sidebar appears on the right of the window and the TOC appears on the left.](/img/blog/2020-recap/datagit-rtl-screenshot.png)
 

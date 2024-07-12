@@ -10,7 +10,7 @@ tags: [new, adoption]
 
 Docusaurus was [officially announced](https://v1.docusaurus.io/blog/2017/12/14/introducing-docusaurus) over nine months ago as a way to easily build open source documentation websites. Since then, it has amassed over 8,600 GitHub Stars, and is used by many popular open source projects such as [React Native](https://facebook.github.io/react-native/), [Babel](https://babeljs.io/), [Jest](https://jestjs.io/), [Reason](https://reasonml.github.io/) and [Prettier](https://prettier.io/).
 
-There is a saying that the very best software is constantly evolving, and the very worst is not. In case you are not aware, we have been planning and working on the next version of Docusaurus 🎉.
+There is a saying that the very best software is constantly evolving, and the very worst is not. In case you are not aware, we have been planning and working on the next version of Docusaurus 🎉.&#x20;
 
 <!--truncate-->
 
@@ -18,7 +18,19 @@ There is a saying that the very best software is constantly evolving, and the ve
 
 It all started with this [RFC issue](https://github.com/facebook/docusaurus/issues/789) opened by [Yangshun](https://github.com/yangshun) towards the end of June 2018.
 
-<blockquote><h4><a href="https://github.com/facebook/docusaurus/issues/789">[RFC] Docusaurus v2 · Issue #789 · facebook/docusaurus</a></h4><p>These are some of the problems I'm seeing in Docusaurus now and also how we can address them in v2. A number of the ideas here were inspired by VuePress and other static site generators. In the current static site generators ecosystem, t...</p></blockquote>
+<blockquote>
+  <h4>
+    <a href="https://github.com/facebook/docusaurus/issues/789">
+      [RFC] Docusaurus v2 · Issue #789 · facebook/docusaurus
+    </a>
+  </h4>
+  <p>
+    These are some of the problems I'm seeing in Docusaurus now and also how we
+    can address them in v2. A number of the ideas here were inspired by VuePress
+    and other static site generators. In the current static site generators
+    ecosystem, t...
+  </p>
+</blockquote>
 
 Most of the suggested improvements are mentioned in the issue; I will provide details on some of issues in Docusaurus 1 and how we are going to address them in Docusaurus 2.
 
