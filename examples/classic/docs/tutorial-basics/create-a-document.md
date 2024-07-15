@@ -11,6 +11,8 @@ Documents are **groups of pages** connected through:
 - **versioning**
 - **modify**
 
+![](/img/cover.png)
+
 ## Create your first Doc
 
 Create a Markdown file at `docs/hello.md`:
