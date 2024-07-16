@@ -54,6 +54,7 @@ Note that:
 - The last component of the supplied path cannot be a symbolic link, it has to be the package directory itself.
 - If you supplied the wrong directory name, `yarn add` may not complain, but `yarn build` and `yarn start` will fail. To avoid this, check `package.json` inside the package directory to make sure you have the correct path.
 - These commands don't work:
+
   ```
   yarn add @docusaurus/core@../../local/docusaurus/node_modules/@docusaurus/core
   yarn add file:../../local/docusaurus/packages/docusaurus
@@ -61,8 +62,9 @@ Note that:
   yarn add ../../local/docusaurus/node_modules/@docusaurus/core
   yarn add ../../local/docusaurus/packages/docusaurus
   ```
+
 - You cannot use `npm install` instead of `yarn add` for this purpose.
-- `yarn link` is very likely to fail with react, unless you also manually link react. See https://github.com/facebook/react/issues/14257.
+- `yarn link` is very likely to fail with react, unless you also manually link react. See [https://github.com/facebook/react/issues/14257](https://github.com/facebook/react/issues/14257).
 
 ## Use Verdaccio
 

@@ -4,27 +4,35 @@ An encapsulated logger for semantically formatting console messages.
 
 ## APIs
 
+hey there
+
 It exports a single object as default export: `logger`. `logger` has the following properties:
 
 - Some useful colors.
+
   - `red`
   - `yellow`
   - `green`
   - `bold`
   - `dim`
+
 - Formatters. These functions all have the signature `(msg: unknown) => string`. Note that their implementations are not guaranteed. You should only care about their semantics.
+
   - `path`: formats a file path.
   - `url`: formats a URL.
   - `name`: formats an identifier.
   - `code`: formats a code snippet.
   - `subdue`: subdues the text.
   - `num`: formats a number.
+
 - The `interpolate` function. It is a template literal tag. The syntax can be found below.
 - Logging functions. All logging functions can both be used as normal functions (similar to the `console.log` family, but only accepts one parameter) or template literal tags.
+
   - `info`: prints information.
   - `warn`: prints a warning that should be paid attention to.
   - `error`: prints an error (not necessarily halting the program) that signals significant problems.
   - `success`: prints a success message.
+
 - The `report` function. It takes a `ReportingSeverity` value (`ignore`, `log`, `warn`, `throw`) and reports a message according to the severity.
 
 ### A word on the `error` formatter
