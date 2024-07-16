@@ -6,6 +6,8 @@ There are two reasonable ways to use a local version of the Docusaurus npm packa
 
 ## Install from a local Docusaurus repo
 
+hello there
+
 ### Install in an existing project
 
 Let's say you have an existing project with this snippet inside package.json:
