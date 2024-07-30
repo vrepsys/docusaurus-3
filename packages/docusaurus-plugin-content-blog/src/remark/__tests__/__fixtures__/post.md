@@ -1,9 +1,5 @@
-foo[^1]
+foo
 
-bar[^2]
+bar
 
-baz[^3]
-
-[^1]: foo
-[^2]: foo
-[^3]: foo
+baz

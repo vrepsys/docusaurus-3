@@ -56,7 +56,7 @@ These keys are not secrets and can be added to your Git repository.
 
 ### What is DocSearch?
 
-[DocSearch](https://docsearch.algolia.com/) is a program created by [Algolia](http://algolia.com/), which offers search to technical documentation of Open Source projects and technical blogs **for free**.
+[DocSearch](https://docsearch.algolia.com/) is a program created by [Algolia](http://algolia.com/), which offers search to technical documentation of Open Source projects and technical blogs **for free**. **[link](../../versioned_docs/version-2.0.1/blog.mdx)**
 
 You can [read more here](https://docsearch.algolia.com/docs/what-is-docsearch/), and [apply](https://docsearch.algolia.com/apply) if you'd like to give it a try!
 
