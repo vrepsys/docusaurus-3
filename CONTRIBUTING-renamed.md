@@ -127,7 +127,7 @@ Working on your first Pull Request? You can learn how from this free video serie
 
 Please make sure the following is done when submitting a pull request:
 
-1. **Keep your PR small.** Small pull requests (~300 lines of diff) are much easier to review and more likely to get merged. Make sure the PR does only one thing, otherwise please split it.
+1. **Keep your PR small.** Small pull requests (\~300 lines of diff) are much easier to review and more likely to get merged. Make sure the PR does only one thing, otherwise please split it.
 2. **Use descriptive titles.** It is recommended to follow this [commit message style](#semantic-commit-messages).
 3. **Test your changes.** Describe your [**test plan**](#test-plan) in your pull request description.
 4. **CLA.** If you haven't already, [sign the CLA](https://code.facebook.com/cla).
@@ -173,8 +173,8 @@ feat(core): allow overriding of webpack config
 
 If you only want to make doc changes, you just need to be aware of versioned docs.
 
-- `website/docs` - The files here are responsible for the "next" version at https://docusaurus.io/docs/next/installation.
-- `website/versioned_docs/version-X.Y.Z` - These are the docs for the X.Y.Z version at https://docusaurus.io/docs/X.Y.Z/installation.
+- `website/docs` - The files here are responsible for the "next" version at [https://docusaurus.io/docs/next/installation](https://docusaurus.io/docs/next/installation).
+- `website/versioned_docs/version-X.Y.Z` - These are the docs for the X.Y.Z version at [https://docusaurus.io/docs/X.Y.Z/installation](https://docusaurus.io/docs/X.Y.Z/installation).
 
 Do not edit the auto-generated files within `versioned_docs/` or `versioned_sidebars/` unless you are sure it is necessary. For example, information about new features should not be documented in versioned docs. Edits made to older versions will not be propagated to newer versions of the docs.
 
