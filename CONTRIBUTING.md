@@ -1,5 +1,7 @@
 # Contributing to Docusaurus
 
+Here's a change for you
+
 [Docusaurus](https://docusaurus.io) is our way to hopefully help to create open source documentation easier. We currently have [multiple open source projects using it](https://docusaurus.io/showcase), with many more planned. If you're interested in contributing to Docusaurus, hopefully, this document makes the process for contributing clear.
 
 The [Open Source Guides](https://opensource.guide/) website has a collection of resources for individuals, communities, and companies who want to learn how to run and contribute to an open source project. Contributors and people new to open source alike will find the following guides especially useful:
@@ -17,7 +19,7 @@ There are many ways to contribute to Docusaurus, and many of them do not involve
 
 - Simply start using Docusaurus. Go through the [Getting Started](https://docusaurus.io/docs/installation) guide. Does everything work as expected? If not, we're always looking for improvements. Let us know by [opening an issue](#issues).
 - Look through the [open issues](https://github.com/facebook/docusaurus/issues). Provide workarounds, ask for clarification, or suggest labels. Help [triage issues](#triaging-issues-and-pull-requests).
-- If you find an issue you would like to fix, [open a pull request](#pull-requests). Issues tagged as [_Good first issue_](https://github.com/facebook/docusaurus/labels/Good%20first%20issue) are a good place to get started.
+- If you find an issue you would like to fix, [open a pull request](#pull-requests). Issues tagged as [*Good first issue*](https://github.com/facebook/docusaurus/labels/Good%20first%20issue) are a good place to get started.
 - Read through the [Docusaurus docs](https://docusaurus.io/docs/installation). If you find anything that is confusing or can be improved, you can click "Edit this page" at the bottom of most docs, which takes you to the GitHub interface to make and propose changes.
 - Take a look at the [features requested](https://github.com/facebook/docusaurus/labels/feature) by others in the community and consider opening a pull request if you see something you want to work on.
 
@@ -54,7 +56,7 @@ When [opening a new issue](https://github.com/facebook/docusaurus/issues/new/cho
 
 ### Bugs
 
-We use [GitHub Issues](https://github.com/facebook/docusaurus/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it. If you are certain this is a new, unreported bug, you can submit a [bug report](https://github.com/facebook/docusaurus/issues/new?assignees=&labels=bug%2Cstatus%3A+needs+triage&template=bug.yml).
+We use [GitHub Issues](https://github.com/facebook/docusaurus/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it. If you are certain this is a new, unreported bug, you can submit a [bug report](https://github.com/facebook/docusaurus/issues/new?assignees=\&labels=bug%2Cstatus%3A+needs+triage\&template=bug.yml).
 
 - **One issue, one bug:** Please report a single bug per issue.
 - **Provide reproduction steps:** List all the steps necessary to reproduce the issue. The person reading your bug report should be able to follow these steps to reproduce your issue with minimal effort.
@@ -67,11 +69,11 @@ Facebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe
 
 ### Feature requests
 
-If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can file an issue with the [feature template](https://github.com/facebook/docusaurus/issues/new?assignees=&labels=feature%2Cstatus%3A+needs+triage&template=feature.yml) in the form of an **elaborated RFC**. Alternatively, you can use the [Canny board](https://docusaurus.io/feature-requests) for more casual feature requests and gain enough traction before proposing an RFC.
+If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can file an issue with the [feature template](https://github.com/facebook/docusaurus/issues/new?assignees=\&labels=feature%2Cstatus%3A+needs+triage\&template=feature.yml) in the form of an **elaborated RFC**. Alternatively, you can use the [Canny board](https://docusaurus.io/feature-requests) for more casual feature requests and gain enough traction before proposing an RFC.
 
 ### Proposals
 
-If you intend to make any non-trivial changes to existing implementations, we recommend filing an issue with the [proposal template](https://github.com/facebook/docusaurus/issues/new?assignees=&labels=proposal%2Cstatus%3A+needs+triage&template=proposal.yml). This lets us reach an agreement on your proposal before you put significant effort into it. These types of issues should be rare.
+If you intend to make any non-trivial changes to existing implementations, we recommend filing an issue with the [proposal template](https://github.com/facebook/docusaurus/issues/new?assignees=\&labels=proposal%2Cstatus%3A+needs+triage\&template=proposal.yml). This lets us reach an agreement on your proposal before you put significant effort into it. These types of issues should be rare.
 
 ### Claiming issues
 
@@ -127,7 +129,7 @@ Working on your first Pull Request? You can learn how from this free video serie
 
 Please make sure the following is done when submitting a pull request:
 
-1. **Keep your PR small.** Small pull requests (~300 lines of diff) are much easier to review and more likely to get merged. Make sure the PR does only one thing, otherwise please split it.
+1. **Keep your PR small.** Small pull requests (\~300 lines of diff) are much easier to review and more likely to get merged. Make sure the PR does only one thing, otherwise please split it.
 2. **Use descriptive titles.** It is recommended to follow this [commit message style](#semantic-commit-messages).
 3. **Test your changes.** Describe your [**test plan**](#test-plan) in your pull request description.
 4. **CLA.** If you haven't already, [sign the CLA](https://code.facebook.com/cla).
@@ -173,8 +175,8 @@ feat(core): allow overriding of webpack config
 
 If you only want to make doc changes, you just need to be aware of versioned docs.
 
-- `website/docs` - The files here are responsible for the "next" version at https://docusaurus.io/docs/next/installation.
-- `website/versioned_docs/version-X.Y.Z` - These are the docs for the X.Y.Z version at https://docusaurus.io/docs/X.Y.Z/installation.
+- `website/docs` - The files here are responsible for the "next" version at [https://docusaurus.io/docs/next/installation](https://docusaurus.io/docs/next/installation).
+- `website/versioned_docs/version-X.Y.Z` - These are the docs for the X.Y.Z version at [https://docusaurus.io/docs/X.Y.Z/installation](https://docusaurus.io/docs/X.Y.Z/installation).
 
 Do not edit the auto-generated files within `versioned_docs/` or `versioned_sidebars/` unless you are sure it is necessary. For example, information about new features should not be documented in versioned docs. Edits made to older versions will not be propagated to newer versions of the docs.
 
