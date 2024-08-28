@@ -37,7 +37,7 @@ After submission, our Netlify bot will post a deploy preview link in comment, in
 Please don't be afraid to change the main site's configuration as well! You can make use of your new feature on our site so we can preview its effects. We can decide if it should be kept in production before merging it.
 -->
 
-Deploy preview: https://deploy-preview-_____--docusaurus-2.netlify.app/
+Deploy preview: [https://deploy-preview-\_\_\_\_\_--docusaurus-2.netlify.app/](https://deploy-preview-_____--docusaurus-2.netlify.app/)
 
 ## Related issues/PRs
 

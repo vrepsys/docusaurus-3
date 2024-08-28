@@ -58,30 +58,29 @@ It is highly recommended to use a config similar to the [**Docusaurus 2 website 
 Docusaurus' own `@docusaurus/preset-classic` supports Algolia DocSearch integration. If you use the classic preset, no additional installation is needed.
 
 <details>
-<summary>Installation steps when not using <code>@docusaurus/preset-classic</code></summary>
+  <summary>Installation steps when not using <code>@docusaurus/preset-classic</code></summary>
 
-1. Install the package:
+  1. Install the package:
 
-```bash npm2yarn
-npm install --save @docusaurus/theme-search-algolia
-```
+  ```bash npm2yarn
+  npm install --save @docusaurus/theme-search-algolia
+  ```
 
-2. Register the theme in `docusaurus.config.js`:
+  2. Register the theme in `docusaurus.config.js`:
 
-```js title="docusaurus.config.js"
-module.exports = {
-  title: 'My site',
-  // ...
-  themes: ['@docusaurus/theme-search-algolia'],
-  themeConfig: {
+  ```js title="docusaurus.config.js"
+  module.exports = {
+    title: 'My site',
     // ...
-  },
-};
-```
-
+    themes: ['@docusaurus/theme-search-algolia'],
+    themeConfig: {
+      // ...
+    },
+  };
+  ```
 </details>
 
-Then, add an `algolia` field in your `themeConfig`. **[Apply for DocSearch](https://docsearch.algolia.com/apply/)** to get your Algolia index and API key.
+Then, add an `algolia` field in your `themeConfig`. [**Apply for DocSearch**](https://docsearch.algolia.com/apply/) to get your Algolia index and API key.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -270,7 +269,7 @@ npm run swizzle @docusaurus/theme-search-algolia SearchBar
 
 The Algolia DocSearch team can help you figure out search problems on your site.
 
-You can contact them by [email](mailto:documentationsearch@algolia.com) or on [Discord](https://discord.gg/tXdr5mP).
+You can contact them by [email](mailto\:documentationsearch@algolia.com) or on [Discord](https://discord.gg/tXdr5mP).
 
 Docusaurus also has an `#algolia` channel on [Discord](https://discordapp.com/invite/docusaurus).
 

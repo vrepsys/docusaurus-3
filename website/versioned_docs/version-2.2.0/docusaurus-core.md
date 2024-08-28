@@ -37,7 +37,7 @@ import ErrorBoundaryTestButton from "@site/src/components/ErrorBoundaryTestButto
 
 :::tip
 
-To see it in action, click here: <ErrorBoundaryTestButton/>
+To see it in action, click here: <ErrorBoundaryTestButton />
 
 :::
 
@@ -707,12 +707,12 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 ```
 
-| Field | Description |
-| --- | --- |
-| `ExecutionEnvironment.canUseDOM` | `true` if on client/browser, `false` on Node.js/prerendering. |
-| `ExecutionEnvironment.canUseEventListeners` | `true` if on client and has `window.addEventListener`. |
-| `ExecutionEnvironment.canUseIntersectionObserver` | `true` if on client and has `IntersectionObserver`. |
-| `ExecutionEnvironment.canUseViewport` | `true` if on client and has `window.screen`. |
+| Field                                             | Description                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------- |
+| `ExecutionEnvironment.canUseDOM`                  | `true` if on client/browser, `false` on Node.js/prerendering. |
+| `ExecutionEnvironment.canUseEventListeners`       | `true` if on client and has `window.addEventListener`.        |
+| `ExecutionEnvironment.canUseIntersectionObserver` | `true` if on client and has `IntersectionObserver`.           |
+| `ExecutionEnvironment.canUseViewport`             | `true` if on client and has `window.screen`.                  |
 
 ### `constants` {#constants}
 
