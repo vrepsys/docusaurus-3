@@ -36,7 +36,7 @@ npx @docusaurus/migrate migrate <v1 website directory> <desired v2 website direc
 npx @docusaurus/migrate migrate ./v1-website ./v2-website
 ```
 
-3. To view your new website locally, go into your v2 website's directory and start your development server.
+1. To view your new website locally, go into your v2 website's directory and start your development server.
 
 ```bash
 cd ./v2-website

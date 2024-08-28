@@ -72,10 +72,10 @@ By default, the `current` docs version is labeled as `Next` and hosted under `/d
 Note the terminology we use here.
 
 <dl>
-<dt><b>Current version</b></dt>
-<dd>The version placed in the <code>./docs</code> folder.</dd>
-<dt><b>Latest version / last version</b></dt>
-<dd>The version served by default for docs navbar items. Usually has path <code>/docs</code>.</dd>
+  <dt><b>Current version</b></dt>
+  <dd>The version placed in the <code>./docs</code> folder.</dd>
+  <dt><b>Latest version / last version</b></dt>
+  <dd>The version served by default for docs navbar items. Usually has path <code>/docs</code>.</dd>
 </dl>
 
 Current version is defined by the **file system location**, while latest version is defined by the **the navigation behavior**. They may or may not be the same version! (And the default configuration, as shown in the table above, would treat them as different: current version at `/docs/next` and latest at `/docs`.)
@@ -160,8 +160,8 @@ Example:
 ]
 ```
 
-2. Delete the versioned docs directory. Example: `versioned_docs/version-1.8.0`.
-3. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`.
+1. Delete the versioned docs directory. Example: `versioned_docs/version-1.8.0`.
+2. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`.
 
 ## Configuring versioning behavior {#configuring-versioning-behavior}
 
@@ -199,12 +199,16 @@ We offer these plugin options to customize versioning behavior:
 
 - `disableVersioning`: Explicitly disable versioning even with versions. This will make the site only include the current version.
 - `includeCurrentVersion`: Include the current version (the `./docs` folder) of your docs.
+
   - **Tip**: turn it off if the current version is a work-in-progress, not ready to be published.
 - `lastVersion`: Sets which version "latest version" (the `/docs` route) refers to.
+
   - **Tip**: `lastVersion: 'current'` makes sense if your current version refers to a major version that's constantly patched and released. The actual route base path and label of the latest version are configurable.
 - `onlyIncludeVersions`: Defines a subset of versions from `versions.json` to be deployed.
+
   - **Tip**: limit to 2 or 3 versions in dev and deploy previews to improve startup and build time.
 - `versions`: A dictionary of version metadata. For each version, you can customize the following:
+
   - `label`: the label displayed in the versions dropdown and banner.
   - `path`: the route base path of this version. By default, latest version has `/` and current version has `/next`.
   - `banner`: one of `'none'`, `'unreleased'`, and `'unmaintained'`. Determines what's displayed at the top of every doc page. Any version above the latest version would be "unreleased", and any version below would be "unmaintained".
