@@ -36,11 +36,7 @@ Unordered
 
     - Ac tristique libero volutpat at
 
-    <!---->
-
-    - Facilisis in pretium nisl aliquet
-
-    <!---->
+    * Facilisis in pretium nisl aliquet
 
     - Nulla volutpat aliquam velit
 - Very easy!
@@ -51,10 +47,8 @@ Ordered
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-<!---->
-
-1. You can use sequential numbers...
-2. ...or keep all the numbers as `1.`
+1) You can use sequential numbers...
+2) ...or keep all the numbers as `1.`
 
 Start numbering with offset:
 
