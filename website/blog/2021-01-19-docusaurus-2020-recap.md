@@ -63,7 +63,7 @@ Localized Docusaurus 1 sites (like **Jest**) will be able to upgrade too:
 
 ![Jest's new website built with Docusaurus v2 in Japanese](/img/blog/2020-recap/jest-screenshot.png)
 
-We also saw the **[first right-to-left](https://datagit.ir/)** Docusaurus 2 site published:
+We also saw the [**first right-to-left**](https://datagit.ir/) Docusaurus 2 site published:
 
 ![Datagit's website in Persian, a right-to-left language. The sidebar appears on the right of the window and the TOC appears on the left.](/img/blog/2020-recap/datagit-rtl-screenshot.png)
 
@@ -123,7 +123,7 @@ We still have a few **major features** that we would like to work on:
 - [Upgrade to MDX 2.0](https://github.com/facebook/docusaurus/issues/4029)
 - Other tasks that we might discover during 2021
 
-Huge thanks to the community for [their contributions in 2020](https://github.com/facebook/docusaurus/graphs/contributors?from=2020-01-01&to=2021-01-01&type=c), especially:
+Huge thanks to the community for [their contributions in 2020](https://github.com/facebook/docusaurus/graphs/contributors?from=2020-01-01\&to=2021-01-01\&type=c), especially:
 
 - [Joel Marcey](https://github.com/JoelMarcey) for creating Docusaurus and supporting the project all this time
 - the core team - [Alexey Pyltsyn](https://github.com/lex111), [Sébastien Lorber](https://sebastienlorber.com), [Yangshun Tay](https://twitter.com/yangshunz)
