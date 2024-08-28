@@ -16,7 +16,7 @@ Returns validated and normalized options for the plugin. This method is called b
 
 ### `validate` {#validate}
 
-`validateOptions` is called with `validate` function which takes a **[Joi](https://www.npmjs.com/package/joi)** schema and options as the arguments, returns validated and normalized options. `validate` will automatically handle error and validation config.
+`validateOptions` is called with `validate` function which takes a [**Joi**](https://www.npmjs.com/package/joi) schema and options as the arguments, returns validated and normalized options. `validate` will automatically handle error and validation config.
 
 :::tip
 
@@ -26,7 +26,7 @@ To avoid mixing Joi versions, use `const {Joi} = require("@docusaurus/utils-vali
 
 :::
 
-If you don't use **[Joi](https://www.npmjs.com/package/joi)** for validation you can throw an Error in case of invalid options and return options in case of success.
+If you don't use [**Joi**](https://www.npmjs.com/package/joi) for validation you can throw an Error in case of invalid options and return options in case of success.
 
 ```js title="my-plugin/src/index.js"
 function myPlugin(context, options) {
@@ -74,7 +74,7 @@ Return validated and normalized configuration for the theme.
 
 ### `validate` {#validate-1}
 
-`validateThemeConfig` is called with `validate` function which takes a **[Joi](https://www.npmjs.com/package/joi)** schema and `themeConfig` as the arguments, returns validated and normalized options. `validate` will automatically handle error and validation config.
+`validateThemeConfig` is called with `validate` function which takes a [**Joi**](https://www.npmjs.com/package/joi) schema and `themeConfig` as the arguments, returns validated and normalized options. `validate` will automatically handle error and validation config.
 
 :::tip
 
@@ -84,7 +84,7 @@ To avoid mixing Joi versions, use `const {Joi} = require("@docusaurus/utils-vali
 
 :::
 
-If you don't use **[Joi](https://www.npmjs.com/package/joi)** for validation you can throw an Error in case of invalid options.
+If you don't use [**Joi**](https://www.npmjs.com/package/joi) for validation you can throw an Error in case of invalid options.
 
 ```js title="my-theme/src/index.js"
 function myPlugin(context, options) {

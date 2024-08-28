@@ -49,7 +49,7 @@ A special Markdown syntax lets you set an **explicit heading id**:
 
 :::tip
 
-Use the **[`write-heading-ids`](../../cli.md#docusaurus-write-heading-ids-sitedir)** CLI command to add explicit IDs to all your Markdown documents.
+Use the [**`write-heading-ids`**](../../cli.md#docusaurus-write-heading-ids-sitedir) CLI command to add explicit IDs to all your Markdown documents.
 
 :::
 
@@ -73,7 +73,7 @@ toc_max_heading_level: 5
 ---
 ```
 
-To set the heading level for _all_ pages, use the [`themeConfig.tableOfContents`](../../api/themes/theme-configuration.md#table-of-contents) option.
+To set the heading level for *all* pages, use the [`themeConfig.tableOfContents`](../../api/themes/theme-configuration.md#table-of-contents) option.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -103,6 +103,7 @@ It is also possible to display an inline table of contents directly inside a Mar
 The `toc` variable is available in any MDX document and contains all the headings of an MDX document. By default, only `h2` and `h3` headings are displayed in the TOC. You can change which heading levels are visible by setting `minHeadingLevel` or `maxHeadingLevel` for individual `TOCInline` components.
 
 <!-- prettier-ignore -->
+
 ```jsx
 import TOCInline from '@theme/TOCInline';
 
@@ -130,6 +131,7 @@ declare const toc: {
 Note that the `toc` global is a flat array, so you can easily cut out unwanted nodes or insert extra nodes, and create a new TOC tree.
 
 <!-- prettier-ignore -->
+
 ```jsx
 import TOCInline from '@theme/TOCInline';
 
@@ -172,7 +174,7 @@ Some content...
 
 The ability to ergonomically insert extra headings or ignore certain headings is a work-in-progress. If this feature is important to you, please report your use-case in [this issue](https://github.com/facebook/docusaurus/issues/6201).
 
----
+***
 
 :::caution
 

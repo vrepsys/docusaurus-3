@@ -19,30 +19,29 @@ module.exports = {
 ```
 
 <details>
-<summary>Config files also support config creator functions and async code.</summary>
+  <summary>Config files also support config creator functions and async code.</summary>
 
-```js title="docusaurus.config.js"
-module.exports = function configCreator() {
-  return {
-    // site config...
+  ```js title="docusaurus.config.js"
+  module.exports = function configCreator() {
+    return {
+      // site config...
+    };
   };
-};
-```
+  ```
 
-```js title="docusaurus.config.js"
-module.exports = async function configCreatorAsync() {
-  return {
-    // site config...
+  ```js title="docusaurus.config.js"
+  module.exports = async function configCreatorAsync() {
+    return {
+      // site config...
+    };
   };
-};
-```
+  ```
 
-```js title="docusaurus.config.js"
-module.exports = Promise.resolve({
-  // site config...
-});
-```
-
+  ```js title="docusaurus.config.js"
+  module.exports = Promise.resolve({
+    // site config...
+  });
+  ```
 </details>
 
 ## Required fields {#required-fields}
@@ -63,7 +62,7 @@ module.exports = {
 
 - Type: `string`
 
-URL for your website. This can also be considered the top-level hostname. For example, `https://facebook.github.io` is the URL of https://facebook.github.io/metro/, and `https://docusaurus.io` is the URL for https://docusaurus.io. This field is related to the [`baseUrl`](#baseUrl) field.
+URL for your website. This can also be considered the top-level hostname. For example, `https://facebook.github.io` is the URL of [https://facebook.github.io/metro/](https://facebook.github.io/metro/), and `https://docusaurus.io` is the URL for [https://docusaurus.io](https://docusaurus.io). This field is related to the [`baseUrl`](#baseUrl) field.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -75,7 +74,7 @@ module.exports = {
 
 - Type: `string`
 
-Base URL for your site. Can be considered as the path after the host. For example, `/metro/` is the base URL of https://facebook.github.io/metro/. For URLs that have no path, the baseUrl should be set to `/`. This field is related to the [`url`](#url) field. Always has both leading and trailing slash.
+Base URL for your site. Can be considered as the path after the host. For example, `/metro/` is the base URL of [https://facebook.github.io/metro/](https://facebook.github.io/metro/). For URLs that have no path, the baseUrl should be set to `/`. This field is related to the [`url`](#url) field. Always has both leading and trailing slash.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -155,6 +154,7 @@ module.exports = {
 - `locales`: List of locales deployed on your site. Must contain `defaultLocale`.
 - `path`: Root folder which all locale folders are relative to. Can be absolute or relative to the config file. Defaults to `i18n`.
 - `localeConfigs`: Individual options for each locale.
+
   - `label`: The label displayed for this locale in the locales dropdown.
   - `direction`: `ltr` (default) or `rtl` (for [right-to-left languages](https://developer.mozilla.org/en-US/docs/Glossary/rtl) like Farsi, Arabic, Hebrew, etc.). Used to select the locale's CSS and HTML meta attribute.
   - `htmlLang`: BCP 47 language tag to use in `<html lang="...">` and in `<link ... hreflang="...">`

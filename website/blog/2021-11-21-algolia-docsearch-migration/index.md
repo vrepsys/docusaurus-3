@@ -102,7 +102,7 @@ We wrote a small [migration guide](https://docsearch.algolia.com/docs/migrating-
 
 ### I received the migration email but the invite expired
 
-Please contact us via either [email](mailto:docsearch@algolia.com) or [DocSearch's Discord](https://discord.gg/bRTacwYrfX) or on [Docusaurus's Discord #algolia channel](https://discordapp.com/invite/docusaurus)
+Please contact us via either [email](mailto\:docsearch@algolia.com) or [DocSearch's Discord](https://discord.gg/bRTacwYrfX) or on [Docusaurus's Discord #algolia channel](https://discordapp.com/invite/docusaurus)
 
 ### I have feedback!
 
