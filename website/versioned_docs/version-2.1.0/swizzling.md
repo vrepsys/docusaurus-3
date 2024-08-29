@@ -108,7 +108,7 @@ Be sure to understand [which components are **safe to swizzle**](#what-is-safe-t
 
 :::
 
-### Ejecting {#ejecting}
+### Ejecting{#ejecting}
 
 Ejecting a theme component is the process of **creating a copy** of the original theme component, which you can **fully customize and override**.
 
@@ -153,7 +153,7 @@ To keep ejected components up-to-date after a Docusaurus upgrade, re-run the eje
 
 :::
 
-### Wrapping {#wrapping}
+### Wrapping{#wrapping}
 
 Wrapping a theme component is the process of **creating a wrapper** around the original theme component, which you can **enhance**.
 
@@ -215,7 +215,7 @@ export default function BlogPostItemWrapper(props) {
 
 :::
 
-## What is safe to swizzle? {#what-is-safe-to-swizzle}
+## What is safe to swizzle?{#what-is-safe-to-swizzle}
 
 > With great power comes great responsibility
 
@@ -255,7 +255,7 @@ If you have a **strong use-case for swizzling an unsafe component**, please [**r
 
 :::
 
-## Which component should I swizzle? {#which-component-should-i-swizzle}
+## Which component should I swizzle?{#which-component-should-i-swizzle}
 
 It is not always clear which component you should swizzle exactly to achieve the desired result. `@docusaurus/theme-classic`, which provides most of the theme components, has about [100 components](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme)!
 
@@ -284,7 +284,7 @@ We also want to understand better your fanciest customization use-cases, so plea
 
 :::
 
-## Do I need to swizzle? {#do-i-need-to-swizzle}
+## Do I need to swizzle?{#do-i-need-to-swizzle}
 
 Swizzling ultimately means you have to maintain some additional React code that interact with Docusaurus internal APIs. If you can, think about the following alternatives when customizing your site:
 
@@ -299,7 +299,7 @@ Swizzling ultimately means you have to maintain some additional React code that 
 
 :::
 
-## Wrapping your site with `<Root>` {#wrapper-your-site-with-root}
+## Wrapping your site with `<Root>`{#wrapper-your-site-with-root}
 
 The `<Root>` component is rendered at the **very top** of the React tree, above the theme `<Layout>`, and **never unmounts**. It is the perfect place to add stateful logic that should not be re-initialized across navigations (user authentication status, shopping card state...).
 

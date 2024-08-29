@@ -17,7 +17,7 @@ slug: /
 
 ![](/img/slash-introducing.svg)
 
-## Fast Track ⏱️ {#fast-track}
+## Fast Track ⏱️{#fast-track}
 
 Understand Docusaurus in **5 minutes** by playing!
 
@@ -65,7 +65,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 </div>
 ```
 
-## Migrating from v1 {#migrating-from-v1}
+## Migrating from v1{#migrating-from-v1}
 
 Docusaurus v2 has been a total rewrite from Docusaurus v1, taking advantage of a completely modernized toolchain. After [v2's official release](https://docusaurus.io/blog/2022/08/01/announcing-docusaurus-2.0), we highly encourage you to **use Docusaurus v2 over Docusaurus v1**, as Docusaurus v1 has been deprecated.
 
@@ -85,7 +85,7 @@ A [lot of users](/showcase) are already using Docusaurus v2 ([trends](https://ww
 
 For existing v1 users that are seeking to upgrade to v2, you can follow our [migration guide](./migration/migration-overview.md).
 
-## Features {#features}
+## Features{#features}
 
 Docusaurus is built with high attention to the developer and contributor experience.
 
@@ -124,7 +124,7 @@ Docusaurus 2 is born to be compassionately accessible to all your users, and lig
 - ⚡️ **Lightning-fast**. Docusaurus 2 follows the [PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) that makes sure your content loads blazing fast.
 - 🦖 **Accessible**. Attention to accessibility, making your site equally accessible to all users.
 
-## Design principles {#design-principles}
+## Design principles{#design-principles}
 
 - **Little to learn**. Docusaurus should be easy to learn and use as the API is quite small. Most things will still be achievable by users, even if it takes them more code and more time to write. Not having abstractions is better than having the wrong abstractions, and we don't want users to have to hack around the wrong abstractions. Mandatory talk—[Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8).
 - **Intuitive**. Users will not feel overwhelmed when looking at the project directory of a Docusaurus project or adding new features. It should look intuitive and easy to build on top of, using approaches they are familiar with.
@@ -146,13 +146,13 @@ References
 
 -->
 
-## Comparison with other tools {#comparison-with-other-tools}
+## Comparison with other tools{#comparison-with-other-tools}
 
 Across all static site generators, Docusaurus has a unique focus on documentation sites and has many out-of-the-box features.
 
 We've also studied other main static site generators and would like to share our insights on the comparison, hopefully helping you navigate through the prismatic choices out there.
 
-### Gatsby {#gatsby}
+### Gatsby{#gatsby}
 
 [Gatsby](https://www.gatsbyjs.com/) is packed with a lot of features, has a rich ecosystem of plugins, and is capable of doing everything that Docusaurus does. Naturally, that comes at a cost of a higher learning curve. Gatsby does many things well and is suitable for building many types of websites. On the other hand, Docusaurus tries to do one thing super well - be the best tool for writing and publishing content.
 
@@ -162,17 +162,17 @@ Many aspects of Docusaurus 2 were inspired by the best things about Gatsby and i
 
 [Docz](https://github.com/pedronauck/docz) is a Gatsby theme to build documentation websites. It is currently less featured than Docusaurus.
 
-### Next.js {#nextjs}
+### Next.js{#nextjs}
 
 [Next.js](https://nextjs.org/) is another very popular hybrid React framework. It can help you build a good documentation website, but it is not opinionated toward the documentation use-case, and it will require a lot more work to implement what Docusaurus provides out-of-the-box.
 
 [Nextra](https://github.com/shuding/nextra) is an opinionated static site generator built on top of Next.js. It is currently less featured than Docusaurus.
 
-### VuePress {#vuepress}
+### VuePress{#vuepress}
 
 [VuePress](https://vuepress.vuejs.org/) has many similarities with Docusaurus - both focus heavily on content-centric website and provides tailored documentation features out of the box. However, VuePress is powered by Vue, while Docusaurus is powered by React. If you want a Vue-based solution, VuePress would be a decent choice.
 
-### MkDocs {#mkdocs}
+### MkDocs{#mkdocs}
 
 [MkDocs](https://www.mkdocs.org/) is a popular Python static site generator with value propositions similar to Docusaurus.
 
@@ -180,30 +180,30 @@ It is a good option if you don't need a single-page application and don't plan t
 
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) is a beautiful theme.
 
-### Docsify {#docsify}
+### Docsify{#docsify}
 
 [Docsify](https://docsify.js.org/) makes it easy to create a documentation website, but is not a static-site generator and is not SEO friendly.
 
-### GitBook {#gitbook}
+### GitBook{#gitbook}
 
 [GitBook](https://www.gitbook.com/) has a very clean design and has been used by many open source projects. With its focus shifting towards a commercial product rather than an open-source tool, many of its requirements no longer fit the needs of open source projects' documentation sites. As a result, many have turned to other products. You may read about Redux's switch to Docusaurus [here](https://github.com/reduxjs/redux/issues/3161).
 
 Currently, GitBook is only free for open-source and non-profit teams. Docusaurus is free for everyone.
 
-### Jekyll {#jekyll}
+### Jekyll{#jekyll}
 
 [Jekyll](https://github.com/jekyll/jekyll) is one of the most mature static site generators around and has been a great tool to use — in fact, before Docusaurus, most of Facebook's Open Source websites are/were built on Jekyll! It is extremely simple to get started. We want to bring a similar developer experience as building a static site with Jekyll.
 
 In comparison with statically generated HTML and interactivity added using `<script />` tags, Docusaurus sites are React apps. Using modern JavaScript ecosystem tooling, we hope to set new standards on doc sites' performance, asset building pipeline and optimizations, and ease to set up.
 
-## Staying informed {#staying-informed}
+## Staying informed{#staying-informed}
 
 - [GitHub](https://github.com/facebook/docusaurus)
 - [Twitter](https://twitter.com/docusaurus)
 - [Blog](/blog)
 - [Discord](https://discord.gg/docusaurus)
 
-## Something missing? {#something-missing}
+## Something missing?{#something-missing}
 
 If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please [file an issue](https://github.com/facebook/docusaurus) for us, or send a tweet mentioning the [@docusaurus](https://twitter.com/docusaurus) Twitter account.
 
