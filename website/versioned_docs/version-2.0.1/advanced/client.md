@@ -4,7 +4,7 @@ description: How the Docusaurus client is structured
 
 # Client architecture
 
-## Theme aliases {#theme-aliases}
+## Theme aliases \{#theme-aliases}
 
 A theme works by exporting a set of components, e.g. `Navbar`, `Layout`, `Footer`, to render the data passed down from plugins. Docusaurus and users use these components by importing them using the `@theme` webpack alias:
 
@@ -18,7 +18,7 @@ The alias `@theme` can refer to a few directories, in the following priority:
 2. A Docusaurus theme package's `theme` directory.
 3. Fallback components provided by Docusaurus core (usually not needed).
 
-This is called a _layered architecture_: a higher-priority layer providing the component would shadow a lower-priority layer, making swizzling possible. Given the following structure:
+This is called a *layered architecture*: a higher-priority layer providing the component would shadow a lower-priority layer, making swizzling possible. Given the following structure:
 
 ```
 website
@@ -78,9 +78,9 @@ The components in this "stack" are pushed in the order of `preset plugins > pres
 
 `@theme-original/*` always points to the topmost non-swizzled component. That's why you can import `@theme-original/CodeBlock` in the swizzled component—it points to the next one in the "component stack", a theme-provided one. Plugin authors should not try to use this because your component could be the topmost component and cause a self-import.
 
-`@theme-init/*` always points to the bottommost component—usually, this comes from the theme or plugin that first provides this component. Individual plugins / themes trying to enhance code block can safely use `@theme-init/CodeBlock` to get its basic version. Site creators should generally not use this because you likely want to enhance the _topmost_ instead of the _bottommost_ component. It's also possible that the `@theme-init/CodeBlock` alias does not exist at all—Docusaurus only creates it when it points to a different one from `@theme-original/CodeBlock`, i.e. when it's provided by more than one theme. We don't waste aliases!
+`@theme-init/*` always points to the bottommost component—usually, this comes from the theme or plugin that first provides this component. Individual plugins / themes trying to enhance code block can safely use `@theme-init/CodeBlock` to get its basic version. Site creators should generally not use this because you likely want to enhance the *topmost* instead of the *bottommost* component. It's also possible that the `@theme-init/CodeBlock` alias does not exist at all—Docusaurus only creates it when it points to a different one from `@theme-original/CodeBlock`, i.e. when it's provided by more than one theme. We don't waste aliases!
 
-## Client modules {#client-modules}
+## Client modules \{#client-modules}
 
 Client modules are part of your site's bundle, just like theme components. However, they are usually side-effect-ful. Client modules are anything that can be `import`ed by Webpack—CSS, JS, etc. JS scripts usually work on the global context, like registering event listeners, creating global variables...
 
@@ -117,7 +117,7 @@ CSS stylesheets imported as client modules are [global](../styling-layout.md#glo
 }
 ```
 
-### Client module lifecycles {#client-module-lifecycles}
+### Client module lifecycles \{#client-module-lifecycles}
 
 Besides introducing side-effects, client modules can optionally export two lifecycle functions: `onRouteUpdate` and `onRouteDidUpdate`.
 
