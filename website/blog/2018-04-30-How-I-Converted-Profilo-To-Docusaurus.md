@@ -7,9 +7,9 @@ authorTwitter: abernathyca
 tags: [profilo, adoption]
 ---
 
-> _“Joel and I were discussing having a website and how it would have been great to launch with it. So I challenged myself to add Docusaurus support. It took just over an hour and a half. I'm going to send you a PR with the addition so you can take a look and see if you like it. Your workflow for adding docs wouldn't be much different from editing those Markdown files.”_
+> *“Joel and I were discussing having a website and how it would have been great to launch with it. So I challenged myself to add Docusaurus support. It took just over an hour and a half. I'm going to send you a PR with the addition so you can take a look and see if you like it. Your workflow for adding docs wouldn't be much different from editing those Markdown files.”*
 >
-> _— Note sent to the Profilo team_
+> *— Note sent to the Profilo team*
 
 This is the story of the rather short journey it took to create the [Profilo](https://facebookincubator.github.io/profilo/) website using Docusaurus.
 
@@ -20,12 +20,13 @@ Profilo, an Android library for collecting performance traces from production, [
 In general, when creating a website with Docusaurus you do the following:
 
 1. Generate a template website using Docusaurus scripts.
-1. Customize the generated template files for your desired site colors and your project configuration (ex: website and GitHub links).
-1. Create the website content:
+2. Customize the generated template files for your desired site colors and your project configuration (ex: website and GitHub links).
+3. Create the website content:
+
    1. Add your docs and any supporting assets.
-   1. Customize the default landing page provided by Docusaurus to suit your needs.
-   1. Configure the default site navigation file.
-1. Publish the website and set up how it will be published for future changes.
+   2. Customize the default landing page provided by Docusaurus to suit your needs.
+   3. Configure the default site navigation file.
+4. Publish the website and set up how it will be published for future changes.
 
 Given I had pre-existing Markdown files, I didn't have to generate the core content but simply make sure that Docusaurus could process the files by adding the expected metadata to them. Most of the work would therefore consist of customizing the defaults provided by Docusaurus.
 
@@ -35,14 +36,14 @@ Here's an overview of the steps taken to convert to a website. I'll discuss some
 
 **Design and colors:**
 
-1. Got all the desired logo formats from designer. I had to create the _.favicon_ one.
-1. Worked out some passable primary and secondary website colors using the http://paletton.com/ tools - very handy!
+1. Got all the desired logo formats from designer. I had to create the *.favicon* one.
+2. Worked out some passable primary and secondary website colors using the [http://paletton.com/](http://paletton.com/) tools - very handy!
 
 **Initial website setup:**
 
 1. Forked the [Profilo project](https://github.com/facebookincubator/profilo/) on GitHub and created a local clone of the fork to set up the website.
-1. Created the initial Docusaurus website using the [installation instructions](https://v1.docusaurus.io/docs/en/installation.html).
-1. Deleted the `docs-examples-from-docusaurus` and `website/blog-examples-from-docusaurus` folders as these would not be needed. Profilo had existing docs we could use and there was no need for blogs at this time.
+2. Created the initial Docusaurus website using the [installation instructions](https://v1.docusaurus.io/docs/en/installation.html).
+3. Deleted the `docs-examples-from-docusaurus` and `website/blog-examples-from-docusaurus` folders as these would not be needed. Profilo had existing docs we could use and there was no need for blogs at this time.
 
 **Content creation:**
 
@@ -57,11 +58,17 @@ Here's an overview of the steps taken to convert to a website. I'll discuss some
    ```
 
 2. Added the logo assets to the `website/static/img` folder.
+
 3. Modified `website/pages/en/index.js`, the landing page, to highlight Profilo features.
+
 4. Modified `website/core/Footer.js`, the footer, to simplify it for Profilo.
+
 5. Edited `website/siteConfig.js` (website configuration file) to specify the previously chosen primary and secondary colors.
+
 6. Modified `website/sidebars.json` that specifies the sidebar navigation. Listed all the docs and customized it based on the metadata added to the Markdown files.
+
 7. Edited the website configuration file to specify the GitHub properties, logo images, header links, and the website link.
+
 8. Tested the website locally throughout this phase. (I ran `yarn start` from the `website` folder to start the server.)
 
 **Feedback and review changes:**
@@ -84,7 +91,7 @@ Here's an overview of the steps taken to convert to a website. I'll discuss some
 
 2. Configured CircleCI using the [provided Docusaurus instructions](https://v1.docusaurus.io/docs/en/publishing.html#automating-deployments-using-continuous-integration). There were 2 PRs for this, [the first](https://github.com/facebookincubator/profilo/pull/8)for the initial config and [the second](https://github.com/facebookincubator/profilo/pull/12) to make sure CircleCI only triggered for changes in the master branch (thanks Joel Marcey!).
 
-The final website was published on https://facebookincubator.github.io/profilo/. It had taken 1.5 hours to get to the initial PR stage and another half an hour or so to respond to review feedback and publish the website.
+The final website was published on [https://facebookincubator.github.io/profilo/](https://facebookincubator.github.io/profilo/). It had taken 1.5 hours to get to the initial PR stage and another half an hour or so to respond to review feedback and publish the website.
 
 ## Design
 

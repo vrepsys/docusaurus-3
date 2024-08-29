@@ -36,27 +36,24 @@ import Avatar from 'avatar';
     { label: 'Bash', value: 'bash' },
     { label: 'Windows', value: 'windows' },
     { label: 'PowerShell', value: 'powershell' }
-]}>
+]}
+>
   <TabItem value="bash">
-
-```bash
-GIT_USER=<GITHUB_USERNAME> yarn deploy
-```
-
+    ```bash
+    GIT_USER=<GITHUB_USERNAME> yarn deploy
+    ```
   </TabItem>
-  <TabItem value="windows">
 
+  <TabItem value="windows">
     ```batch
     cmd /C "set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy"
     ```
-
   </TabItem>
+
   <TabItem value="powershell">
-
-```powershell
-cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
-```
-
+    ```powershell
+    cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
+    ```
   </TabItem>
 </Tabs>
 
