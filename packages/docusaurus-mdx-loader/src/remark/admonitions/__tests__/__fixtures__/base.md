@@ -6,7 +6,7 @@ Check the [Blog Plugin API Reference documentation](./api/plugins/plugin-content
 
 :::
 
-## Initial setup{#initial-setup}
+## Initial setup \{#initial-setup}
 
 To set up your site's blog, start by creating a `blog` directory.
 

@@ -15,7 +15,7 @@ This plugin is always inactive in development and **only active in production** 
 
 :::
 
-## Installation{#installation}
+## Installation \{#installation}
 
 ```bash npm2yarn
 npm install --save @docusaurus/plugin-google-analytics
@@ -29,7 +29,7 @@ You can configure this plugin through the preset options.
 
 :::
 
-## Configuration{#configuration}
+## Configuration \{#configuration}
 
 Accepted fields:
 
@@ -46,7 +46,7 @@ Accepted fields:
 </APITable>
 ```
 
-### Example configuration{#ex-config}
+### Example configuration \{#ex-config}
 
 You can configure this plugin through preset options or plugin options.
 

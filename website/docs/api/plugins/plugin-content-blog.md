@@ -15,7 +15,7 @@ The [feed feature](../../blog.mdx#feed) works by extracting the build output, an
 
 :::
 
-## Installation{#installation}
+## Installation \{#installation}
 
 ```bash npm2yarn
 npm install --save @docusaurus/plugin-content-blog
@@ -29,7 +29,7 @@ You can configure this plugin through the [preset options](#ex-config-preset).
 
 :::
 
-## Configuration{#configuration}
+## Configuration \{#configuration}
 
 Accepted fields:
 
@@ -77,9 +77,9 @@ Accepted fields:
 </APITable>
 ```
 
-### Types{#types}
+### Types \{#types}
 
-#### `EditUrlFn`{#EditUrlFn}
+#### `EditUrlFn` \{#EditUrlFn}
 
 ```ts
 type EditUrlFunction = (params: {
@@ -90,7 +90,7 @@ type EditUrlFunction = (params: {
 }) => string | undefined;
 ```
 
-#### `ReadingTimeFn`{#ReadingTimeFn}
+#### `ReadingTimeFn` \{#ReadingTimeFn}
 
 ```ts
 type ReadingTimeOptions = {
@@ -111,13 +111,13 @@ type ReadingTimeFn = (params: {
 }) => number | undefined;
 ```
 
-#### `FeedType`{#FeedType}
+#### `FeedType` \{#FeedType}
 
 ```ts
 type FeedType = 'rss' | 'atom' | 'json';
 ```
 
-### Example configuration{#ex-config}
+### Example configuration \{#ex-config}
 
 You can configure this plugin through preset options or plugin options.
 
@@ -172,7 +172,7 @@ const config = {
 };
 ```
 
-## Markdown front matter{#markdown-front-matter}
+## Markdown front matter \{#markdown-front-matter}
 
 Markdown documents can use the following Markdown front matter metadata fields, enclosed by a line `---` on either side.
 
@@ -245,18 +245,18 @@ hide_table_of_contents: false
 A Markdown blog post
 ```
 
-## i18n{#i18n}
+## i18n \{#i18n}
 
 Read the [i18n introduction](../../i18n/i18n-introduction.md) first.
 
-### Translation files location{#translation-files-location}
+### Translation files location \{#translation-files-location}
 
 - **Base path**: `website/i18n/[locale]/docusaurus-plugin-content-blog`
 - **Multi-instance path**: `website/i18n/[locale]/docusaurus-plugin-content-blog-[pluginId]`
 - **JSON files**: extracted with [`docusaurus write-translations`](../../cli.md#docusaurus-write-translations-sitedir)
 - **Markdown files**: `website/i18n/[locale]/docusaurus-plugin-content-blog`
 
-### Example file-system structure{#example-file-system-structure}
+### Example file-system structure \{#example-file-system-structure}
 
 ```bash
 website/i18n/[locale]/docusaurus-plugin-content-blog
