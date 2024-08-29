@@ -6,7 +6,7 @@ slug: /api/docusaurus-config
 
 # `docusaurus.config.js`
 
-## Overview {#overview}
+## Overview \{#overview}
 
 `docusaurus.config.js` contains configurations for your site and is placed in the root directory of your site.
 
@@ -19,35 +19,34 @@ module.exports = {
 ```
 
 <details>
-<summary>Config files also support config creator functions and async code.</summary>
+  <summary>Config files also support config creator functions and async code.</summary>
 
-```js title="docusaurus.config.js"
-module.exports = function configCreator() {
-  return {
-    // site config...
+  ```js title="docusaurus.config.js"
+  module.exports = function configCreator() {
+    return {
+      // site config...
+    };
   };
-};
-```
+  ```
 
-```js title="docusaurus.config.js"
-module.exports = async function configCreatorAsync() {
-  return {
-    // site config...
+  ```js title="docusaurus.config.js"
+  module.exports = async function configCreatorAsync() {
+    return {
+      // site config...
+    };
   };
-};
-```
+  ```
 
-```js title="docusaurus.config.js"
-module.exports = Promise.resolve({
-  // site config...
-});
-```
-
+  ```js title="docusaurus.config.js"
+  module.exports = Promise.resolve({
+    // site config...
+  });
+  ```
 </details>
 
-## Required fields {#required-fields}
+## Required fields \{#required-fields}
 
-### `title` {#title}
+### `title` \{#title}
 
 - Type: `string`
 
@@ -59,11 +58,11 @@ module.exports = {
 };
 ```
 
-### `url` {#url}
+### `url` \{#url}
 
 - Type: `string`
 
-URL for your website. This can also be considered the top-level hostname. For example, `https://facebook.github.io` is the URL of https://facebook.github.io/metro/, and `https://docusaurus.io` is the URL for https://docusaurus.io. This field is related to the [`baseUrl`](#baseUrl) field.
+URL for your website. This can also be considered the top-level hostname. For example, `https://facebook.github.io` is the URL of [https://facebook.github.io/metro/](https://facebook.github.io/metro/), and `https://docusaurus.io` is the URL for [https://docusaurus.io](https://docusaurus.io). This field is related to the [`baseUrl`](#baseUrl) field.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -71,11 +70,11 @@ module.exports = {
 };
 ```
 
-### `baseUrl` {#baseUrl}
+### `baseUrl` \{#baseUrl}
 
 - Type: `string`
 
-Base URL for your site. Can be considered as the path after the host. For example, `/metro/` is the base URL of https://facebook.github.io/metro/. For URLs that have no path, the baseUrl should be set to `/`. This field is related to the [`url`](#url) field. Always has both leading and trailing slash.
+Base URL for your site. Can be considered as the path after the host. For example, `/metro/` is the base URL of [https://facebook.github.io/metro/](https://facebook.github.io/metro/). For URLs that have no path, the baseUrl should be set to `/`. This field is related to the [`url`](#url) field. Always has both leading and trailing slash.
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -83,9 +82,9 @@ module.exports = {
 };
 ```
 
-## Optional fields {#optional-fields}
+## Optional fields \{#optional-fields}
 
-### `favicon` {#favicon}
+### `favicon` \{#favicon}
 
 - Type: `string | undefined`
 
@@ -97,7 +96,7 @@ module.exports = {
 };
 ```
 
-### `trailingSlash` {#trailingSlash}
+### `trailingSlash` \{#trailingSlash}
 
 - Type: `boolean | undefined`
 
@@ -115,7 +114,7 @@ Refer to the [deployment guide](../deployment.mdx) and [slorber/trailing-slash-g
 
 :::
 
-### `i18n` {#i18n}
+### `i18n` \{#i18n}
 
 - Type: `Object`
 
@@ -155,13 +154,14 @@ module.exports = {
 - `locales`: List of locales deployed on your site. Must contain `defaultLocale`.
 - `path`: Root folder which all locale folders are relative to. Can be absolute or relative to the config file. Defaults to `i18n`.
 - `localeConfigs`: Individual options for each locale.
+
   - `label`: The label displayed for this locale in the locales dropdown.
   - `direction`: `ltr` (default) or `rtl` (for [right-to-left languages](https://developer.mozilla.org/en-US/docs/Glossary/rtl) like Farsi, Arabic, Hebrew, etc.). Used to select the locale's CSS and HTML meta attribute.
   - `htmlLang`: BCP 47 language tag to use in `<html lang="...">` (or any other DOM tag name) and in `<link ... hreflang="...">`
   - `calendar`: the [calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar) used to calculate the date era. Note that it doesn't control the actual string displayed: `MM/DD/YYYY` and `DD/MM/YYYY` are both `gregory`. To choose the format (`DD/MM/YYYY` or `MM/DD/YYYY`), set your locale name to `en-GB` or `en-US` (`en` means `en-US`).
   - `path`: Root folder that all plugin localization folders of this locale are relative to. Will be resolved against `i18n.path`. Defaults to the locale's name. Note: this has no effect on the locale's `baseUrl`—customization of base URL is a work-in-progress.
 
-### `noIndex` {#noIndex}
+### `noIndex` \{#noIndex}
 
 - Type: `boolean`
 
@@ -175,7 +175,7 @@ module.exports = {
 };
 ```
 
-### `onBrokenLinks` {#onBrokenLinks}
+### `onBrokenLinks` \{#onBrokenLinks}
 
 - Type: `'ignore' | 'log' | 'warn' | 'throw'`
 
@@ -189,7 +189,7 @@ The broken links detection is only available for a production build (`docusaurus
 
 :::
 
-### `onBrokenMarkdownLinks` {#onBrokenMarkdownLinks}
+### `onBrokenMarkdownLinks` \{#onBrokenMarkdownLinks}
 
 - Type: `'ignore' | 'log' | 'warn' | 'throw'`
 
@@ -197,7 +197,7 @@ The behavior of Docusaurus when it detects any broken Markdown link.
 
 By default, it prints a warning, to let you know about your broken Markdown link, but you can change this security if needed.
 
-### `onDuplicateRoutes` {#onDuplicateRoutes}
+### `onDuplicateRoutes` \{#onDuplicateRoutes}
 
 - Type: `'ignore' | 'log' | 'warn' | 'throw'`
 
@@ -205,7 +205,7 @@ The behavior of Docusaurus when it detects any [duplicate routes](/guides/creati
 
 By default, it displays a warning after you run `yarn start` or `yarn build`.
 
-### `tagline` {#tagline}
+### `tagline` \{#tagline}
 
 - Type: `string`
 
@@ -218,7 +218,7 @@ module.exports = {
 };
 ```
 
-### `organizationName` {#organizationName}
+### `organizationName` \{#organizationName}
 
 - Type: `string`
 
@@ -231,7 +231,7 @@ module.exports = {
 };
 ```
 
-### `projectName` {#projectName}
+### `projectName` \{#projectName}
 
 - Type: `string`
 
@@ -243,7 +243,7 @@ module.exports = {
 };
 ```
 
-### `deploymentBranch` {#deploymentBranch}
+### `deploymentBranch` \{#deploymentBranch}
 
 - Type: `string`
 
@@ -255,7 +255,7 @@ module.exports = {
 };
 ```
 
-### `githubHost` {#githubHost}
+### `githubHost` \{#githubHost}
 
 - Type: `string`
 
@@ -267,7 +267,7 @@ module.exports = {
 };
 ```
 
-### `githubPort` {#githubPort}
+### `githubPort` \{#githubPort}
 
 - Type: `string`
 
@@ -279,7 +279,7 @@ module.exports = {
 };
 ```
 
-### `themeConfig` {#themeConfig}
+### `themeConfig` \{#themeConfig}
 
 - Type: `Object`
 
@@ -346,7 +346,7 @@ module.exports = {
 };
 ```
 
-### `plugins` {#plugins}
+### `plugins` \{#plugins}
 
 - Type: `PluginConfig[]`
 
@@ -370,7 +370,7 @@ module.exports = {
 };
 ```
 
-### `themes` {#themes}
+### `themes` \{#themes}
 
 - Type: `PluginConfig[]`
 
@@ -380,7 +380,7 @@ module.exports = {
 };
 ```
 
-### `presets` {#presets}
+### `presets` \{#presets}
 
 - Type: `PresetConfig[]`
 
@@ -394,7 +394,7 @@ module.exports = {
 };
 ```
 
-### `markdown` {#markdown}
+### `markdown` \{#markdown}
 
 The global Docusaurus Markdown config.
 
@@ -418,7 +418,7 @@ module.exports = {
 
 - `mermaid`: when `true`, allows Docusaurus to render Markdown code blocks with `mermaid` language as Mermaid diagrams.
 
-### `customFields` {#customFields}
+### `customFields` \{#customFields}
 
 Docusaurus guards `docusaurus.config.js` from unknown fields. To add a custom field, define it on `customFields`.
 
@@ -439,7 +439,7 @@ Attempting to add unknown fields in the config will lead to errors during build 
 Error: The field(s) 'foo', 'bar' are not recognized in docusaurus.config.js
 ```
 
-### `staticDirectories` {#staticDirectories}
+### `staticDirectories` \{#staticDirectories}
 
 An array of paths, relative to the site's directory or absolute. Files under these paths will be copied to the build output as-is.
 
@@ -453,7 +453,7 @@ module.exports = {
 };
 ```
 
-### `headTags` {#headTags}
+### `headTags` \{#headTags}
 
 An array of tags that will be inserted in the HTML `<head>`. The values must be objects that contain two properties; `tagName` and `attributes`. `tagName` must be a string that determines the tag being created; eg `"link"`. `attributes` must be an attribute-value map.
 
@@ -477,7 +477,7 @@ module.exports = {
 
 This would become `<link rel="icon" href="img/docusaurus.png" />` in the generated HTML.
 
-### `scripts` {#scripts}
+### `scripts` \{#scripts}
 
 An array of scripts to load. The values can be either strings or plain objects of attribute-value maps. The `<script>` tags will be inserted in the HTML `<head>`. If you use a plain object, the only required attribute is `src`, and any other attributes are permitted (each one should have boolean/string values).
 
@@ -501,7 +501,7 @@ module.exports = {
 };
 ```
 
-### `stylesheets` {#stylesheets}
+### `stylesheets` \{#stylesheets}
 
 An array of CSS sources to load. The values can be either strings or plain objects of attribute-value maps. The `<link>` tags will be inserted in the HTML `<head>`. If you use an object, the only required attribute is `href`, and any other attributes are permitted (each one should have boolean/string values).
 
@@ -528,7 +528,7 @@ By default, the `<link>` tags will have `rel="stylesheet"`, but you can explicit
 
 :::
 
-### `clientModules` {#clientModules}
+### `clientModules` \{#clientModules}
 
 An array of [client modules](../advanced/client.md#client-modules) to load globally on your site.
 
@@ -543,7 +543,7 @@ module.exports = {
 };
 ```
 
-### `ssrTemplate` {#ssrTemplate}
+### `ssrTemplate` \{#ssrTemplate}
 
 An HTML template written in [Eta's syntax](https://eta.js.org/docs/syntax#syntax-overview) that will be used to render your application. This can be used to set custom attributes on the `body` tags, additional `meta` tags, customize the `viewport`, etc. Please note that Docusaurus will rely on the template to be correctly structured in order to function properly, once you do customize it, you will have to make sure that your template is compliant with the requirements from upstream.
 
@@ -583,7 +583,7 @@ module.exports = {
 };
 ```
 
-### `titleDelimiter` {#titleDelimiter}
+### `titleDelimiter` \{#titleDelimiter}
 
 - Type: `string`
 
@@ -597,7 +597,7 @@ module.exports = {
 };
 ```
 
-### `baseUrlIssueBanner` {#baseUrlIssueBanner}
+### `baseUrlIssueBanner` \{#baseUrlIssueBanner}
 
 - Type: `boolean`
 
