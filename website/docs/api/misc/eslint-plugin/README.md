@@ -48,10 +48,10 @@ For more fine-grained control, you can also enable the plugin manually and confi
 
 ## Supported rules
 
-| Name | Description |  |
-| --- | --- | --- |
-| [`@docusaurus/no-untranslated-text`](./no-untranslated-text.md) | Enforce text labels in JSX to be wrapped by translate calls |  |
-| [`@docusaurus/string-literal-i18n-messages`](./string-literal-i18n-messages.md) | Enforce translate APIs to be called on plain text labels | ✅ |
+| Name                                                                            | Description                                                 |   |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------- | - |
+| [`@docusaurus/no-untranslated-text`](./no-untranslated-text.md)                 | Enforce text labels in JSX to be wrapped by translate calls |   |
+| [`@docusaurus/string-literal-i18n-messages`](./string-literal-i18n-messages.md) | Enforce translate APIs to be called on plain text labels    | ✅ |
 
 ✅ = recommended
 

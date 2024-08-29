@@ -89,14 +89,12 @@ In CSS, the `url()` function is commonly used to reference assets like fonts and
 The `static/font/Caroline.otf` asset will be loaded by the bundler.
 
 :::warning important takeaway
-
 One important takeaway: **never hardcode your base URL!** The base URL is considered an implementation detail and should be easily changeable. All paths, even when they look like URL slugs, are actually file paths.
 
 If you find the URL slug mental model more understandable, here's a rule of thumb:
 
 - Pretend you have a base URL like `/test/` when writing JSX so you don't use an absolute URL path like `src="/img/thumbnail.png"` but instead `require` the asset.
 - Pretend it's `/` when writing Markdown or CSS so you always use absolute paths without the base URL.
-
 :::
 
 ## Caveats {#caveats}
@@ -104,6 +102,7 @@ If you find the URL slug mental model more understandable, here's a rule of thum
 Keep in mind that:
 
 - By default, none of the files in the `static` folder will be post-processed, hashed, or minified.
+
   - However, as we've demonstrated above, we are usually able to convert them to `require` calls for you so they do get processed. This is good for aggressive caching and better user experience.
 - Missing files referenced via hard-coded absolute paths will not be detected at compilation time and will result in a 404 error.
 - By default, GitHub Pages runs published files through [Jekyll](https://jekyllrb.com/). Since Jekyll will discard any files that begin with `_`, it is recommended that you disable Jekyll by adding an empty file named `.nojekyll` file to your `static` directory if you are using GitHub pages for hosting.
