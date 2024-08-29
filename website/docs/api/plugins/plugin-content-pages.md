@@ -9,7 +9,7 @@ import APITable from '@site/src/components/APITable';
 
 The default pages plugin for Docusaurus. The classic template ships with this plugin with default configurations. This plugin provides [creating pages](guides/creating-pages.md) functionality.
 
-## Installation {#installation}
+## Installation \{#installation}
 
 ```bash npm2yarn
 npm install --save @docusaurus/plugin-content-pages
@@ -23,7 +23,7 @@ You can configure this plugin through the preset options.
 
 :::
 
-## Configuration {#configuration}
+## Configuration \{#configuration}
 
 Accepted fields:
 
@@ -31,23 +31,23 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `path` | `string` | `'src/pages'` | Path to data on filesystem relative to site dir. Components in this directory will be automatically converted to pages. |
-| `routeBasePath` | `string` | `'/'` | URL route for the pages section of your site. **DO NOT** include a trailing slash. |
-| `include` | `string[]` | `['**/*.{js,jsx,ts,tsx,md,mdx}']` | Matching files will be included and processed. |
-| `exclude` | `string[]` | _See example configuration_ | No route will be created for matching files. |
-| `mdxPageComponent` | `string` | `'@theme/MDXPage'` | Component used by each MDX page. |
-| `remarkPlugins` | `[]` | `any[]` | Remark plugins passed to MDX. |
-| `rehypePlugins` | `[]` | `any[]` | Rehype plugins passed to MDX. |
-| `beforeDefaultRemarkPlugins` | `any[]` | `[]` | Custom Remark plugins passed to MDX before the default Docusaurus Remark plugins. |
-| `beforeDefaultRehypePlugins` | `any[]` | `[]` | Custom Rehype plugins passed to MDX before the default Docusaurus Rehype plugins. |
+| Name                         | Type       | Default                           | Description                                                                                                             |
+| ---------------------------- | ---------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `path`                       | `string`   | `'src/pages'`                     | Path to data on filesystem relative to site dir. Components in this directory will be automatically converted to pages. |
+| `routeBasePath`              | `string`   | `'/'`                             | URL route for the pages section of your site. **DO NOT** include a trailing slash.                                      |
+| `include`                    | `string[]` | `['**/*.{js,jsx,ts,tsx,md,mdx}']` | Matching files will be included and processed.                                                                          |
+| `exclude`                    | `string[]` | *See example configuration*       | No route will be created for matching files.                                                                            |
+| `mdxPageComponent`           | `string`   | `'@theme/MDXPage'`                | Component used by each MDX page.                                                                                        |
+| `remarkPlugins`              | `[]`       | `any[]`                           | Remark plugins passed to MDX.                                                                                           |
+| `rehypePlugins`              | `[]`       | `any[]`                           | Rehype plugins passed to MDX.                                                                                           |
+| `beforeDefaultRemarkPlugins` | `any[]`    | `[]`                              | Custom Remark plugins passed to MDX before the default Docusaurus Remark plugins.                                       |
+| `beforeDefaultRehypePlugins` | `any[]`    | `[]`                              | Custom Rehype plugins passed to MDX before the default Docusaurus Rehype plugins.                                       |
 
 ```mdx-code-block
 </APITable>
 ```
 
-### Example configuration {#ex-config}
+### Example configuration \{#ex-config}
 
 You can configure this plugin through preset options or plugin options.
 
@@ -57,7 +57,7 @@ Most Docusaurus users configure this plugin through the preset options.
 
 :::
 
-```js config-tabs
+```js
 // Preset Options: pages
 // Plugin Options: @docusaurus/plugin-content-pages
 
@@ -79,7 +79,7 @@ const config = {
 };
 ```
 
-## Markdown front matter {#markdown-front-matter}
+## Markdown front matter \{#markdown-front-matter}
 
 Markdown pages can use the following Markdown front matter metadata fields, enclosed by a line `---` on either side.
 
@@ -89,13 +89,13 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `title` | `string` | Markdown title | The blog post title. |
-| `description` | `string` | The first line of Markdown content | The description of your page, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines. |
-| `hide_table_of_contents` | `boolean` | `false` | Whether to hide the table of contents to the right. |
-| `draft` | `boolean` | `false` | Draft pages will only be available during development. |
-| `unlisted` | `boolean` | `false` | Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link. |
+| Name                     | Type      | Default                            | Description                                                                                                                                                                                            |
+| ------------------------ | --------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `title`                  | `string`  | Markdown title                     | The blog post title.                                                                                                                                                                                   |
+| `description`            | `string`  | The first line of Markdown content | The description of your page, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines.              |
+| `hide_table_of_contents` | `boolean` | `false`                            | Whether to hide the table of contents to the right.                                                                                                                                                    |
+| `draft`                  | `boolean` | `false`                            | Draft pages will only be available during development.                                                                                                                                                 |
+| `unlisted`               | `boolean` | `false`                            | Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link. |
 
 ```mdx-code-block
 </APITable>
@@ -114,18 +114,18 @@ draft: true
 Markdown page content
 ```
 
-## i18n {#i18n}
+## i18n \{#i18n}
 
 Read the [i18n introduction](../../i18n/i18n-introduction.md) first.
 
-### Translation files location {#translation-files-location}
+### Translation files location \{#translation-files-location}
 
 - **Base path**: `website/i18n/[locale]/docusaurus-plugin-content-pages`
 - **Multi-instance path**: `website/i18n/[locale]/docusaurus-plugin-content-pages-[pluginId]`
 - **JSON files**: extracted with [`docusaurus write-translations`](../../cli.md#docusaurus-write-translations-sitedir)
 - **Markdown files**: `website/i18n/[locale]/docusaurus-plugin-content-pages`
 
-### Example file-system structure {#example-file-system-structure}
+### Example file-system structure \{#example-file-system-structure}
 
 ```bash
 website/i18n/[locale]/docusaurus-plugin-content-pages

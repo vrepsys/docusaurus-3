@@ -5,7 +5,7 @@ tags: [release, i18n]
 image: /img/blog/2021-03-09-releasing-docusaurus-i18n/social-card.png
 ---
 
-Today, we officially release **[Docusaurus 2 i18n](https://docusaurus.io/docs/i18n/introduction)** ([internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)), as part of [2.0.0-alpha.71](https://github.com/facebook/docusaurus/releases/tag/v2.0.0-alpha.71).
+Today, we officially release [**Docusaurus 2 i18n**](https://docusaurus.io/docs/i18n/introduction) ([internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)), as part of [2.0.0-alpha.71](https://github.com/facebook/docusaurus/releases/tag/v2.0.0-alpha.71).
 
 Docusaurus 2 has now reached **full feature parity with Docusaurus 1**. 🎉 And soon, after a few additional infrastructure updates and a bit more testing, the **first Docusaurus 2 beta** will be released.
 
@@ -22,12 +22,12 @@ We also **dogfood** the i18n support on the **Docusaurus 2 site itself**, and th
 You can translate a Docusaurus site in **3 simple steps**:
 
 1. **Configure**: declare the default locale and alternative locales in `docusaurus.config.js`
-1. **Translate**: put the translation files at the [correct filesystem location](https://docusaurus.io/docs/next/i18n/introduction#translation-files-location)
-1. **Deploy**: build and deploy your site using a single or multi-domain strategy
+2. **Translate**: put the translation files at the [correct filesystem location](https://docusaurus.io/docs/next/i18n/introduction#translation-files-location)
+3. **Deploy**: build and deploy your site using a single or multi-domain strategy
 
 The i18n support is **very flexible** and based on the **filesystem**.
 
-The **[i18n tutorial](https://docusaurus.io/docs/i18n/tutorial)** is the best way to get started, and we provide help to use **[Git](https://docusaurus.io/docs/i18n/git)** or **[Crowdin](https://docusaurus.io/docs/i18n/crowdin)**.
+The [**i18n tutorial**](https://docusaurus.io/docs/i18n/tutorial) is the best way to get started, and we provide help to use [**Git**](https://docusaurus.io/docs/i18n/git) or [**Crowdin**](https://docusaurus.io/docs/i18n/crowdin).
 
 ## Design decisions
 
@@ -54,7 +54,7 @@ We worked with a few volunteers to **dogfood the i18n support** before releasing
 
 We have made it possible to **upgrade** a **translated Docusaurus 1 site** to Docusaurus 2.
 
-**[Jest](https://jestjs.io)**, using Docusaurus 1 and Crowdin was one of those sites.
+[**Jest**](https://jestjs.io), using Docusaurus 1 and Crowdin was one of those sites.
 
 The Docusaurus 2 migration was successful and the new site is now deployed in production ([announcement post](https://jestjs.io/blog/2021/03/09/jest-website-upgrade)).
 

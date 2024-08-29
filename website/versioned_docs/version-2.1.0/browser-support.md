@@ -6,7 +6,7 @@ description: How to keep a reasonable bundle size while ensuring sufficient brow
 
 Docusaurus allows sites to define the list of supported browsers through a [browserslist configuration](https://github.com/browserslist/browserslist).
 
-## Purpose {#purpose}
+## Purpose \{#purpose}
 
 Websites need to balance between backward compatibility and bundle size. As old browsers do not support modern APIs or syntax, more code is needed to implement the same functionality.
 
@@ -39,7 +39,7 @@ On old browsers, the compiled output will use unsupported (too recent) JS syntax
 
 :::
 
-## Default values {#default-values}
+## Default values \{#default-values}
 
 Websites initialized with the default classic template has the following in `package.json`:
 
@@ -63,13 +63,13 @@ Websites initialized with the default classic template has the following in `pac
 
 Explained in natural language, the browsers supported in production are those:
 
-- With more than 0.5% of market share; _and_
-- Has official support or updates in the past 24 months (the opposite of "dead"); _and_
+- With more than 0.5% of market share; *and*
+- Has official support or updates in the past 24 months (the opposite of "dead"); *and*
 - Is not Opera Mini.
 
 And browsers used in development are:
 
-- The latest version of Chrome _or_ Firefox _or_ Safari.
+- The latest version of Chrome *or* Firefox *or* Safari.
 
 You can "evaluate" any config with the `browserslist` CLI to obtain the actual list:
 
@@ -101,6 +101,6 @@ safari 14.1
 safari 13.1
 ```
 
-## Read more {#read-more}
+## Read more \{#read-more}
 
 You may wish to visit the [browserslist documentation](https://github.com/browserslist/browserslist/blob/main/README.md) for more specifications, especially the accepted [query values](https://github.com/browserslist/browserslist/blob/main/README.md#queries) and [best practices](https://github.com/browserslist/browserslist/blob/main/README.md#best-practices).

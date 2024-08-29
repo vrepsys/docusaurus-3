@@ -12,7 +12,7 @@ pagination_prev: null
 
 Click the `clear` link to start with a clean slate, or get the `permalink` to share or save your results.
 
----
+***
 
 # h1 Heading
 
@@ -28,11 +28,11 @@ Click the `clear` link to start with a clean slate, or get the `permalink` to sh
 
 ## Horizontal Rules
 
----
+***
 
----
+***
 
----
+***
 
 ## Typographic replacements
 
@@ -56,16 +56,16 @@ Remarkable -- awesome
 
 **This is bold text**
 
-_This is italic text_
+*This is italic text*
 
-_This is italic text_
+*This is italic text*
 
-~~Deleted text~~
+! unknown handler not found
 
 Superscript: 19^th^
 
-Subscript: H~2~O
+Unable to handle node text! unknown handler not foundUnable to handle node text
 
 ++Inserted text++
 
-==Marked text==
+\==Marked text==

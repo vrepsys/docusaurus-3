@@ -8,7 +8,7 @@ This topic is particularly important for highly customized sites that may have d
 
 :::
 
-## Semantic versioning {#semantic-versioning}
+## Semantic versioning \{#semantic-versioning}
 
 Docusaurus versioning is based on the `major.minor.patch` scheme and respects [Semantic Versioning](https://semver.org/).
 
@@ -27,7 +27,7 @@ Releasing Docusaurus 2.0 took a very long time. From now on, Docusaurus will **r
 
 :::
 
-### Major versions {#major-versions}
+### Major versions \{#major-versions}
 
 The `major` version number is incremented on **every breaking change**.
 
@@ -42,7 +42,7 @@ Read our [public API surface](#public-api-surface) section to clearly understand
 
 :::
 
-### Minor versions {#minor-versions}
+### Minor versions \{#minor-versions}
 
 The `minor` version number is incremented on every significant retro-compatible change.
 
@@ -57,7 +57,7 @@ If you only use our [public API surface](#public-api-surface), you should be abl
 
 :::
 
-### Patch versions {#patch-versions}
+### Patch versions \{#patch-versions}
 
 The `patch` version number is incremented on bugfixes releases.
 
@@ -65,7 +65,7 @@ Whenever a new patch version is released, we publish:
 
 - an exhaustive changelog entry
 
-## Versions {#versions}
+## Versions \{#versions}
 
 ```mdx-code-block
 import {
@@ -78,20 +78,20 @@ import {
 
 The Docusaurus team is usually working on 2 major versions at the same time:
 
-- **Docusaurus <StableMajorVersion/>**: the **stable** version, on the <StableMajorBranchLink/> branch
-- **Docusaurus <NextMajorVersion/>**: the **next** version, on the <NextMajorBranchLink/> branch
+- **Docusaurus <StableMajorVersion />**: the **stable** version, on the <StableMajorBranchLink /> branch
+- **Docusaurus <NextMajorVersion />**: the **next** version, on the <NextMajorBranchLink /> branch
 
 :::note
 
-The <StableMajorBranchLink/> branch is created just before releasing the first v<StableMajorVersion/> release candidate.
+The <StableMajorBranchLink /> branch is created just before releasing the first v<StableMajorVersion /> release candidate.
 
 :::
 
-### Stable version {#stable-version}
+### Stable version \{#stable-version}
 
-The stable version (v<StableMajorVersion/>, on <StableMajorBranchLink/>) is recommended for most Docusaurus users.
+The stable version (v<StableMajorVersion />, on <StableMajorBranchLink />) is recommended for most Docusaurus users.
 
-We regularly backport retro-compatible features, bug and security fixes from <NextMajorBranchLink/> to <StableMajorBranchLink/> with `git cherry-pick` to make them available to those not ready for the next version.
+We regularly backport retro-compatible features, bug and security fixes from <NextMajorBranchLink /> to <StableMajorBranchLink /> with `git cherry-pick` to make them available to those not ready for the next version.
 
 :::info
 
@@ -101,11 +101,11 @@ It is recommended to upgrade within that time frame to the new stable version.
 
 :::
 
-### Next version {#next-version}
+### Next version \{#next-version}
 
-The next version (v<NextMajorVersion/>, on <NextMajorBranchLink/>) is the version the Docusaurus team is currently working on.
+The next version (v<NextMajorVersion />, on <NextMajorBranchLink />) is the version the Docusaurus team is currently working on.
 
-The <NextMajorBranchLink/> branch is the **default target branch** for all pull requests, including core team and external contributions.
+The <NextMajorBranchLink /> branch is the **default target branch** for all pull requests, including core team and external contributions.
 
 This version is recommended for **early adopters** that want to use the latest Docusaurus features as soon as possible. It is also a good way to help us by reporting bugs and giving some feedback.
 
@@ -129,7 +129,7 @@ At the `beta` and `rc` (release candidate) phases, we avoid introducing major br
 
 :::
 
-## Public API surface {#public-api-surface}
+## Public API surface \{#public-api-surface}
 
 Docusaurus commits to respecting Semantic Versioning. This means that whenever changes occur in Docusaurus public APIs and break backward compatibility, we will increment the `major` version number.
 
@@ -141,7 +141,7 @@ Docusaurus guarantees public API retro-compatibility across `minor` versions. Un
 
 We will outline what accounts as the public API surface.
 
-### Core public API {#core-public-api}
+### Core public API \{#core-public-api}
 
 ✅ Our public API includes:
 
@@ -154,6 +154,7 @@ We will outline what accounts as the public API surface.
 - Theme config
 - Core plugins route component props
 - `@docusaurus/types` TypeScript types
+
   - We still retain the freedom to make types stricter (which may break type-checking).
 
 :::tip
@@ -164,7 +165,7 @@ For non-theme APIs, any documented API is considered public (and will be stable)
 
 An API being "stable" means if you increment the patch or minor version of your Docusaurus installation without any other change, running `docusaurus start` or `docusaurus build` should not throw an error.
 
-### Theming public API {#theming-public-api}
+### Theming public API \{#theming-public-api}
 
 Docusaurus has a very flexible theming system:
 

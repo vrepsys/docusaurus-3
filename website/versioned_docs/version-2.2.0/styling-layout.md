@@ -16,7 +16,7 @@ A Docusaurus site is a single-page React application. You can style it the way y
 
 There are a few approaches/frameworks which will work, depending on your preferences and the type of website you are trying to build. Websites that are highly interactive and behave more like web apps will benefit from more modern styling approaches that co-locate styles with the components. Component styling can also be particularly useful when you wish to customize or swizzle a component.
 
-## Global styles {#global-styles}
+## Global styles \{#global-styles}
 
 This is the most traditional way of styling that most developers (including non-front-end developers) would be familiar with. It works fine for small websites that do not have much customization.
 
@@ -64,7 +64,7 @@ If you want to add CSS to any element, you can open the DevTools in your browser
 - **Infima class names**. These class names are found in the classic theme and usually follow the [BEM convention](http://getbem.com/naming/) of `block__element--modifier`. They are usually stable but are still considered implementation details, so you should generally avoid targeting them. However, you can [modify Infima CSS variables](#styling-your-site-with-infima).
 - **CSS module class names**. These class names have a hash in production (`codeBlockContainer_RIuc`) and are appended with a long file path in development. They are considered implementation details and you should almost always avoid targeting them in your custom CSS. If you must, you can use an [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) (`[class*='codeBlockContainer']`) that ignores the hash.
 
-### Theme Class Names {#theme-class-names}
+### Theme Class Names \{#theme-class-names}
 
 We provide some stable CSS class names for robust and maintainable global layout styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
@@ -75,25 +75,23 @@ If you can't find a way to create a robust CSS selector, please [report your cus
 :::
 
 <details>
+  <summary>Exhaustive list of stable class names</summary>
 
-<summary>Exhaustive list of stable class names</summary>
+  ```mdx-code-block
+  import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
+  import CodeBlock from '@theme/CodeBlock';
 
-```mdx-code-block
-import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-ts">
-  {ThemeClassNamesCode
-    // remove source comments
-    .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
-    .replace(/^ *\n/gm,'')
-    .trim()}
-</CodeBlock>
-```
-
+  <CodeBlock className="language-ts">
+    {ThemeClassNamesCode
+      // remove source comments
+      .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
+      .replace(/^ *\n/gm,'')
+      .trim()}
+  </CodeBlock>
+  ```
 </details>
 
-### Styling your site with Infima {#styling-your-site-with-infima}
+### Styling your site with Infima \{#styling-your-site-with-infima}
 
 `@docusaurus/preset-classic` uses [Infima](https://infima.dev/) as the underlying styling framework. Infima provides a flexible layout and common UI components styling suitable for content-centric websites (blogs, documentation, landing pages). For more details, check out the [Infima website](https://infima.dev/).
 
@@ -110,9 +108,9 @@ Infima uses 7 shades of each color. We recommend using [ColorBox](https://www.co
 
 Alternatively, use the following tool to generate the different shades for your website and copy the variables into `/src/css/custom.css`.
 
-<ColorGenerator/>
+<ColorGenerator />
 
-### Dark Mode {#dark-mode}
+### Dark Mode \{#dark-mode}
 
 In light mode, the `<html>` element has a `data-theme="light"` attribute; in dark mode, it's `data-theme="dark"`. Therefore, you can scope your CSS to dark-mode-only by targeting `html` with a specific attribute.
 
@@ -127,7 +125,7 @@ In light mode, the `<html>` element has a `data-theme="light"` attribute; in dar
 }
 ```
 
-### Mobile View {#mobile-view}
+### Mobile View \{#mobile-view}
 
 Docusaurus uses `996px` as the cutoff between mobile screen width and desktop. If you want your layout to be different in the mobile view, you can use media queries.
 
@@ -143,7 +141,7 @@ Docusaurus uses `996px` as the cutoff between mobile screen width and desktop. I
 }
 ```
 
-## CSS modules {#css-modules}
+## CSS modules \{#css-modules}
 
 To style your components using [CSS Modules](https://github.com/css-modules/css-modules), name your stylesheet files with the `.module.css` suffix (e.g. `welcome.module.css`). Webpack will load such CSS files as CSS modules and you have to reference the class names as properties of the imported CSS module (as opposed to using plain strings). This is similar to the convention used in [Create React App](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
@@ -176,7 +174,7 @@ function MyComponent() {
 
 The class names will be processed by webpack into a globally unique class name during build.
 
-## CSS-in-JS {#css-in-js}
+## CSS-in-JS \{#css-in-js}
 
 :::caution
 
@@ -184,7 +182,7 @@ CSS-in-JS support is a work in progress, so libs like MUI may have display quirk
 
 :::
 
-## Sass/SCSS {#sassscss}
+## Sass/SCSS \{#sassscss}
 
 To use Sass/SCSS as your CSS preprocessor, install the unofficial Docusaurus 2 plugin [`docusaurus-plugin-sass`](https://github.com/rlamana/docusaurus-plugin-sass). This plugin works for both global styles and the CSS modules approach:
 
@@ -194,7 +192,7 @@ To use Sass/SCSS as your CSS preprocessor, install the unofficial Docusaurus 2 p
 npm install --save docusaurus-plugin-sass sass
 ```
 
-2. Include the plugin in your `docusaurus.config.js` file:
+1. Include the plugin in your `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -205,9 +203,9 @@ module.exports = {
 };
 ```
 
-3. Write and import your stylesheets in Sass/SCSS as normal.
+1. Write and import your stylesheets in Sass/SCSS as normal.
 
-### Global styles using Sass/SCSS {#global-styles-using-sassscss}
+### Global styles using Sass/SCSS \{#global-styles-using-sassscss}
 
 You can now set the `customCss` property of `@docusaurus/preset-classic` to point to your Sass/SCSS file:
 
@@ -229,7 +227,7 @@ module.exports = {
 };
 ```
 
-### Modules using Sass/SCSS {#modules-using-sassscss}
+### Modules using Sass/SCSS \{#modules-using-sassscss}
 
 Name your stylesheet files with the `.module.scss` suffix (e.g. `welcome.module.scss`) instead of `.css`. Webpack will use `sass-loader` to preprocess your stylesheets and load them as CSS modules.
 
