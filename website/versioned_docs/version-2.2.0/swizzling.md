@@ -16,17 +16,15 @@ In practice, swizzling permits to **swap a theme component with your own impleme
 - [**Wrapping**](#wrapping): creates a **wrapper** around the original theme component, which you can **enhance**
 
 <details>
+  <summary>Why is it called swizzling?</summary>
 
-<summary>Why is it called swizzling?</summary>
+  **The name comes from Objective-C and Swift-UI**: [method swizzling](https://pspdfkit.com/blog/2019/swizzling-in-swift/) is the process of changing the implementation of an existing selector (method).
 
-**The name comes from Objective-C and Swift-UI**: [method swizzling](https://pspdfkit.com/blog/2019/swizzling-in-swift/) is the process of changing the implementation of an existing selector (method).
+  **For Docusaurus, component swizzling means providing an alternative component that takes precedence over the component provided by the theme.**
 
-**For Docusaurus, component swizzling means providing an alternative component that takes precedence over the component provided by the theme.**
+  You can think of it as [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) for React components, enabling you to override the default implementation. Gatsby has a similar concept called [theme shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/).
 
-You can think of it as [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) for React components, enabling you to override the default implementation. Gatsby has a similar concept called [theme shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/).
-
-To gain a deeper understanding of this, you have to understand [how theme components are resolved](./advanced/client.md#theme-aliases).
-
+  To gain a deeper understanding of this, you have to understand [how theme components are resolved](./advanced/client.md#theme-aliases).
 </details>
 
 ## Swizzling Process
@@ -101,9 +99,7 @@ After swizzling a component, **restart your dev server** in order for Docusaurus
 :::
 
 :::warning Prefer staying on the safe side
-
 Be sure to understand [which components are **safe to swizzle**](#what-is-safe-to-swizzle). Some components are **internal implementation details** of a theme.
-
 :::
 
 :::info
@@ -195,8 +191,7 @@ export default function FooterWrapper(props) {
 <details>
   <summary>What is this <code>@theme-original</code> thing?</summary>
 
-Docusaurus uses [theme aliases](./advanced/client.md#theme-aliases) to resolve the theme components to use. The newly created wrapper takes the `@theme/SomeComponent` alias. `@theme-original/SomeComponent` permits to import original component that the wrapper shadows without creating an infinite import loop where the wrapper imports itself.
-
+  Docusaurus uses [theme aliases](./advanced/client.md#theme-aliases) to resolve the theme components to use. The newly created wrapper takes the `@theme/SomeComponent` alias. `@theme-original/SomeComponent` permits to import original component that the wrapper shadows without creating an infinite import loop where the wrapper imports itself.
 </details>
 
 :::tip
@@ -227,15 +222,13 @@ export default function BlogPostItemWrapper(props) {
 Some theme components are **internal implementation details** of a theme. Docusaurus allows you to swizzle them, but it **might be risky**.
 
 <details>
+  <summary>Why is it risky?</summary>
 
-<summary>Why is it risky?</summary>
+  Theme authors (including us) might have to update their theme over time: changing the component props, name, file system location, types... For example, consider a component that receives two props `name` and `age`, but after a refactor, it now receives a `person` prop with the above two properties. Your component, which still expects these two props, will render `undefined` instead.
 
-Theme authors (including us) might have to update their theme over time: changing the component props, name, file system location, types... For example, consider a component that receives two props `name` and `age`, but after a refactor, it now receives a `person` prop with the above two properties. Your component, which still expects these two props, will render `undefined` instead.
+  Moreover, internal components may simply disappear. If a component is called `Sidebar` and it's later renamed to `DocSidebar`, your swizzled component will be completely ignored.
 
-Moreover, internal components may simply disappear. If a component is called `Sidebar` and it's later renamed to `DocSidebar`, your swizzled component will be completely ignored.
-
-**Theme components marked as unsafe may change in a backward-incompatible way between theme minor versions.** When upgrading a theme (or Docusaurus), your customizations might **behave unexpectedly**, and can even **break your site**.
-
+  **Theme components marked as unsafe may change in a backward-incompatible way between theme minor versions.** When upgrading a theme (or Docusaurus), your customizations might **behave unexpectedly**, and can even **break your site**.
 </details>
 
 For each theme component, the swizzle CLI will indicate **3 different levels of safety** declared by theme authors:

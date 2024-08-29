@@ -20,8 +20,8 @@ And the answer is: create an MDX plugin! MDX has a built-in [plugin system](http
 
 If you play with the [MDX playground](https://mdx-git-renovate-babel-monorepo-mdx.vercel.app/playground), you would notice that the MDX transpilation has two intermediate steps: Markdown AST (MDAST), and Hypertext AST (HAST), before arriving at the final JSX output. MDX plugins also come in two forms:
 
-- **[Remark](https://github.com/remarkjs/remark/)**: processes the Markdown AST.
-- **[Rehype](https://github.com/rehypejs/rehype/)**: processes the Hypertext AST.
+- [**Remark**](https://github.com/remarkjs/remark/): processes the Markdown AST.
+- [**Rehype**](https://github.com/rehypejs/rehype/): processes the Hypertext AST.
 
 :::tip
 
@@ -57,10 +57,9 @@ There's recently a trend in the Remark/Rehype ecosystem to migrate to ES Modules
 <details>
   <summary>How are <code>remark-math</code> and <code>rehype-katex</code> different?</summary>
 
-In case you are wondering how Remark and Rehype are different, here is a good example. `remark-math` operates on the Markdown AST, where it sees text like `$...$`, and all it does is transform that to the JSX `<span class="math math-inline">...</span>` without doing too much with the content. This decouples the extraction of math formulae from their rendering, which means you can swap $\KaTeX$ out with other math renderers, like MathJax (with [`rehype-mathjax`](https://github.com/remarkjs/remark-math/tree/main/packages/rehype-mathjax)), just by replacing the Rehype plugin.
+  In case you are wondering how Remark and Rehype are different, here is a good example. `remark-math` operates on the Markdown AST, where it sees text like `$...$`, and all it does is transform that to the JSX `<span class="math math-inline">...</span>` without doing too much with the content. This decouples the extraction of math formulae from their rendering, which means you can swap $\KaTeX$ out with other math renderers, like MathJax (with [`rehype-mathjax`](https://github.com/remarkjs/remark-math/tree/main/packages/rehype-mathjax)), just by replacing the Rehype plugin.
 
-Next, the `rehype-katex` operates on the Hypertext AST where everything has been converted to HTML-like tags already. It traverses all the elements with `math` class and uses $\KaTeX$ to parse and render the content to actual HTML.
-
+  Next, the `rehype-katex` operates on the Hypertext AST where everything has been converted to HTML-like tags already. It traverses all the elements with `math` class and uses $\KaTeX$ to parse and render the content to actual HTML.
 </details>
 
 Next, add them to the plugin options through plugin or preset config in `docusaurus.config.js`:
@@ -127,7 +126,7 @@ The writeup below is **not** meant to be a comprehensive guide to creating a plu
 
 For example, let's make a plugin that visits every `h2` heading and adds a `Section X. ` prefix. First, create your plugin source file anywhere—you can even publish it as a separate npm package and install it like explained above. We would put ours at `src/remark/section-prefix.js`. A remark/rehype plugin is just a function that receives the `options` and returns a `transformer` that operates on the AST.
 
-```js "src/remark/section-prefix.js"
+```js
 const visit = require('unist-util-visit');
 
 const plugin = (options) => {

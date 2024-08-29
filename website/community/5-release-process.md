@@ -78,20 +78,20 @@ import {
 
 The Docusaurus team is usually working on 2 major versions at the same time:
 
-- **Docusaurus <StableMajorVersion/>**: the **stable** version, on the <StableMajorBranchLink/> branch
-- **Docusaurus <NextMajorVersion/>**: the **next** version, on the <NextMajorBranchLink/> branch
+- **Docusaurus <StableMajorVersion />**: the **stable** version, on the <StableMajorBranchLink /> branch
+- **Docusaurus <NextMajorVersion />**: the **next** version, on the <NextMajorBranchLink /> branch
 
 :::note
 
-The <StableMajorBranchLink/> branch is created just before releasing the first v<StableMajorVersion/> release candidate.
+The <StableMajorBranchLink /> branch is created just before releasing the first v<StableMajorVersion /> release candidate.
 
 :::
 
 ### Stable version {#stable-version}
 
-The stable version (v<StableMajorVersion/>, on <StableMajorBranchLink/>) is recommended for most Docusaurus users.
+The stable version (v<StableMajorVersion />, on <StableMajorBranchLink />) is recommended for most Docusaurus users.
 
-We regularly backport retro-compatible features, bug and security fixes from <NextMajorBranchLink/> to <StableMajorBranchLink/> with `git cherry-pick` to make them available to those not ready for the next version.
+We regularly backport retro-compatible features, bug and security fixes from <NextMajorBranchLink /> to <StableMajorBranchLink /> with `git cherry-pick` to make them available to those not ready for the next version.
 
 :::info
 
@@ -103,9 +103,9 @@ It is recommended to upgrade within that time frame to the new stable version.
 
 ### Next version {#next-version}
 
-The next version (v<NextMajorVersion/>, on <NextMajorBranchLink/>) is the version the Docusaurus team is currently working on.
+The next version (v<NextMajorVersion />, on <NextMajorBranchLink />) is the version the Docusaurus team is currently working on.
 
-The <NextMajorBranchLink/> branch is the **default target branch** for all pull requests, including core team and external contributions.
+The <NextMajorBranchLink /> branch is the **default target branch** for all pull requests, including core team and external contributions.
 
 This version is recommended for **early adopters** that want to use the latest Docusaurus features as soon as possible. It is also a good way to help us by reporting bugs and giving some feedback.
 
@@ -154,6 +154,7 @@ We will outline what accounts as the public API surface.
 - Theme config
 - Core plugins route component props
 - `@docusaurus/types` TypeScript types
+
   - We still retain the freedom to make types stricter (which may break type-checking).
 
 :::tip
