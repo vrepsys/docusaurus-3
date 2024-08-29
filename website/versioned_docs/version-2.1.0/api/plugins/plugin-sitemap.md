@@ -15,7 +15,7 @@ This plugin is always inactive in development and **only active in production** 
 
 :::
 
-## Installation {#installation}
+## Installation \{#installation}
 
 ```bash npm2yarn
 npm install --save @docusaurus/plugin-sitemap
@@ -29,7 +29,7 @@ You can configure this plugin through the [preset options](#ex-config-preset).
 
 :::
 
-## Configuration {#configuration}
+## Configuration \{#configuration}
 
 Accepted fields:
 
@@ -37,12 +37,12 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `changefreq` | `string` | `'weekly'` | See [sitemap docs](https://www.sitemaps.org/protocol.html#xmlTagDefinitions) |
-| `priority` | `number` | `0.5` | See [sitemap docs](https://www.sitemaps.org/protocol.html#xmlTagDefinitions) |
-| `ignorePatterns` | `string[]` | `[]` | A list of glob patterns; matching route paths will be filtered from the sitemap. Note that you may need to include the base URL in here. |
-| `filename` | `string` | `sitemap.xml` | The path to the created sitemap file, relative to the output directory. Useful if you have two plugin instances outputting two files. |
+| Name             | Type       | Default       | Description                                                                                                                              |
+| ---------------- | ---------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `changefreq`     | `string`   | `'weekly'`    | See [sitemap docs](https://www.sitemaps.org/protocol.html#xmlTagDefinitions)                                                             |
+| `priority`       | `number`   | `0.5`         | See [sitemap docs](https://www.sitemaps.org/protocol.html#xmlTagDefinitions)                                                             |
+| `ignorePatterns` | `string[]` | `[]`          | A list of glob patterns; matching route paths will be filtered from the sitemap. Note that you may need to include the base URL in here. |
+| `filename`       | `string`   | `sitemap.xml` | The path to the created sitemap file, relative to the output directory. Useful if you have two plugin instances outputting two files.    |
 
 ```mdx-code-block
 </APITable>
@@ -57,7 +57,7 @@ This plugin also respects some site config:
 
 :::
 
-### Example configuration {#ex-config}
+### Example configuration \{#ex-config}
 
 You can configure this plugin through preset options or plugin options.
 
@@ -67,7 +67,7 @@ Most Docusaurus users configure this plugin through the preset options.
 
 :::
 
-```js config-tabs
+```js
 // Preset Options: sitemap
 // Plugin Options: @docusaurus/plugin-sitemap
 

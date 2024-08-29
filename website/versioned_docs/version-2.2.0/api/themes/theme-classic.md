@@ -19,7 +19,7 @@ If you have installed `@docusaurus/preset-classic`, you don't need to install it
 
 :::
 
-## Configuration {#configuration}
+## Configuration \{#configuration}
 
 Accepted fields:
 
@@ -27,9 +27,9 @@ Accepted fields:
 <APITable>
 ```
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `customCss` | <code>string[] \| string</code> | `[]` | Stylesheets to be imported globally as [client modules](../../advanced/client.md#client-modules). Relative paths are resolved against the site directory. |
+| Option      | Type                           | Default | Description                                                                                                                                               |
+| ----------- | ------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `customCss` | <code>string[] | string</code> | `[]`    | Stylesheets to be imported globally as [client modules](../../advanced/client.md#client-modules). Relative paths are resolved against the site directory. |
 
 ```mdx-code-block
 </APITable>
@@ -41,7 +41,7 @@ Most configuration for the theme is done in `themeConfig`, which can be found in
 
 :::
 
-### Example configuration {#ex-config}
+### Example configuration \{#ex-config}
 
 You can configure this theme through preset options or plugin options.
 
@@ -51,7 +51,7 @@ Most Docusaurus users configure this plugin through the preset options.
 
 :::
 
-```js config-tabs
+```js
 // Preset Options: theme
 // Plugin Options: @docusaurus/theme-classic
 
