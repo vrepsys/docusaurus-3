@@ -74,7 +74,7 @@ The [front matter](./guides/markdown-features/markdown-features-intro.mdx#front-
 
 ## Blog list {#blog-list}
 
-The blog's index page (by default, it is at `/blog`) is the _blog list page_, where all blog posts are collectively displayed.
+The blog's index page (by default, it is at `/blog`) is the *blog list page*, where all blog posts are collectively displayed.
 
 Use the `<!--truncate-->` marker in your blog post to represent what will be shown as the summary when viewing all published blog posts. Anything above `<!--truncate-->` will be part of the summary. For example:
 
@@ -120,7 +120,7 @@ module.exports = {
 
 ## Blog sidebar {#blog-sidebar}
 
-The blog sidebar displays recent blog posts. The default number of items shown is 5, but you can customize with the `blogSidebarCount` option in the plugin configuration. By setting `blogSidebarCount: 0`, the sidebar will be completely disabled, with the container removed as well. This will increase the width of the main container. Specially, if you have set `blogSidebarCount: 'ALL'`, _all_ posts will be displayed.
+The blog sidebar displays recent blog posts. The default number of items shown is 5, but you can customize with the `blogSidebarCount` option in the plugin configuration. By setting `blogSidebarCount: 0`, the sidebar will be completely disabled, with the container removed as well. This will increase the width of the main container. Specially, if you have set `blogSidebarCount: 'ALL'`, *all* posts will be displayed.
 
 You can also alter the sidebar heading text with the `blogSidebarTitle` option. For example, if you have set `blogSidebarCount: 'ALL'`, instead of the default "Recent posts", you may rather make it say "All posts":
 
@@ -147,21 +147,20 @@ module.exports = {
 Docusaurus will extract a `YYYY-MM-DD` date from a file/folder name such as `YYYY-MM-DD-my-blog-post-title.md`.
 
 <details>
-<summary>Example supported patterns</summary>
+  <summary>Example supported patterns</summary>
 
-| Pattern | Example |
-| --- | --- |
-| Single file | `2021-05-28-my-blog-post-title.md` |
-| MDX file | `2021-05-28-my-blog-post-title.mdx` |
-| Single folder + `index.md` | `2021-05-28-my-blog-post-title/index.md` |
-| Folder named by date | `2021-05-28/my-blog-post-title.md` |
-| Nested folders by date | `2021/05/28/my-blog-post-title.md` |
-| Partially nested folders by date | `2021/05-28-my-blog-post-title.md` |
-| Nested folders + `index.md` | `2021/05/28/my-blog-post-title/index.md` |
-| Date in the middle of path | `category/2021/05-28-my-blog-post-title.md` |
+  | Pattern                          | Example                                     |
+  | -------------------------------- | ------------------------------------------- |
+  | Single file                      | `2021-05-28-my-blog-post-title.md`          |
+  | MDX file                         | `2021-05-28-my-blog-post-title.mdx`         |
+  | Single folder + `index.md`       | `2021-05-28-my-blog-post-title/index.md`    |
+  | Folder named by date             | `2021-05-28/my-blog-post-title.md`          |
+  | Nested folders by date           | `2021/05/28/my-blog-post-title.md`          |
+  | Partially nested folders by date | `2021/05-28-my-blog-post-title.md`          |
+  | Nested folders + `index.md`      | `2021/05/28/my-blog-post-title/index.md`    |
+  | Date in the middle of path       | `category/2021/05-28-my-blog-post-title.md` |
 
-The date will be excised from the path and appended to the beginning of the URL slug.
-
+  The date will be excised from the path and appended to the beginning of the URL slug.
 </details>
 
 :::tip
@@ -317,48 +316,45 @@ The `authors` system is very flexible and can suit more advanced use-case:
 <details>
   <summary>Mix inline authors and global authors</summary>
 
-You can use global authors most of the time, and still use inline authors:
+  You can use global authors most of the time, and still use inline authors:
 
-```md title="my-blog-post.md"
----
-authors:
-  - jmarcey
-  - slorber
-  - name: Inline Author name
-    title: Inline Author Title
-    url: https://github.com/inlineAuthor
-    image_url: https://github.com/inlineAuthor
----
-```
-
+  ```md title="my-blog-post.md"
+  ---
+  authors:
+    - jmarcey
+    - slorber
+    - name: Inline Author name
+      title: Inline Author Title
+      url: https://github.com/inlineAuthor
+      image_url: https://github.com/inlineAuthor
+  ---
+  ```
 </details>
 
 <details>
   <summary>Local override of global authors</summary>
 
-You can customize the global author's data on per-blog-post basis:
+  You can customize the global author's data on per-blog-post basis:
 
-```md title="my-blog-post.md"
----
-authors:
-  - key: jmarcey
-    title: Joel Marcey's new title
-  - key: slorber
-    name: Sébastien Lorber's new name
----
-```
-
+  ```md title="my-blog-post.md"
+  ---
+  authors:
+    - key: jmarcey
+      title: Joel Marcey's new title
+    - key: slorber
+      name: Sébastien Lorber's new name
+  ---
+  ```
 </details>
 
 <details>
   <summary>Localize the author's configuration file</summary>
 
-The configuration file can be localized, just create a localized copy of it at:
+  The configuration file can be localized, just create a localized copy of it at:
 
-```bash
-website/i18n/[locale]/docusaurus-plugin-content-blog/authors.yml
-```
-
+  ```bash
+  website/i18n/[locale]/docusaurus-plugin-content-blog/authors.yml
+  ```
 </details>
 
 :::
@@ -432,7 +428,7 @@ module.exports = {
 
 Usage:
 
-```md "my-blog-post.md"
+```md
 ---
 hide_reading_time: true
 ---
@@ -541,27 +537,23 @@ module.exports = {
 The feeds can be found at:
 
 <Tabs>
-<TabItem value="RSS">
+  <TabItem value="RSS">
+    ```text
+    https://example.com/blog/rss.xml
+    ```
+  </TabItem>
 
-```text
-https://example.com/blog/rss.xml
-```
+  <TabItem value="Atom">
+    ```text
+    https://example.com/blog/atom.xml
+    ```
+  </TabItem>
 
-</TabItem>
-<TabItem value="Atom">
-
-```text
-https://example.com/blog/atom.xml
-```
-
-</TabItem>
-<TabItem value="JSON">
-
-```text
-https://example.com/blog/feed.json
-```
-
-</TabItem>
+  <TabItem value="JSON">
+    ```text
+    https://example.com/blog/feed.json
+    ```
+  </TabItem>
 </Tabs>
 
 ## Advanced topics {#advanced-topics}

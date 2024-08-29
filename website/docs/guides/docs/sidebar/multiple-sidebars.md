@@ -45,8 +45,8 @@ How does Docusaurus know which sidebar to display when browsing `commonDoc`? Ans
 
 When you add doc Y to sidebar X, it creates a two-way binding: sidebar X contains a link to doc Y, and when browsing doc Y, sidebar X will be displayed. But sometimes, we want to break either implicit binding:
 
-1. _How do I generate a link to doc Y in sidebar X without making sidebar X displayed on Y?_ For example, when I include doc Y in multiple sidebars as in the example above, and I want to explicitly tell Docusaurus to display one sidebar?
-2. _How do I make sidebar X displayed when browsing doc Y, but sidebar X shouldn't contain the link to Y?_ For example, when Y is a "doc home page" and the sidebar is purely used for navigation?
+1. *How do I generate a link to doc Y in sidebar X without making sidebar X displayed on Y?* For example, when I include doc Y in multiple sidebars as in the example above, and I want to explicitly tell Docusaurus to display one sidebar?
+2. *How do I make sidebar X displayed when browsing doc Y, but sidebar X shouldn't contain the link to Y?* For example, when Y is a "doc home page" and the sidebar is purely used for navigation?
 
 Front matter option `displayed_sidebar` will forcibly set the sidebar association. For the same example, you can still use doc shorthands without any special configuration:
 
@@ -114,7 +114,7 @@ You can also disable displaying a pagination link with `pagination_next: null` o
 
 The pagination label by default is the sidebar label. You can use the front matter `pagination_label` to customize how this doc appears in the pagination.
 
-## The `ref` item {#sidebar-item-ref}
+## The `ref`item {#sidebar-item-ref}
 
 The `ref` type is identical to the [`doc` type](#sidebar-item-doc) in every way, except that it doesn't participate in generating navigation metadata. It only registers itself as a link. When [generating pagination](#generating-pagination) and [displaying sidebar](#sidebar-association), `ref` items are completely ignored.
 

@@ -87,7 +87,7 @@ export default function Home() {
 }
 ```
 
-### Initialize the `i18n` folder {#initialize-the-i18n-folder}
+### Initialize the `i18n`folder {#initialize-the-i18n-folder}
 
 Use the [write-translations](../cli.md#docusaurus-write-translations-sitedir) CLI command to initialize the JSON translation files for the French locale:
 
