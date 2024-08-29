@@ -73,9 +73,7 @@ import myImageUrl from './assets/docusaurus-asset-example-banner.png';
 All of the above result in displaying the image:
 
 <BrowserWindow>
-
-![My image alternative text](../../assets/docusaurus-asset-example-banner.png)
-
+  ![My image alternative text](../../assets/docusaurus-asset-example-banner.png)
 </BrowserWindow>
 
 :::note
@@ -99,15 +97,14 @@ or
 ```
 
 <BrowserWindow>
+  <a
+    target="_blank"
+    href={require('../../assets/docusaurus-asset-example.docx').default}
+  >
+    Download this docx
+  </a>
 
-<a
-  target="_blank"
-  href={require('../../assets/docusaurus-asset-example.docx').default}>
-  Download this docx
-</a>
-
-[Download this docx using Markdown](../../assets/docusaurus-asset-example.docx)
-
+  [Download this docx using Markdown](../../assets/docusaurus-asset-example.docx)
 </BrowserWindow>
 
 :::info Markdown links are always file paths
@@ -127,11 +124,9 @@ import DocusaurusSvg from './docusaurus.svg';
 ```
 
 <BrowserWindow>
+  import DocusaurusSvg from '@site/static/img/docusaurus.svg';
 
-import DocusaurusSvg from '@site/static/img/docusaurus.svg';
-
-<DocusaurusSvg />
-
+  <DocusaurusSvg />
 </BrowserWindow>
 
 This can be useful if you want to alter the part of the SVG image via CSS. For example, you can change one of the SVG colors based on the current theme.
@@ -207,9 +202,7 @@ To toggle the visibility of an image using the path fragment (for GitHub, it's `
 ```
 
 <BrowserWindow>
-
-![Docusaurus themed image](/img/docusaurus_keytar.svg#gh-light-mode-only)![Docusaurus themed image](/img/docusaurus_speed.svg#gh-dark-mode-only)
-
+  ![Docusaurus themed image](/img/docusaurus_keytar.svg#gh-light-mode-only)![Docusaurus themed image](/img/docusaurus_speed.svg#gh-dark-mode-only)
 </BrowserWindow>
 
 ## Static assets {#static-assets}

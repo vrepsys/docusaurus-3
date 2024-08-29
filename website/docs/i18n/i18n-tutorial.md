@@ -84,7 +84,7 @@ We haven't provided any translation yet, so the site is mostly untranslated.
 
 Docusaurus provides **default translations** for generic theme labels, such as "Next" and "Previous" for the pagination.
 
-Please help us complete those **[default translations](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-translations/locales)**.
+Please help us complete those [**default translations**](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-translations/locales).
 
 :::
 
@@ -117,7 +117,7 @@ Use the one that better fits the context semantically. For example, the `<Transl
 
 :::caution
 
-A JSX element is an _object_, not a string. Using it in contexts expecting strings (such as the children of [`<option>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)) would [coerce it to a string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), which returns `"[object Object]"`. While we encourage you to use `<Translate>` as JSX children, only use the element form when it actually works.
+A JSX element is an *object*, not a string. Using it in contexts expecting strings (such as the children of [`<option>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)) would [coerce it to a string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), which returns `"[object Object]"`. While we encourage you to use `<Translate>` as JSX children, only use the element form when it actually works.
 
 :::
 
@@ -226,7 +226,7 @@ The `docusaurus write-translations` command will statically analyze all React co
 
 :::caution text labels must be static
 
-The `docusaurus write-translations` command only does **static analysis** of your code. It doesn't actually run your site. Therefore, dynamic messages can't be extracted, as the message is an _expression_, not a _string_:
+The `docusaurus write-translations` command only does **static analysis** of your code. It doesn't actually run your site. Therefore, dynamic messages can't be extracted, as the message is an *expression*, not a *string*:
 
 ```jsx
 const items = [
@@ -268,7 +268,7 @@ function ItemsList() {
 }
 ```
 
-You can see the calls to the translation APIs as purely _markers_ that tell Docusaurus that "here's a text label to be replaced with a translated message".
+You can see the calls to the translation APIs as purely *markers* that tell Docusaurus that "here's a text label to be replaced with a translated message".
 
 :::
 
@@ -437,7 +437,7 @@ Generated IDs are not always a good fit for localized sites, as it requires you 
 + [link](#bonjour-le-monde)
 ```
 
-For localized sites, it is recommended to use **[explicit heading IDs](../guides/markdown-features/markdown-features-toc.mdx#explicit-ids)**.
+For localized sites, it is recommended to use [**explicit heading IDs**](../guides/markdown-features/markdown-features-toc.mdx#explicit-ids).
 
 :::
 

@@ -63,13 +63,13 @@ Websites initialized with the default classic template has the following in `pac
 
 Explained in natural language, the browsers supported in production are those:
 
-- With more than 0.5% of market share; _and_
-- Has official support or updates in the past 24 months (the opposite of "dead"); _and_
+- With more than 0.5% of market share; *and*
+- Has official support or updates in the past 24 months (the opposite of "dead"); *and*
 - Is not Opera Mini.
 
 And browsers used in development are:
 
-- The latest version of Chrome _or_ Firefox _or_ Safari.
+- The latest version of Chrome *or* Firefox *or* Safari.
 
 You can "evaluate" any config with the `browserslist` CLI to obtain the actual list:
 
