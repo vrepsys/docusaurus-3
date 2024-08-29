@@ -36,7 +36,7 @@ npx @docusaurus/migrate migrate <v1 website directory> <desired v2 website direc
 npx @docusaurus/migrate migrate ./v1-website ./v2-website
 ```
 
-3. To view your new website locally, go into your v2 website's directory and start your development server.
+1. To view your new website locally, go into your v2 website's directory and start your development server.
 
 ```bash
 cd ./v2-website
@@ -50,7 +50,7 @@ The migration CLI updates existing files. Be sure to have committed them first!
 
 :::
 
-#### Options {#options}
+#### Options \{#options}
 
 You can add option flags to the migration CLI to automatically migrate Markdown content and pages to v2. It is likely that you will still need to make some manual changes to achieve your desired result.
 

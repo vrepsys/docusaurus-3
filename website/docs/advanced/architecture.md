@@ -11,9 +11,7 @@ import Zoom from 'react-medium-image-zoom';
 ```
 
 <Zoom>
-
-![Architecture overview](/img/architecture.png)
-
+  ![Architecture overview](/img/architecture.png)
 </Zoom>
 
 This diagram shows how Docusaurus works to build your app. Plugins each collect their content and emit JSON data; themes provide layout components which receive the JSON data as route modules. The bundler bundles all the components and emits a server bundle and a client bundle.
