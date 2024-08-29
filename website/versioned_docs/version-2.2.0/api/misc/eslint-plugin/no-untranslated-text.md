@@ -36,9 +36,9 @@ Accepted fields:
 <APITable>
 ```
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `ignoredStrings` | `string[]` | `[]` | Text labels that only contain strings in this list will not be reported. |
+| Option           | Type       | Default | Description                                                              |
+| ---------------- | ---------- | ------- | ------------------------------------------------------------------------ |
+| `ignoredStrings` | `string[]` | `[]`    | Text labels that only contain strings in this list will not be reported. |
 
 ```mdx-code-block
 </APITable>
@@ -50,5 +50,5 @@ If you're not using the [i18n feature](../../../i18n/i18n-introduction.md), you 
 
 ## Further Reading {#further-reading}
 
-- https://docusaurus.io/docs/docusaurus-core#translate
-- https://docusaurus.io/docs/docusaurus-core#translate-imperative
+- [https://docusaurus.io/docs/docusaurus-core#translate](https://docusaurus.io/docs/docusaurus-core#translate)
+- [https://docusaurus.io/docs/docusaurus-core#translate-imperative](https://docusaurus.io/docs/docusaurus-core#translate-imperative)

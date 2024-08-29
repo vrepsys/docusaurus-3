@@ -31,17 +31,17 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `path` | `string` | `'src/pages'` | Path to data on filesystem relative to site dir. Components in this directory will be automatically converted to pages. |
-| `routeBasePath` | `string` | `'/'` | URL route for the pages section of your site. **DO NOT** include a trailing slash. |
-| `include` | `string[]` | `['**/*.{js,jsx,ts,tsx,md,mdx}']` | Matching files will be included and processed. |
-| `exclude` | `string[]` | _See example configuration_ | No route will be created for matching files. |
-| `mdxPageComponent` | `string` | `'@theme/MDXPage'` | Component used by each MDX page. |
-| `remarkPlugins` | `[]` | `any[]` | Remark plugins passed to MDX. |
-| `rehypePlugins` | `[]` | `any[]` | Rehype plugins passed to MDX. |
-| `beforeDefaultRemarkPlugins` | `any[]` | `[]` | Custom Remark plugins passed to MDX before the default Docusaurus Remark plugins. |
-| `beforeDefaultRehypePlugins` | `any[]` | `[]` | Custom Rehype plugins passed to MDX before the default Docusaurus Rehype plugins. |
+| Name                         | Type       | Default                           | Description                                                                                                             |
+| ---------------------------- | ---------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `path`                       | `string`   | `'src/pages'`                     | Path to data on filesystem relative to site dir. Components in this directory will be automatically converted to pages. |
+| `routeBasePath`              | `string`   | `'/'`                             | URL route for the pages section of your site. **DO NOT** include a trailing slash.                                      |
+| `include`                    | `string[]` | `['**/*.{js,jsx,ts,tsx,md,mdx}']` | Matching files will be included and processed.                                                                          |
+| `exclude`                    | `string[]` | *See example configuration*       | No route will be created for matching files.                                                                            |
+| `mdxPageComponent`           | `string`   | `'@theme/MDXPage'`                | Component used by each MDX page.                                                                                        |
+| `remarkPlugins`              | `[]`       | `any[]`                           | Remark plugins passed to MDX.                                                                                           |
+| `rehypePlugins`              | `[]`       | `any[]`                           | Rehype plugins passed to MDX.                                                                                           |
+| `beforeDefaultRemarkPlugins` | `any[]`    | `[]`                              | Custom Remark plugins passed to MDX before the default Docusaurus Remark plugins.                                       |
+| `beforeDefaultRehypePlugins` | `any[]`    | `[]`                              | Custom Rehype plugins passed to MDX before the default Docusaurus Rehype plugins.                                       |
 
 ```mdx-code-block
 </APITable>
@@ -57,7 +57,7 @@ Most Docusaurus users configure this plugin through the preset options.
 
 :::
 
-```js config-tabs
+```js
 // Preset Options: pages
 // Plugin Options: @docusaurus/plugin-content-pages
 
@@ -89,13 +89,13 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `title` | `string` | Markdown title | The blog post title. |
-| `description` | `string` | The first line of Markdown content | The description of your page, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines. |
-| `hide_table_of_contents` | `boolean` | `false` | Whether to hide the table of contents to the right. |
-| `draft` | `boolean` | `false` | Draft pages will only be available during development. |
-| `unlisted` | `boolean` | `false` | Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link. |
+| Name                     | Type      | Default                            | Description                                                                                                                                                                                            |
+| ------------------------ | --------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `title`                  | `string`  | Markdown title                     | The blog post title.                                                                                                                                                                                   |
+| `description`            | `string`  | The first line of Markdown content | The description of your page, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines.              |
+| `hide_table_of_contents` | `boolean` | `false`                            | Whether to hide the table of contents to the right.                                                                                                                                                    |
+| `draft`                  | `boolean` | `false`                            | Draft pages will only be available during development.                                                                                                                                                 |
+| `unlisted`               | `boolean` | `false`                            | Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link. |
 
 ```mdx-code-block
 </APITable>

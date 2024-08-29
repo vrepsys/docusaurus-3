@@ -39,11 +39,11 @@ Accepted fields:
 <APITable>
 ```
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `fromExtensions` | `string[]` | `[]` | The extensions to be removed from the route after redirecting. |
-| `toExtensions` | `string[]` | `[]` | The extensions to be appended to the route after redirecting. |
-| `redirects` | <code><a href="#RedirectRule">RedirectRule</a>[]</code> | `[]` | The list of redirect rules. |
+| Option            | Type                                                            | Default     | Description                                                                                                                                            |
+| ----------------- | --------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fromExtensions`  | `string[]`                                                      | `[]`        | The extensions to be removed from the route after redirecting.                                                                                         |
+| `toExtensions`    | `string[]`                                                      | `[]`        | The extensions to be appended to the route after redirecting.                                                                                          |
+| `redirects`       | <code><a href="#RedirectRule">RedirectRule</a>[]</code>         | `[]`        | The list of redirect rules.                                                                                                                            |
 | `createRedirects` | <code><a href="#CreateRedirectsFn">CreateRedirectsFn</a></code> | `undefined` | A callback to create a redirect rule. Docusaurus query this callback against every path it has created, and use its return value to output more paths. |
 
 ```mdx-code-block
@@ -69,7 +69,7 @@ type RedirectRule = {
 
 :::note
 
-The idea of "from" and "to" is central in this plugin. "From" means a path that you want to _create_, i.e. an extra HTML file that will be written; "to" means a path to want to redirect _to_, usually a route that Docusaurus already knows about.
+The idea of "from" and "to" is central in this plugin. "From" means a path that you want to *create*, i.e. an extra HTML file that will be written; "to" means a path to want to redirect *to*, usually a route that Docusaurus already knows about.
 
 This is why you can have multiple "from" for the same "to": we will create multiple HTML files that all redirect to the same destination. On the other hand, one "from" can never have more than one "to": the written HTML file needs to have a determinate destination.
 

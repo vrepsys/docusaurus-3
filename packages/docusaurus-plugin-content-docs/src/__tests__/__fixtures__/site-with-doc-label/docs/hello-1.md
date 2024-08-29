@@ -5,4 +5,3 @@ slug: /
 ---
 
 Hello World 1!
-

@@ -295,10 +295,10 @@ If there is no name (like `@jquery`), `[scope]/docusaurus-[moduleType]` (i.e. `@
 
 Below are some examples, for a plugin registered in the `plugins` field. Note that unlike [ESLint](https://eslint.org/docs/user-guide/configuring/plugins#configuring-plugins) or [Babel](https://babeljs.io/docs/en/options#name-normalization) where a consistent naming convention for plugins is mandated, Docusaurus permits greater naming freedom, so the resolutions are not certain, but follows the priority defined above.
 
-| Declaration | May be resolved as |
-| --- | --- |
-| `awesome` | `docusaurus-plugin-awesome` |
-| `sitemap` | [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md) |
-| `@my-company` | `@my-company/docusaurus-plugin` (the only possible resolution!) |
-| `@my-company/awesome` | `@my-company/docusaurus-plugin-awesome` |
-| `@my-company/awesome/web` | `@my-company/docusaurus-plugin-awesome/web` |
+| Declaration               | May be resolved as                                              |
+| ------------------------- | --------------------------------------------------------------- |
+| `awesome`                 | `docusaurus-plugin-awesome`                                     |
+| `sitemap`                 | [`@docusaurus/plugin-sitemap`](./api/plugins/plugin-sitemap.md) |
+| `@my-company`             | `@my-company/docusaurus-plugin` (the only possible resolution!) |
+| `@my-company/awesome`     | `@my-company/docusaurus-plugin-awesome`                         |
+| `@my-company/awesome/web` | `@my-company/docusaurus-plugin-awesome/web`                     |

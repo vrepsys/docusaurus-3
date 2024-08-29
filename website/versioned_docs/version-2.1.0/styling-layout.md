@@ -75,22 +75,20 @@ If you can't find a way to create a robust CSS selector, please [report your cus
 :::
 
 <details>
+  <summary>Exhaustive list of stable class names</summary>
 
-<summary>Exhaustive list of stable class names</summary>
+  ```mdx-code-block
+  import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
+  import CodeBlock from '@theme/CodeBlock';
 
-```mdx-code-block
-import ThemeClassNamesCode from '!!raw-loader!@site/../packages/docusaurus-theme-common/src/utils/ThemeClassNames.ts';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-ts">
-  {ThemeClassNamesCode
-    // remove source comments
-    .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
-    .replace(/^ *\n/gm,'')
-    .trim()}
-</CodeBlock>
-```
-
+  <CodeBlock className="language-ts">
+    {ThemeClassNamesCode
+      // remove source comments
+      .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'')
+      .replace(/^ *\n/gm,'')
+      .trim()}
+  </CodeBlock>
+  ```
 </details>
 
 ### Styling your site with Infima {#styling-your-site-with-infima}
@@ -110,7 +108,7 @@ Infima uses 7 shades of each color. We recommend using [ColorBox](https://www.co
 
 Alternatively, use the following tool to generate the different shades for your website and copy the variables into `/src/css/custom.css`.
 
-<ColorGenerator/>
+<ColorGenerator />
 
 ### Dark Mode {#dark-mode}
 
@@ -194,7 +192,7 @@ To use Sass/SCSS as your CSS preprocessor, install the unofficial Docusaurus 2 p
 npm install --save docusaurus-plugin-sass sass
 ```
 
-2. Include the plugin in your `docusaurus.config.js` file:
+1. Include the plugin in your `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
 module.exports = {
@@ -205,7 +203,7 @@ module.exports = {
 };
 ```
 
-3. Write and import your stylesheets in Sass/SCSS as normal.
+1. Write and import your stylesheets in Sass/SCSS as normal.
 
 ### Global styles using Sass/SCSS {#global-styles-using-sassscss}
 
