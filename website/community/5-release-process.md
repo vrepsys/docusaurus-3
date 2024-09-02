@@ -1,5 +1,7 @@
 # Release process
 
+A change
+
 Let's see how Docusaurus handles **versioning, releases and breaking changes**.
 
 :::info
