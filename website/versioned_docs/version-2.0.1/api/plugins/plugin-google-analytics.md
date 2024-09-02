@@ -37,10 +37,10 @@ Accepted fields:
 <APITable>
 ```
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `trackingID` | `string` | **Required** | The tracking ID of your analytics service. |
-| `anonymizeIP` | `boolean` | `false` | Whether the IP should be anonymized when sending requests. |
+| Name          | Type      | Default      | Description                                                |
+| ------------- | --------- | ------------ | ---------------------------------------------------------- |
+| `trackingID`  | `string`  | **Required** | The tracking ID of your analytics service.                 |
+| `anonymizeIP` | `boolean` | `false`      | Whether the IP should be anonymized when sending requests. |
 
 ```mdx-code-block
 </APITable>
@@ -56,7 +56,7 @@ Most Docusaurus users configure this plugin through the preset options.
 
 :::
 
-```js config-tabs
+```js
 // Preset Options: googleAnalytics
 // Plugin Options: @docusaurus/plugin-google-analytics
 

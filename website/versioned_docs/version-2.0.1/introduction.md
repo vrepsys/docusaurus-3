@@ -11,7 +11,7 @@ slug: /
 
 💥 Ready for more? Use **advanced features** like versioning, i18n, search and theme customizations.
 
-💅 Check the **[best Docusaurus sites](/showcase?tags=favorite)** for inspiration and read some **[testimonials](https://twitter.com/sebastienlorber/timelines/1392048416872706049)**.
+💅 Check the [**best Docusaurus sites**](/showcase?tags=favorite) for inspiration and read some [**testimonials**](https://twitter.com/sebastienlorber/timelines/1392048416872706049).
 
 🧐 Docusaurus is a **static-site generator**. It builds a **single-page application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive. It provides out-of-the-box **documentation features** but can be used to create **any kind of site** (personal website, product, blog, marketing landing pages, etc).
 
@@ -40,9 +40,9 @@ Open [http://localhost:3000](http://localhost:3000) and follow the tutorial.
 
 :::tip
 
-Use **[docusaurus.new](https://docusaurus.new)** to test Docusaurus immediately in your browser!
+Use [**docusaurus.new**](https://docusaurus.new) to test Docusaurus immediately in your browser!
 
-Or read the **[5-minute tutorial](https://tutorial.docusaurus.io)** online.
+Or read the [**5-minute tutorial**](https://tutorial.docusaurus.io) online.
 
 :::
 
@@ -73,15 +73,15 @@ A [lot of users](/showcase) are already using Docusaurus v2 ([trends](https://ww
 
 **Use Docusaurus v2 if:**
 
-- :white_check_mark: You want a modern Jamstack documentation site
-- :white_check_mark: You want a single-page application (SPA) with client-side routing
-- :white_check_mark: You want the full power of React and MDX
-- :white_check_mark: You do not need support for IE11
+- \:white\_check\_mark: You want a modern Jamstack documentation site
+- \:white\_check\_mark: You want a single-page application (SPA) with client-side routing
+- \:white\_check\_mark: You want the full power of React and MDX
+- \:white\_check\_mark: You do not need support for IE11
 
 **Use [Docusaurus v1](https://v1.docusaurus.io/) if:**
 
-- :x: You don't want a single-page application (SPA)
-- :x: You need support for IE11 (...do you? IE [has already reached end-of-life](https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-11) and is no longer officially supported)
+- \:x: You don't want a single-page application (SPA)
+- \:x: You need support for IE11 (...do you? IE [has already reached end-of-life](https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-11) and is no longer officially supported)
 
 For existing v1 users that are seeking to upgrade to v2, you can follow our [migration guide](./migration/migration-overview.md).
 
@@ -90,12 +90,15 @@ For existing v1 users that are seeking to upgrade to v2, you can follow our [mig
 Docusaurus is built with high attention to the developer and contributor experience.
 
 - ⚛️ **Built with 💚 and React**:
+
   - Extend and customize with React
   - Gain full control of your site's browsing experience by providing your own React components
 - **Pluggable**:
+
   - Bootstrap your site with a basic template, then use advanced features and plugins
   - Open source your plugins to share with the community
 - ✂️ **Developer experience**:
+
   - Start writing your docs right now
   - Universal configuration entry point to make it more maintainable by contributors
   - Hot reloading with lightning-fast incremental build on changes
@@ -105,9 +108,11 @@ Docusaurus is built with high attention to the developer and contributor experie
 Our shared goal—to help your users quickly find what they need and understand your products better. We share our best practices to help you build your docs site right and well.
 
 - 🎯 **SEO friendly**:
+
   - HTML files are statically generated for every possible path.
   - Page-specific SEO to help your users land on your official docs directly relating their problems at hand.
 - 📝 **Powered by MDX**:
+
   - Write interactive components via JSX and React embedded in Markdown.
   - Share your code in live editors to get your users to love your products on the spot.
 - 🔍 **Search**: Your full site is searchable.

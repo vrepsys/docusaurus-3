@@ -8,7 +8,7 @@ import PagePartial from "./_pagePartial.md"
 <PagePartial />
 ```
 
----
+***
 
 Now let's import `../README.md`:
 

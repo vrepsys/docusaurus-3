@@ -8,13 +8,13 @@ A category to play with draft/unlisted front matter.
 
 In dev, both draft/unlisted items are displayed.
 
----
+***
 
 In production, draft items shouldn't be accessible:
 
 - [/tests/docs/tests/visibility/only-drafts/draft1](pathname:///tests/docs/tests/visibility/only-drafts/draft1)
 
----
+***
 
 In production, unlisted items should remain accessible, but be hidden in the sidebar (unless currently browsed):
 
@@ -25,7 +25,7 @@ In production, unlisted items should remain accessible, but be hidden in the sid
 - [./some-unlisteds/unlisted2.md](./some-unlisteds/unlisted2.md)
 - [./some-unlisteds/unlisted-subcategory/unlisted3.md](./some-unlisteds/unlisted-subcategory/unlisted3.md)
 
----
+***
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

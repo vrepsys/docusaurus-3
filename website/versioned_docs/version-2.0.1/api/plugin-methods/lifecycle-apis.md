@@ -32,7 +32,7 @@ The data that was loaded in `loadContent` will be consumed in `contentLoaded`. I
 
 ### `content` {#content}
 
-`contentLoaded` will be called _after_ `loadContent` is done. The return value of `loadContent()` will be passed to `contentLoaded` as `content`.
+`contentLoaded` will be called *after* `loadContent` is done. The return value of `loadContent()` will be passed to `contentLoaded` as `content`.
 
 ### `actions` {#actions}
 

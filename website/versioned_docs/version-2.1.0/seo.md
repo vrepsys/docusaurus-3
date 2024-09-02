@@ -102,9 +102,7 @@ You may also add a title for your image—this doesn't impact SEO much but is di
 ```
 
 <BrowserWindow>
-
-![Docusaurus banner](./assets/docusaurus-asset-example-banner.png 'Image title')
-
+  ![Docusaurus banner](./assets/docusaurus-asset-example-banner.png "Image title")
 </BrowserWindow>
 
 ## Rich search information {#rich-search-information}
