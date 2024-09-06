@@ -12,7 +12,7 @@ In [architecture](architecture.md), we mentioned that the theme is run in Webpac
 
 :::info SSR or SSG?
 
-_Server-side rendering_ and _static site generation_ can be different concepts, but we use them interchangeably.
+*Server-side rendering* and *static site generation* can be different concepts, but we use them interchangeably.
 
 Strictly speaking, Docusaurus is a static site generator, because there's no server-side runtime—we statically render to HTML files that are deployed on a CDN, instead of dynamically pre-rendering on each request. This differs from the working model of [Next.js](https://nextjs.org/).
 
@@ -101,7 +101,7 @@ export default function expensiveComp() {
 </details>
 ```
 
-## Understanding SSR {#understanding-ssr}
+## Understanding SSR{#understanding-ssr}
 
 React is not just a dynamic UI runtime—it's also a templating engine. Because Docusaurus sites mostly contain static contents, it should be able to work without any JavaScript (which React runs in), but only plain HTML/CSS. And that's what server-side rendering offers: statically rendering your React code into HTML, without any dynamic content. An HTML file has no concept of client state (it's purely markup), hence it shouldn't rely on browser APIs.
 
@@ -109,9 +109,9 @@ These HTML files are the first to arrive at the user's browser screen when a URL
 
 In CSR-only apps, all DOM elements are generated on client side with React, and the HTML file only ever contains one root element for React to mount DOM to; in SSR, React is already facing a fully built HTML page, and it only needs to correlate the DOM elements with the virtual DOM in its model. This step is called "hydration". After React has hydrated the static markup, the app starts to work as any normal React app.
 
-Note that Docusaurus is ultimately a single-page application, so static site generation is only an optimization (_progressive enhancement_, as it's called), but our functionality does not fully depend on those HTML files. This is contrary to site generators like [Jekyll](https://jekyllrb.com/) and [Docusaurus v1](https://v1.docusaurus.io/), where all files are statically transformed to markup, and interactiveness is added through external JavaScript linked with `<script>` tags. If you inspect the build output, you will still see JS assets under `build/assets/js`, which are, really, the core of Docusaurus.
+Note that Docusaurus is ultimately a single-page application, so static site generation is only an optimization (*progressive enhancement*, as it's called), but our functionality does not fully depend on those HTML files. This is contrary to site generators like [Jekyll](https://jekyllrb.com/) and [Docusaurus v1](https://v1.docusaurus.io/), where all files are statically transformed to markup, and interactiveness is added through external JavaScript linked with `<script>` tags. If you inspect the build output, you will still see JS assets under `build/assets/js`, which are, really, the core of Docusaurus.
 
-## Escape hatches {#escape-hatches}
+## Escape hatches{#escape-hatches}
 
 If you want to render any dynamic content on your screen that relies on the browser API to be functional at all, for example:
 
@@ -133,7 +133,7 @@ You can read more about this pitfall in [The Perils of Rehydration](https://www.
 
 We provide several more reliable ways to escape SSR.
 
-### `<BrowserOnly>` {#browseronly}
+### `<BrowserOnly>`{#browseronly}
 
 If you need to render some component in browser only (for example, because the component relies on browser specifics to be functional at all), one common approach is to wrap your component with [`<BrowserOnly>`](../docusaurus-core.md#browseronly) to make sure it's invisible during SSR and only rendered in CSR.
 
@@ -155,7 +155,7 @@ function MyComponent(props) {
 }
 ```
 
-It's important to realize that the children of `<BrowserOnly>` is not a JSX element, but a function that _returns_ an element. This is a design decision. Consider this code:
+It's important to realize that the children of `<BrowserOnly>` is not a JSX element, but a function that *returns* an element. This is a design decision. Consider this code:
 
 ```jsx
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -174,7 +174,7 @@ function MyComponent() {
 
 While you may expect that `BrowserOnly` hides away the children during server-side rendering, it actually can't. When the React renderer tries to render this JSX tree, it does see the `{window.location.href}` variable as a node of this tree and tries to render it, although it's actually not used! Using a function ensures that we only let the renderer see the browser-only component when it's needed.
 
-### `useIsBrowser` {#useisbrowser}
+### `useIsBrowser`{#useisbrowser}
 
 You can also use the `useIsBrowser()` hook to test if the component is currently in a browser environment. It returns `false` in SSR and `true` is CSR, after first client render. Use this hook if you only need to perform certain conditional operations on client-side, but not render an entirely different UI.
 
@@ -188,9 +188,9 @@ function MyComponent() {
 }
 ```
 
-### `useEffect` {#useeffect}
+### `useEffect`{#useeffect}
 
-Lastly, you can put your logic in `useEffect()` to delay its execution until after first CSR. This is most appropriate if you are only performing side-effects but don't _get_ data from the client state.
+Lastly, you can put your logic in `useEffect()` to delay its execution until after first CSR. This is most appropriate if you are only performing side-effects but don't *get* data from the client state.
 
 ```jsx
 function MyComponent() {
@@ -202,7 +202,7 @@ function MyComponent() {
 }
 ```
 
-### `ExecutionEnvironment` {#executionenvironment}
+### `ExecutionEnvironment`{#executionenvironment}
 
 The [`ExecutionEnvironment`](../docusaurus-core.md#executionenvironment) namespace contains several values, and `canUseDOM` is an effective way to detect browser environment.
 

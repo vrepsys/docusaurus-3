@@ -4,7 +4,7 @@ slug: /migration/versioned-sites
 
 # Versioned sites
 
-Read up https://docusaurus.io/blog/2018/09/11/Towards-Docusaurus-2#versioning first for problems in v1's approach.
+Read up [https://docusaurus.io/blog/2018/09/11/Towards-Docusaurus-2#versioning](https://docusaurus.io/blog/2018/09/11/Towards-Docusaurus-2#versioning) first for problems in v1's approach.
 
 :::note
 
@@ -12,7 +12,7 @@ The versioned docs should normally be migrated correctly by the [migration CLI](
 
 :::
 
-## Migrate your `versioned_docs` front matter {#migrate-your-versioned_docs-front-matter}
+## Migrate your `versioned_docs`front matter \{#migrate-your-versioned\_docs-front-matter}
 
 Unlike v1, The Markdown header for each versioned doc is no longer altered by using `version-${version}-${original_id}` as the value for the actual ID field. See scenario below for better explanation.
 
@@ -52,9 +52,9 @@ Hi, Endilie here :)
 
 Since we're going for snapshot and allow people to move (and edit) docs easily inside version. The `id` front matter is no longer altered and will remain the same. Internally, it is set as `version-${version}/${id}`.
 
-Essentially, here are the necessary changes in each versioned_docs file:
+Essentially, here are the necessary changes in each versioned\_docs file:
 
-```diff {2-3,5}
+```diff
 ---
 - id: version-1.0.0-hello
 + id: hello
@@ -64,7 +64,7 @@ title: Hello, World !
 Hi, Endilie here :)
 ```
 
-## Migrate your `versioned_sidebars` {#migrate-your-versioned_sidebars}
+## Migrate your `versioned_sidebars` \{#migrate-your-versioned\_sidebars}
 
 - Refer to `versioned_docs` ID as `version-${version}/${id}` (v2) instead of `version-${version}-${original_id}` (v1).
 
@@ -94,11 +94,11 @@ Hi, Endilie here :)
 
 Since we don't allow `/` in v1 & v2 for front matter, conflicts are less likely to occur.
 
-So v1 users need to migrate their versioned_sidebars file
+So v1 users need to migrate their versioned\_sidebars file
 
 Example `versioned_sidebars/version-1.0.0-sidebars.json`:
 
-```diff {2-3,5-6,9-10}  title="versioned_sidebars/version-1.0.0-sidebars.json"
+```diff title="versioned_sidebars/version-1.0.0-sidebars.json"
 {
 + "version-1.0.0/docs": {
 - "version-1.0.0-docs": {
@@ -114,9 +114,9 @@ Example `versioned_sidebars/version-1.0.0-sidebars.json`:
 }
 ```
 
-## Populate your `versioned_sidebars` and `versioned_docs` {#populate-your-versioned_sidebars-and-versioned_docs}
+## Populate your `versioned_sidebars` and `versioned_docs` \{#populate-your-versioned\_sidebars-and-versioned\_docs}
 
-In v2, we use snapshot approach for documentation versioning. **Every versioned docs does not depends on other version**. It is possible to have `foo.md` in `version-1.0.0` but it doesn't exist in `version-1.2.0`. This is not possible in previous version due to Docusaurus v1 fallback functionality (https://v1.docusaurus.io/docs/en/versioning#fallback-functionality).
+In v2, we use snapshot approach for documentation versioning. **Every versioned docs does not depends on other version**. It is possible to have `foo.md` in `version-1.0.0` but it doesn't exist in `version-1.2.0`. This is not possible in previous version due to Docusaurus v1 fallback functionality ([https://v1.docusaurus.io/docs/en/versioning#fallback-functionality](https://v1.docusaurus.io/docs/en/versioning#fallback-functionality)).
 
 For example, if your `versions.json` looks like this in v1
 
@@ -141,7 +141,7 @@ website
 
 In v2, you have to populate the missing `versioned_docs` and `versioned_sidebars` (with the right front matter and ID reference too).
 
-```bash {3-5,12}
+```bash
 website
 ├── versioned_docs
 │   ├── version-1.1.0
@@ -157,7 +157,7 @@ website
 │   └── version-1.0.0-sidebars.json
 ```
 
-## Convert style attributes to style objects in MDX {#convert-style-attributes-to-style-objects-in-mdx}
+## Convert style attributes to style objects in MDX \{#convert-style-attributes-to-style-objects-in-mdx}
 
 Docusaurus 2 uses JSX for doc files. If you have any style attributes in your Docusaurus 1 docs, convert them to style objects, like this:
 

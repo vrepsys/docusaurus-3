@@ -16,17 +16,15 @@ In practice, swizzling permits to **swap a theme component with your own impleme
 - [**Wrapping**](#wrapping): creates a **wrapper** around the original theme component, which you can **enhance**
 
 <details>
+  <summary>Why is it called swizzling?</summary>
 
-<summary>Why is it called swizzling?</summary>
+  **The name comes from Objective-C and Swift-UI**: [method swizzling](https://pspdfkit.com/blog/2019/swizzling-in-swift/) is the process of changing the implementation of an existing selector (method).
 
-**The name comes from Objective-C and Swift-UI**: [method swizzling](https://pspdfkit.com/blog/2019/swizzling-in-swift/) is the process of changing the implementation of an existing selector (method).
+  **For Docusaurus, component swizzling means providing an alternative component that takes precedence over the component provided by the theme.**
 
-**For Docusaurus, component swizzling means providing an alternative component that takes precedence over the component provided by the theme.**
+  You can think of it as [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) for React components, enabling you to override the default implementation. Gatsby has a similar concept called [theme shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/).
 
-You can think of it as [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) for React components, enabling you to override the default implementation. Gatsby has a similar concept called [theme shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/).
-
-To gain a deeper understanding of this, you have to understand [how theme components are resolved](./advanced/client.md#theme-aliases).
-
+  To gain a deeper understanding of this, you have to understand [how theme components are resolved](./advanced/client.md#theme-aliases).
 </details>
 
 ## Swizzling Process
@@ -101,9 +99,7 @@ After swizzling a component, **restart your dev server** in order for Docusaurus
 :::
 
 :::warning Prefer staying on the safe side
-
 Be sure to understand [which components are **safe to swizzle**](#what-is-safe-to-swizzle). Some components are **internal implementation details** of a theme.
-
 :::
 
 :::info
@@ -112,7 +108,7 @@ Be sure to understand [which components are **safe to swizzle**](#what-is-safe-t
 
 :::
 
-### Ejecting {#ejecting}
+### Ejecting \{#ejecting}
 
 Ejecting a theme component is the process of **creating a copy** of the original theme component, which you can **fully customize and override**.
 
@@ -157,7 +153,7 @@ To keep ejected components up-to-date after a Docusaurus upgrade, re-run the eje
 
 :::
 
-### Wrapping {#wrapping}
+### Wrapping \{#wrapping}
 
 Wrapping a theme component is the process of **creating a wrapper** around the original theme component, which you can **enhance**.
 
@@ -195,8 +191,7 @@ export default function FooterWrapper(props) {
 <details>
   <summary>What is this <code>@theme-original</code> thing?</summary>
 
-Docusaurus uses [theme aliases](./advanced/client.md#theme-aliases) to resolve the theme components to use. The newly created wrapper takes the `@theme/SomeComponent` alias. `@theme-original/SomeComponent` permits to import original component that the wrapper shadows without creating an infinite import loop where the wrapper imports itself.
-
+  Docusaurus uses [theme aliases](./advanced/client.md#theme-aliases) to resolve the theme components to use. The newly created wrapper takes the `@theme/SomeComponent` alias. `@theme-original/SomeComponent` permits to import original component that the wrapper shadows without creating an infinite import loop where the wrapper imports itself.
 </details>
 
 :::tip
@@ -220,22 +215,20 @@ export default function BlogPostItemWrapper(props) {
 
 :::
 
-## What is safe to swizzle? {#what-is-safe-to-swizzle}
+## What is safe to swizzle? \{#what-is-safe-to-swizzle}
 
 > With great power comes great responsibility
 
 Some theme components are **internal implementation details** of a theme. Docusaurus allows you to swizzle them, but it **might be risky**.
 
 <details>
+  <summary>Why is it risky?</summary>
 
-<summary>Why is it risky?</summary>
+  Theme authors (including us) might have to update their theme over time: changing the component props, name, file system location, types... For example, consider a component that receives two props `name` and `age`, but after a refactor, it now receives a `person` prop with the above two properties. Your component, which still expects these two props, will render `undefined` instead.
 
-Theme authors (including us) might have to update their theme over time: changing the component props, name, file system location, types... For example, consider a component that receives two props `name` and `age`, but after a refactor, it now receives a `person` prop with the above two properties. Your component, which still expects these two props, will render `undefined` instead.
+  Moreover, internal components may simply disappear. If a component is called `Sidebar` and it's later renamed to `DocSidebar`, your swizzled component will be completely ignored.
 
-Moreover, internal components may simply disappear. If a component is called `Sidebar` and it's later renamed to `DocSidebar`, your swizzled component will be completely ignored.
-
-**Theme components marked as unsafe may change in a backward-incompatible way between theme minor versions.** When upgrading a theme (or Docusaurus), your customizations might **behave unexpectedly**, and can even **break your site**.
-
+  **Theme components marked as unsafe may change in a backward-incompatible way between theme minor versions.** When upgrading a theme (or Docusaurus), your customizations might **behave unexpectedly**, and can even **break your site**.
 </details>
 
 For each theme component, the swizzle CLI will indicate **3 different levels of safety** declared by theme authors:
@@ -262,7 +255,7 @@ If you have a **strong use-case for swizzling an unsafe component**, please [**r
 
 :::
 
-## Which component should I swizzle? {#which-component-should-i-swizzle}
+## Which component should I swizzle? \{#which-component-should-i-swizzle}
 
 It is not always clear which component you should swizzle exactly to achieve the desired result. `@docusaurus/theme-classic`, which provides most of the theme components, has about [100 components](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme)!
 
@@ -291,7 +284,7 @@ We also want to understand better your fanciest customization use-cases, so plea
 
 :::
 
-## Do I need to swizzle? {#do-i-need-to-swizzle}
+## Do I need to swizzle? \{#do-i-need-to-swizzle}
 
 Swizzling ultimately means you have to maintain some additional React code that interact with Docusaurus internal APIs. If you can, think about the following alternatives when customizing your site:
 
@@ -306,7 +299,7 @@ Swizzling ultimately means you have to maintain some additional React code that 
 
 :::
 
-## Wrapping your site with `<Root>` {#wrapper-your-site-with-root}
+## Wrapping your site with `<Root>` \{#wrapper-your-site-with-root}
 
 The `<Root>` component is rendered at the **very top** of the React tree, above the theme `<Layout>`, and **never unmounts**. It is the perfect place to add stateful logic that should not be re-initialized across navigations (user authentication status, shopping card state...).
 

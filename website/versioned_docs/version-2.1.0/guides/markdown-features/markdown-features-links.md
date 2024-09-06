@@ -37,7 +37,7 @@ You can write [links](/otherFolder/doc4.md) relative to the content root (`/docs
 You can also write [links](/docs/otherFolder/doc4.md) relative to the site directory, but it's not recommended.
 ```
 
-Using relative _file_ paths (with `.md` extensions) instead of relative _URL_ links provides the following benefits:
+Using relative *file* paths (with `.md` extensions) instead of relative *URL* links provides the following benefits:
 
 - Links will keep working on the GitHub interface and many Markdown editors
 - You can customize the files' slugs without having to update all the links
@@ -46,7 +46,5 @@ Using relative _file_ paths (with `.md` extensions) instead of relative _URL_ li
 - Relative URL links are very likely to break if you update the [`trailingSlash` config](../../api/docusaurus.config.js.md#trailingSlash)
 
 :::warning
-
 Markdown file references only work when the source and target files are processed by the same plugin instance. This is a technical limitation of our Markdown processing architecture and will be fixed in the future. If you are linking files between plugins (e.g. linking to a doc page from a blog post), you have to use URL links.
-
 :::

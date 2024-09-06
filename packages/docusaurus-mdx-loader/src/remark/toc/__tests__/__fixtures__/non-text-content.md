@@ -1,8 +1,8 @@
-## _Emphasis_
+## *Emphasis*
 
 ### **Importance**
 
-## ~~Strikethrough~~
+## ! unknown handler not found
 
 ## <i>HTML</i>
 
