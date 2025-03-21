@@ -47,18 +47,6 @@ A special Markdown syntax lets you set an **explicit heading id**:
 ### Hello World \{#my-explicit-id}
 ```
 
-:::tip
-
-Use the [**`write-heading-ids`**](../../cli.md#docusaurus-write-heading-ids-sitedir) CLI command to add explicit IDs to all your Markdown documents.
-
-:::
-
-:::caution Avoid colliding IDs
-
-Generated heading IDs will be guaranteed to be unique on each page, but if you use custom IDs, make sure each one appears exactly once on each page, or there will be two DOM elements with the same ID, which is invalid HTML semantics, and will lead to one heading being unlinkable.
-
-:::
-
 ## Table of contents heading level \{#table-of-contents-heading-level}
 
 Each Markdown document displays a table of contents on the top-right corner. By default, this table only shows h2 and h3 headings, which should be sufficient for an overview of the page structure. In case you need to change the range of headings displayed, you can customize the minimum and maximum heading level — either per page or globally.
@@ -90,19 +78,11 @@ module.exports = {
 
 If you've set the options globally, you can still override them locally via front matter.
 
-:::note
-
-The `themeConfig` option would apply to all TOC on the site, including [inline TOC](#inline-table-of-contents), but front matter options only affect the top-right TOC. You need to use the `minHeadingLevel` and `maxHeadingLevel` props to customize each `<TOCInline />` component.
-
-:::
-
 ## Inline table of contents \{#inline-table-of-contents}
 
 It is also possible to display an inline table of contents directly inside a Markdown document, thanks to MDX.
 
 The `toc` variable is available in any MDX document and contains all the headings of an MDX document. By default, only `h2` and `h3` headings are displayed in the TOC. You can change which heading levels are visible by setting `minHeadingLevel` or `maxHeadingLevel` for individual `TOCInline` components.
-
-<!-- prettier-ignore -->
 
 ```jsx
 import TOCInline from '@theme/TOCInline';
@@ -129,8 +109,6 @@ declare const toc: {
 ```
 
 Note that the `toc` global is a flat array, so you can easily cut out unwanted nodes or insert extra nodes, and create a new TOC tree.
-
-<!-- prettier-ignore -->
 
 ```jsx
 import TOCInline from '@theme/TOCInline';
@@ -175,12 +153,6 @@ Some content...
 The ability to ergonomically insert extra headings or ignore certain headings is a work-in-progress. If this feature is important to you, please report your use-case in [this issue](https://github.com/facebook/docusaurus/issues/6201).
 
 ***
-
-:::caution
-
-Below is just some dummy content to have more table of contents items available on the current page.
-
-:::
 
 ## Example Section 1 \{#example-section-1}
 

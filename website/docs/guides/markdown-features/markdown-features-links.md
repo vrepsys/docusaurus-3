@@ -44,7 +44,3 @@ Using relative *file* paths (with `.md` extensions) instead of relative *URL* li
 - Moving files around the folders can be tracked by your editor, and some editors may automatically update file links
 - A [versioned doc](../docs/versioning.md) will link to another doc of the exact same version
 - Relative URL links are very likely to break if you update the [`trailingSlash` config](../../api/docusaurus.config.js.md#trailingSlash)
-
-:::warning
-Markdown file references only work when the source and target files are processed by the same plugin instance. This is a technical limitation of our Markdown processing architecture and will be fixed in the future. If you are linking files between plugins (e.g. linking to a doc page from a blog post), you have to use URL links.
-:::
