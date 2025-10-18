@@ -2,7 +2,23 @@
 
 Change.
 
+> sadfasdf
+>
+> sadf
+
+Uploading image
+
+<img
+  src={require("/img/20250630_1101_futuristic-eco-system-backpack_remix_01jyzxk67meyabs9gnqnhqck6t.png").default}
+  style={{width: '320px'}}
+/>
+
 [Docusaurus](https://docusaurus.io) is our way to hopefully help to create open source documentation easier. We currently have [multiple open source projects using it](https://docusaurus.io/showcase), with many more planned. If you're interested in contributing to Docusaurus, hopefully, this document makes the process for contributing clear.
+
+| asdfasdfssfddaf |          |   |
+| --------------- | -------- | - |
+| asdf            | asdfasdf |   |
+|                 |          |   |
 
 The [Open Source Guides](https://opensource.guide/) website has a collection of resources for individuals, communities, and companies who want to learn how to run and contribute to an open source project. Contributors and people new to open source alike will find the following guides especially useful:
 
@@ -14,6 +30,8 @@ The [Open Source Guides](https://opensource.guide/) website has a collection of 
 Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
 
 ## Get Involved
+
+$F = ma$
 
 There are many ways to contribute to Docusaurus, and many of them do not involve writing any code. Here's a few ideas to get started:
 
