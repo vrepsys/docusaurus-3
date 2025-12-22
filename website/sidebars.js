@@ -1,11 +1,11 @@
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Fac sadf sad febook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */
+ */sad fas fas df
 
-// @ts-check
+// @ts-check asdfasdfasdf asdf asdf asd fasd f
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -27,7 +27,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Guides',as dfas d
       link: {
         type: 'generated-index',
         title: 'Docusaurus Guides',
@@ -49,7 +49,7 @@ const sidebars = {
             'guides/docs/create-doc',
             {
               type: 'category',
-              label: 'Sidebar',
+              label: 'Sidebar',sa d
               link: {
                 type: 'doc',
                 id: 'guides/docs/sidebar/index',
@@ -67,7 +67,7 @@ const sidebars = {
         'blog',
         {
           type: 'category',
-          label: 'Markdown Features',
+          label: 'Markdown Features', sad
           link: {
             type: 'doc',
             id: 'guides/markdown-features/introduction',
