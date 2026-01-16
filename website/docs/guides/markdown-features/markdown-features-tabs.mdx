@@ -15,8 +15,6 @@ import styles from './markdown-features-tabs-styles.module.css';
 
 Docusaurus provides the `<Tabs>` component that you can use in Markdown thanks to [MDX](./markdown-features-react.mdx):
 
-<!-- prettier-ignore-start -->
-
 ```jsx
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -33,8 +31,6 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 ```
-
-<!-- prettier-ignore-end -->
 
 ```mdx-code-block
 <BrowserWindow>
@@ -119,14 +115,6 @@ It is also possible to provide `values` and `defaultValue` props to `Tabs`:
   </BrowserWindow>
   ```
 </details>
-
-:::tip
-
-By default, all tabs are rendered eagerly during the build process, and search engines can index hidden tabs.
-
-It is possible to only render the default tab with `<Tabs lazy />`.
-
-:::
 
 ## Displaying a default tab \{#displaying-a-default-tab}
 
@@ -251,8 +239,6 @@ You might want to customize the appearance of a certain set of tabs. You can pas
 
 You can also customize each tab heading independently by using the `attributes` field. The extra props can be passed to the headings either through the `values` prop in `Tabs`, or props of each `TabItem`—in the same way as you declare `label`.
 
-<!-- prettier-ignore-start -->
-
 ```jsx title="some-doc.mdx"
 import styles from './styles.module.css';
 
@@ -268,8 +254,6 @@ import styles from './styles.module.css';
   </TabItem>
 </Tabs>
 ```
-
-<!-- prettier-ignore-end -->
 
 ```css title="styles.module.css"
 .red {
@@ -310,18 +294,6 @@ import styles from './styles.module.css';
 </BrowserWindow>
 ```
 
-:::tip
-
-`className` would be merged with other default class names. You may also use a custom `data-value` field (`{'data-value': 'apple'}`) paired with CSS attribute selectors:
-
-```css title="styles.module.css"
-li[role='tab'][data-value='apple'] {
-  color: red;
-}
-```
-
-:::
-
 ## Query string \{#query-string}
 
 It is possible to persist the selected tab into the url search parameters. This enables deep linking: the ability to share or bookmark a link to a specific tab, that will be pre-selected when the page loads.
@@ -350,34 +322,3 @@ Use the `queryString` prop to enable this feature and define the search param na
 ```
 
 As soon as a tab is clicked, a search parameter is added at the end of the url: `?current-os=android` or `?current-os=ios`.
-
-:::tip
-
-`queryString` can be used together with `groupId`.
-
-For convenience, when the `queryString` prop is `true`, the `groupId` value will be used as a fallback.
-
-```tsx
-// highlight-next-line
-<Tabs groupId="current-os" queryString>
-  <TabItem value="android" label="Android">
-    Android
-  </TabItem>
-  <TabItem value="ios" label="iOS">
-    iOS
-  </TabItem>
-</Tabs>
-```
-
-```mdx-code-block
-<BrowserWindow>
-  <Tabs queryString groupId="current-os">
-    <TabItem value="android" label="Android">Android</TabItem>
-    <TabItem value="ios" label="iOS">iOS</TabItem>
-  </Tabs>
-</BrowserWindow>
-```
-
-When the page loads, the tab query string choice will be restored in priority over the `groupId` choice (using `localStorage`).
-
-:::
