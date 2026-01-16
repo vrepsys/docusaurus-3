@@ -1,18 +1,6 @@
----
-title: Docusaurus 2.2
-authors: [slorber]
-tags: [release]
-image: ./img/social-card.png
-date: 2022-10-29
----
-
 We are happy to announce **Docusaurus 2.2**.
 
 The upgrade should be easy: as explained in our [release process documentation](/community/release-process), minor versions respect [Semantic Versioning](https://semver.org/).
-
-![Docusaurus 2.2 social card](./img/social-card.png)
-
-<!--truncate-->
 
 ## Highlights
 
@@ -20,64 +8,11 @@ The upgrade should be easy: as explained in our [release process documentation](
 
 In [#7490](https://github.com/facebook/docusaurus/pull/7490), we added support for Mermaid diagrams. This fills the gap between GitHub Flavored Markdown which also [added support recently](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/). You can create Mermaid diagrams using Markdown code blocks:
 
-````md
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Health check
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-````
-
-````mdx-code-block
-import BrowserWindow from '@site/src/components/BrowserWindow';
-
-<BrowserWindow>
-
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Health check
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-
-</BrowserWindow>
-
-````
-
 Make sure to check the [documentation](/docs/markdown-features/diagrams), and the [more advanced examples](/tests/pages/diagrams)
 
 ### Config `headTags`
 
 In [#8151](https://github.com/facebook/docusaurus/pull/8151), we added the ability to apply arbitrary HTML `<head>` tags to all pages of your site.
-
-```js title="docusaurus.config.js"
-module.exports = {
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'icon',
-        href: '/img/docusaurus.png',
-      },
-    },
-  ],
-};
-```
 
 ### Accessibility
 
@@ -104,12 +39,6 @@ We completed the default theme translation support for multiple languages:
 - 🇷🇺 [#8253](https://github.com/facebook/docusaurus/pull/8253): completes Russian translations
 - 🇫🇷 [#8243](https://github.com/facebook/docusaurus/pull/8243): completes French translations
 - 🇯🇵 [#8075](https://github.com/facebook/docusaurus/pull/8075): completes Japanese translations
-
-:::tip
-
-Completing theme translations is an [ongoing effort](https://github.com/facebook/docusaurus/issues/3526) and an easy way to contribute to Docusaurus. We add new theme features regularly, for which we often [need new translations](https://github.com/facebook/docusaurus/issues/3526).
-
-:::
 
 ## Other changes
 
