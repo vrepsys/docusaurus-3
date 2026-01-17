@@ -5,7 +5,20 @@ slug: /api/misc/create-docusaurus
 
 # 📦 create-docusaurus
 
-A scaffolding utility to help you instantly set up a functional Docusaurus app.
+<figure>
+  <img
+    src={require("/img/playgrounds/codesandbox.png").default}
+    style={{width: '200px'}}
+  />
+
+  <figcaption>
+    Caption XXX
+  </figcaption>
+</figure>
+
+A scaffolding utility to help you [instantly](../../guides/markdown-features/markdown-features-assets.mdx) set up a functional Docusaurus app.
+
+
 
 ## Usage \{#usage}
 
