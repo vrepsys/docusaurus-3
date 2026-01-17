@@ -43,13 +43,25 @@ Hello world message with some **bold** text, some _italic_ text and a [link](/)
 ```
 
 <details>
-  <summary>Markdown is declarative</summary>
+  <summary>Markdown is **declarative**</summary>
 
   Some may assume a 1-1 correlation between Markdown and HTML, e.g., `![Preview](/img/docusaurus.png)` will always become `<img src="/img/docusaurus.png" alt="Preview" />`, as-is. However, *that is not the case*.
 
-  The Markdown syntax `![message](url)` only declaratively tells Docusaurus that an image needs to be inserted here, but we may do other things like transforming a [file path to URL path](./markdown-features-assets.mdx#images), so the generated markup may differ from the output of other Markdown renderers, or a naïve hand-transcription to the equivalent JSX/HTML code.
+  The **Markdown** syntax `![message](url)` only declaratively tells Docusaurus that an image needs to be inserted here, but we may do other things like transforming a [file path to URL path](./markdown-features-assets.mdx#images), so the generated markup may differ from the output of other Markdown renderers, or a naïve hand-transcription to the equivalent JSX/HTML code.
 
   In general, you should only assume the *semantics* of the markup (` ``` ` fences become [code blocks](./markdown-features-code-blocks.mdx); `>` becomes [quotes](#quotes), etc.), but not the actual compiled output.
+
+  Change
+</details>
+
+<details>
+  <summary>One more</summary>
+
+  Toggle
+
+  Text
+
+  ![](/img/architecture.png)
 </details>
 
 ## Front matter \{#front-matter}
